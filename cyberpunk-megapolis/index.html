@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#0a0c10">
+<title>CYBERPUNK MEGAPOLIS — Web-Swing Edition</title>
+<meta name="description" content="CYBERPUNK MEGAPOLIS — Web-Swing Edition. A third-person cyberpunk city web-swinging game running directly in the browser on WebGL2.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230a0c10'/%3E%3Cpath d='M6 26 L16 6 L26 26' stroke='%23ff4fd8' stroke-width='2.4' fill='none'/%3E%3Cpath d='M11 18h10' stroke='%2342e8ff' stroke-width='2'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="./styles.css">
+<script type="importmap">
+{
+  "imports": {
+    "three": "./vendor/three/three.module.js",
+    "three/addons/": "./vendor/three/jsm/"
+  }
+}
+</script>
+</head>
+<body>
+
+<!-- ============================================================ 3D canvas -->
+<canvas id="gl" aria-label="Cyberpunk Megapolis 游戏画面。操作：WASD 移动，鼠标转动视角，Shift 冲刺或收绳，空格在地面跳跃、在空中按住发射蛛丝、松开脱离，W 在摆荡底部加速，A/D 摆荡转向，S 空中俯冲，E 或右键飞索到屋顶边缘，R 高空重新进入，T 切换时段，Esc 暂停。Controls: WASD move, mouse look, Shift sprint or reel in, Space jump and web, W pump, A/D steer, S dive, E or right mouse zip, R re-enter, T time of day, Esc pause." tabindex="0"></canvas>
+
+<!-- ============================================================ UI layer -->
+<div id="ui">
+
+  <!-- ------------------------------------------------------------ loader -->
+  <section id="loader" aria-live="polite">
+    <div class="loader-center">
+      <div class="stagger s1" id="ld-presented">WEB-SWING EDITION</div>
+      <h1 class="stagger s2" id="ld-brand">CYBERPUNK MEGAPOLIS</h1>
+      <div class="stagger s3 hairline"></div>
+    </div>
+    <div class="loader-bottom">
+      <div class="stagger s4" id="ld-pct">0%</div>
+      <div class="stagger s5 bar"><i id="ld-bar"></i></div>
+      <div class="stagger s6" id="ld-count">LOADING ASSETS · 0 / 0</div>
+      <ul id="ld-errors" hidden aria-label="资源加载错误 Asset errors"></ul>
+    </div>
+  </section>
+
+  <!-- -------------------------------------------------------------- menu -->
+  <section id="menu" hidden>
+    <div class="menu-mask" aria-hidden="true"></div>
+    <div class="menu-left">
+      <p class="kicker">WEB-SWING EDITION</p>
+      <h2 class="title"><span class="t1">CYBERPUNK</span><span class="t2">MEGAPOLIS</span></h2>
+      <div class="title-rule" aria-hidden="true"></div>
+      <p class="lede">在密集的赛博霓虹都市之间连续摆荡穿行<br><span class="lede-en">Continuous traversal between densely packed neon skyscrapers</span></p>
+
+      <div id="chars" role="radiogroup" aria-label="选择角色 Select character">
+        <button class="char" type="button" role="radio" aria-checked="false" data-char="man">
+          <span class="char-line" aria-hidden="true"></span>
+          <span class="char-code">RUNNER 01</span>
+          <span class="char-name">SURVIVAL MAN</span>
+          <span class="char-tags">camouflage jacket · tactical vest</span>
+        </button>
+        <button class="char" type="button" role="radio" aria-checked="false" data-char="girl">
+          <span class="char-line" aria-hidden="true"></span>
+          <span class="char-code">RUNNER 02</span>
+          <span class="char-name">SURVIVAL GIRL</span>
+          <span class="char-tags">baseball cap · backpack</span>
+        </button>
+      </div>
+
+      <button id="enter" type="button" disabled>ENTER GAME</button>
+      <p class="hintline">← → 选择 Select · ENTER 开始 Start · T 切换时段 Time of day</p>
+      <p id="touch-note" hidden>本作需要键盘与鼠标 · Please use a keyboard and mouse</p>
+    </div>
+  </section>
+
+  <!-- --------------------------------------------------------------- HUD -->
+  <section id="hud" hidden aria-hidden="true">
+    <div class="panel"><b id="hud-speed">0</b><span>速度 SPEED · KM/H</span></div>
+    <div class="panel"><b id="hud-height">0</b><span>高度 HEIGHT · M</span></div>
+    <div class="panel"><b id="hud-state">地面</b><span>状态 STATE</span></div>
+  </section>
+
+  <div id="perf" hidden>-- fps · draw --- · BUILD</div>
+  <div id="notice" aria-live="polite"></div>
+
+  <!-- ---------------------------------------------------------- controls -->
+  <section id="controls" hidden>
+    <h3>操作说明 CONTROLS</h3>
+    <dl>
+      <dt>WASD</dt><dd>相对镜头移动 · camera-relative movement</dd>
+      <dt>鼠标 Mouse</dt><dd>转动镜头 · rotate camera</dd>
+      <dt>Shift</dt><dd>地面冲刺 / 摆荡中收绳 · sprint / reel in</dd>
+      <dt>Space</dt><dd>地面轻点起跳；空中按住发射并保持蛛丝，松开脱离 · tap to jump, hold in air to fire and keep a web, release to detach</dd>
+      <dt>W</dt><dd>摆荡底部加速 · pump speed at the bottom of a swing</dd>
+      <dt>A / D</dt><dd>摆荡转向 · steer while swinging</dd>
+      <dt>S</dt><dd>空中俯冲 · dive while airborne</dd>
+      <dt>E / 右键</dt><dd>飞索到瞄准的屋顶边缘 · zip to a targeted rooftop edge</dd>
+      <dt>R</dt><dd>高空重新进入 · re-enter from high altitude</dd>
+      <dt>T</dt><dd>切换时段 · cycle time of day</dd>
+      <dt>Esc</dt><dd>暂停 · pause (点击或 Enter 继续 · click or Enter to resume)</dd>
+      <dt>触屏 Touch</dt><dd>左半屏摇杆移动，右半屏拖动转视角，右下按钮对应 蛛丝 / 冲刺 / 俯冲 / 飞索 · left half is the stick, right half looks, the buttons are web / sprint / dive / zip</dd>
+    </dl>
+    <button id="controls-close" type="button">开始 · START (Enter)</button>
+  </section>
+
+  <!-- ------------------------------------------------------------- pause -->
+  <section id="pause" hidden>
+    <div class="pause-inner">
+      <p class="pause-title">已暂停 PAUSED</p>
+      <p class="pause-sub">点击或按 Enter 继续 · Click or press Enter to continue</p>
+      <p class="pause-keys">T 切换时段 · R 高空重入 · Esc 暂停</p>
+    </div>
+  </section>
+
+  <!-- ------------------------------------------------ compatibility/error -->
+  <section id="compat" hidden>
+    <div class="compat-inner">
+      <h3 id="compat-title">兼容性提示 COMPATIBILITY</h3>
+      <p id="compat-body"></p>
+      <button id="compat-ok" type="button">继续 · CONTINUE</button>
+    </div>
+  </section>
+
+  <section id="fatal" hidden role="alert">
+    <div class="compat-inner">
+      <h3>出错了 SOMETHING WENT WRONG</h3>
+      <p id="fatal-body"></p>
+      <pre id="fatal-detail"></pre>
+      <button id="fatal-retry" type="button">重试 · RETRY</button>
+    </div>
+  </section>
+
+  <div id="flash" aria-hidden="true"></div>
+  <div id="fade" aria-hidden="true"></div>
+</div>
+
+<noscript><p style="color:#c9d4e4;font:14px monospace;padding:24px">This game needs JavaScript and WebGL2. 本作需要 JavaScript 与 WebGL2。</p></noscript>
+<script type="module" src="./main.js"></script>
+</body>
+</html>

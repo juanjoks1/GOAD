@@ -1,0 +1,572 @@
+{
+ "generated": "2026-09-21",
+ "note": "WebP is preferred; PNG is the fallback when Image/decode of WebP fails. colorSpace tells the runtime whether to tag SRGBColorSpace (albedo/emissive) or NoColorSpace (normal, metallicSmoothness, AO).",
+ "facades": {
+  "facade_tower": {
+   "metres": 12,
+   "cols": 6,
+   "rows": 6
+  },
+  "facade_res": {
+   "metres": 10,
+   "cols": 8,
+   "rows": 8
+  },
+  "facade_glass": {
+   "metres": 14,
+   "cols": 5,
+   "rows": 10
+  },
+  "facade_slum": {
+   "metres": 8,
+   "cols": 10,
+   "rows": 10
+  }
+ },
+ "textures": [
+  {
+   "name": "concrete",
+   "webp": "concrete.webp",
+   "png": "concrete.png",
+   "size": [
+    1024,
+    1024
+   ],
+   "channels": 3,
+   "colorSpace": "srgb",
+   "role": "albedo",
+   "note": "planar-projected city concrete",
+   "bytes": {
+    "webp": 17498,
+    "png": 516790
+   }
+  },
+  {
+   "name": "concrete_n",
+   "webp": "concrete_n.webp",
+   "png": "concrete_n.png",
+   "size": [
+    1024,
+    1024
+   ],
+   "channels": 3,
+   "colorSpace": "linear",
+   "role": "normal",
+   "note": "",
+   "bytes": {
+    "webp": 31688,
+    "png": 1123379
+   }
+  },
+  {
+   "name": "concrete_ms",
+   "webp": "concrete_ms.webp",
+   "png": "concrete_ms.png",
+   "size": [
+    512,
+    512
+   ],
+   "channels": 4,
+   "colorSpace": "linear",
+   "role": "metallicSmoothness",
+   "note": "R=metal A=smoothness",
+   "bytes": {
+    "webp": 48506,
+    "png": 104587
+   }
+  },
+  {
+   "name": "concrete_dark",
+   "webp": "concrete_dark.webp",
+   "png": "concrete_dark.png",
+   "size": [
+    512,
+    512
+   ],
+   "channels": 3,
+   "colorSpace": "srgb",
+   "role": "albedo",
+   "note": "",
+   "bytes": {
+    "webp": 5980,
+    "png": 168169
+   }
+  },
+  {
+   "name": "sidewalk",
+   "webp": "sidewalk.webp",
+   "png": "sidewalk.png",
+   "size": [
+    512,
+    512
+   ],
+   "channels": 3,
+   "colorSpace": "srgb",
+   "role": "albedo",
+   "note": "paving slabs",
+   "bytes": {
+    "webp": 8646,
+    "png": 205065
+   }
+  },
+  {
+   "name": "asphalt",
+   "webp": "asphalt.webp",
+   "png": "asphalt.png",
+   "size": [
+    512,
+    512
+   ],
+   "channels": 3,
+   "colorSpace": "srgb",
+   "role": "albedo",
+   "note": "",
+   "bytes": {
+    "webp": 6480,
+    "png": 176479
+   }
+  },
+  {
+   "name": "asphalt_n",
+   "webp": "asphalt_n.webp",
+   "png": "asphalt_n.png",
+   "size": [
+    512,
+    512
+   ],
+   "channels": 3,
+   "colorSpace": "linear",
+   "role": "normal",
+   "note": "",
+   "bytes": {
+    "webp": 29644,
+    "png": 431790
+   }
+  },
+  {
+   "name": "facade_tower",
+   "webp": "facade_tower.webp",
+   "png": "facade_tower.png",
+   "size": [
+    1024,
+    1024
+   ],
+   "channels": 3,
+   "colorSpace": "srgb",
+   "role": "albedo",
+   "note": "tile = 12m",
+   "bytes": {
+    "webp": 12806,
+    "png": 144989
+   }
+  },
+  {
+   "name": "facade_tower_emis",
+   "webp": "facade_tower_emis.webp",
+   "png": "facade_tower_emis.png",
+   "size": [
+    1024,
+    1024
+   ],
+   "channels": 3,
+   "colorSpace": "srgb",
+   "role": "emissive",
+   "note": "warm window lights",
+   "bytes": {
+    "webp": 13570,
+    "png": 155320
+   }
+  },
+  {
+   "name": "facade_tower_n",
+   "webp": "facade_tower_n.webp",
+   "png": "facade_tower_n.png",
+   "size": [
+    1024,
+    1024
+   ],
+   "channels": 3,
+   "colorSpace": "linear",
+   "role": "normal",
+   "note": "",
+   "bytes": {
+    "webp": 30298,
+    "png": 213246
+   }
+  },
+  {
+   "name": "facade_res",
+   "webp": "facade_res.webp",
+   "png": "facade_res.png",
+   "size": [
+    1024,
+    1024
+   ],
+   "channels": 3,
+   "colorSpace": "srgb",
+   "role": "albedo",
+   "note": "tile = 10m",
+   "bytes": {
+    "webp": 19256,
+    "png": 174277
+   }
+  },
+  {
+   "name": "facade_res_emis",
+   "webp": "facade_res_emis.webp",
+   "png": "facade_res_emis.png",
+   "size": [
+    1024,
+    1024
+   ],
+   "channels": 3,
+   "colorSpace": "srgb",
+   "role": "emissive",
+   "note": "warm window lights",
+   "bytes": {
+    "webp": 15910,
+    "png": 174620
+   }
+  },
+  {
+   "name": "facade_glass",
+   "webp": "facade_glass.webp",
+   "png": "facade_glass.png",
+   "size": [
+    1024,
+    1024
+   ],
+   "channels": 3,
+   "colorSpace": "srgb",
+   "role": "albedo",
+   "note": "tile = 14m",
+   "bytes": {
+    "webp": 10740,
+    "png": 58549
+   }
+  },
+  {
+   "name": "facade_glass_emis",
+   "webp": "facade_glass_emis.webp",
+   "png": "facade_glass_emis.png",
+   "size": [
+    1024,
+    1024
+   ],
+   "channels": 3,
+   "colorSpace": "srgb",
+   "role": "emissive",
+   "note": "warm window lights",
+   "bytes": {
+    "webp": 23514,
+    "png": 275701
+   }
+  },
+  {
+   "name": "facade_slum",
+   "webp": "facade_slum.webp",
+   "png": "facade_slum.png",
+   "size": [
+    1024,
+    1024
+   ],
+   "channels": 3,
+   "colorSpace": "srgb",
+   "role": "albedo",
+   "note": "tile = 8m",
+   "bytes": {
+    "webp": 24144,
+    "png": 207579
+   }
+  },
+  {
+   "name": "facade_slum_emis",
+   "webp": "facade_slum_emis.webp",
+   "png": "facade_slum_emis.png",
+   "size": [
+    1024,
+    1024
+   ],
+   "channels": 3,
+   "colorSpace": "srgb",
+   "role": "emissive",
+   "note": "warm window lights",
+   "bytes": {
+    "webp": 18852,
+    "png": 136033
+   }
+  },
+  {
+   "name": "facade_slum_n",
+   "webp": "facade_slum_n.webp",
+   "png": "facade_slum_n.png",
+   "size": [
+    1024,
+    1024
+   ],
+   "channels": 3,
+   "colorSpace": "linear",
+   "role": "normal",
+   "note": "",
+   "bytes": {
+    "webp": 58198,
+    "png": 277633
+   }
+  },
+  {
+   "name": "metal_panel",
+   "webp": "metal_panel.webp",
+   "png": "metal_panel.png",
+   "size": [
+    512,
+    512
+   ],
+   "channels": 3,
+   "colorSpace": "srgb",
+   "role": "albedo",
+   "note": "",
+   "bytes": {
+    "webp": 4676,
+    "png": 92269
+   }
+  },
+  {
+   "name": "metal_panel_n",
+   "webp": "metal_panel_n.webp",
+   "png": "metal_panel_n.png",
+   "size": [
+    512,
+    512
+   ],
+   "channels": 3,
+   "colorSpace": "linear",
+   "role": "normal",
+   "note": "",
+   "bytes": {
+    "webp": 8402,
+    "png": 370900
+   }
+  },
+  {
+   "name": "metal_ms",
+   "webp": "metal_ms.webp",
+   "png": "metal_ms.png",
+   "size": [
+    512,
+    512
+   ],
+   "channels": 4,
+   "colorSpace": "linear",
+   "role": "metallicSmoothness",
+   "note": "R=metal A=smoothness",
+   "bytes": {
+    "webp": 50112,
+    "png": 116795
+   }
+  },
+  {
+   "name": "metal_rust",
+   "webp": "metal_rust.webp",
+   "png": "metal_rust.png",
+   "size": [
+    512,
+    512
+   ],
+   "channels": 3,
+   "colorSpace": "srgb",
+   "role": "albedo",
+   "note": "",
+   "bytes": {
+    "webp": 9084,
+    "png": 409741
+   }
+  },
+  {
+   "name": "facade_glass_ms",
+   "webp": "facade_glass_ms.webp",
+   "png": "facade_glass_ms.png",
+   "size": [
+    512,
+    512
+   ],
+   "channels": 4,
+   "colorSpace": "linear",
+   "role": "metallicSmoothness",
+   "note": "R=metal A=smoothness",
+   "bytes": {
+    "webp": 49152,
+    "png": 114210
+   }
+  },
+  {
+   "name": "tile_metro",
+   "webp": "tile_metro.webp",
+   "png": "tile_metro.png",
+   "size": [
+    512,
+    512
+   ],
+   "channels": 3,
+   "colorSpace": "srgb",
+   "role": "albedo",
+   "note": "",
+   "bytes": {
+    "webp": 13506,
+    "png": 101951
+   }
+  },
+  {
+   "name": "tile_metro_n",
+   "webp": "tile_metro_n.webp",
+   "png": "tile_metro_n.png",
+   "size": [
+    512,
+    512
+   ],
+   "channels": 3,
+   "colorSpace": "linear",
+   "role": "normal",
+   "note": "",
+   "bytes": {
+    "webp": 26592,
+    "png": 9887
+   }
+  },
+  {
+   "name": "roof_gravel",
+   "webp": "roof_gravel.webp",
+   "png": "roof_gravel.png",
+   "size": [
+    512,
+    512
+   ],
+   "channels": 3,
+   "colorSpace": "srgb",
+   "role": "albedo",
+   "note": "",
+   "bytes": {
+    "webp": 14050,
+    "png": 237614
+   }
+  },
+  {
+   "name": "brick",
+   "webp": "brick.webp",
+   "png": "brick.png",
+   "size": [
+    512,
+    512
+   ],
+   "channels": 3,
+   "colorSpace": "srgb",
+   "role": "albedo",
+   "note": "",
+   "bytes": {
+    "webp": 12168,
+    "png": 5237
+   }
+  },
+  {
+   "name": "brick_n",
+   "webp": "brick_n.webp",
+   "png": "brick_n.png",
+   "size": [
+    512,
+    512
+   ],
+   "channels": 3,
+   "colorSpace": "linear",
+   "role": "normal",
+   "note": "",
+   "bytes": {
+    "webp": 34498,
+    "png": 4643
+   }
+  },
+  {
+   "name": "plaster",
+   "webp": "plaster.webp",
+   "png": "plaster.png",
+   "size": [
+    512,
+    512
+   ],
+   "channels": 3,
+   "colorSpace": "srgb",
+   "role": "albedo",
+   "note": "",
+   "bytes": {
+    "webp": 3768,
+    "png": 123427
+   }
+  },
+  {
+   "name": "neon_bars",
+   "webp": "neon_bars.webp",
+   "png": "neon_bars.png",
+   "size": [
+    256,
+    256
+   ],
+   "channels": 3,
+   "colorSpace": "srgb",
+   "role": "emissive",
+   "note": "",
+   "bytes": {
+    "webp": 2392,
+    "png": 24860
+   }
+  },
+  {
+   "name": "road_lines",
+   "webp": "road_lines.webp",
+   "png": "road_lines.png",
+   "size": [
+    512,
+    512
+   ],
+   "channels": 4,
+   "colorSpace": "srgb",
+   "role": "albedo-alpha",
+   "note": "alphaTest decal",
+   "bytes": {
+    "webp": 7378,
+    "png": 21990
+   }
+  },
+  {
+   "name": "cloud_puff",
+   "webp": "cloud_puff.webp",
+   "png": "cloud_puff.png",
+   "size": [
+    256,
+    256
+   ],
+   "channels": 4,
+   "colorSpace": "srgb",
+   "role": "albedo-alpha",
+   "note": "camera-facing cloud billboard",
+   "bytes": {
+    "webp": 9388,
+    "png": 18265
+   }
+  },
+  {
+   "name": "grime_decal",
+   "webp": "grime_decal.webp",
+   "png": "grime_decal.png",
+   "size": [
+    256,
+    256
+   ],
+   "channels": 4,
+   "colorSpace": "srgb",
+   "role": "albedo-alpha",
+   "note": "",
+   "bytes": {
+    "webp": 17434,
+    "png": 53077
+   }
+  }
+ ]
+}

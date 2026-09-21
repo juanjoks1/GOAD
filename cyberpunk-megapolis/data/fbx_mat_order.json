@@ -1,0 +1,3827 @@
+{
+ "note": "Ordered material slots per prefab. The runtime resolves materials by GLB material NAME first and only falls back to this slot order, so a multi-material asset can never get facades painted with ground textures.",
+ "order": {
+  "Background/skyline_0": [
+   "silhouette_a",
+   "facade_tower_a"
+  ],
+  "Background/skyline_1": [
+   "silhouette_b",
+   "facade_tower_b"
+  ],
+  "Background/skyline_2": [
+   "silhouette_c",
+   "facade_res_a",
+   "light_red"
+  ],
+  "Background/skyline_3": [
+   "silhouette_a",
+   "facade_res_a"
+  ],
+  "Background/skyline_4": [
+   "silhouette_b",
+   "facade_res_a"
+  ],
+  "Background/skyline_5": [
+   "silhouette_c"
+  ],
+  "Background/skyline_6": [
+   "silhouette_a",
+   "light_red"
+  ],
+  "Background/skyline_7": [
+   "silhouette_b",
+   "facade_tower_a"
+  ],
+  "Background/skyline_8": [
+   "silhouette_c",
+   "facade_tower_a",
+   "light_red"
+  ],
+  "Background/skyline_9": [
+   "silhouette_a",
+   "facade_res_a"
+  ],
+  "Background/skyline_10": [
+   "silhouette_b",
+   "facade_tower_a",
+   "light_red"
+  ],
+  "Background/skyline_11": [
+   "silhouette_c"
+  ],
+  "Background/skyline_12": [
+   "silhouette_a",
+   "facade_tower_b"
+  ],
+  "Background/skyline_13": [
+   "silhouette_b",
+   "light_red"
+  ],
+  "Background/skyline_14": [
+   "silhouette_c",
+   "facade_res_a",
+   "light_red"
+  ],
+  "Background/skyline_15": [
+   "silhouette_a"
+  ],
+  "Background/skyline_16": [
+   "silhouette_b",
+   "light_red"
+  ],
+  "Background/skyline_17": [
+   "silhouette_c",
+   "facade_res_a"
+  ],
+  "Background/skyline_18": [
+   "silhouette_a",
+   "facade_tower_a"
+  ],
+  "Background/skyline_19": [
+   "silhouette_b",
+   "facade_res_a"
+  ],
+  "Background/skyline_20": [
+   "silhouette_c",
+   "facade_tower_a"
+  ],
+  "Background/skyline_21": [
+   "silhouette_a",
+   "facade_tower_a",
+   "light_red"
+  ],
+  "Background/skyline_22": [
+   "silhouette_b",
+   "light_red"
+  ],
+  "Background/skyline_23": [
+   "silhouette_c",
+   "facade_tower_b"
+  ],
+  "Background/skyline_24": [
+   "silhouette_a",
+   "facade_res_a"
+  ],
+  "Background/skyline_25": [
+   "silhouette_b",
+   "facade_res_a"
+  ],
+  "Background/skyline_26": [
+   "silhouette_c",
+   "light_red"
+  ],
+  "Background/skyline_27": [
+   "silhouette_a",
+   "light_red"
+  ],
+  "Background/skyline_28": [
+   "silhouette_b",
+   "facade_tower_a",
+   "light_red"
+  ],
+  "Background/skyline_29": [
+   "silhouette_c",
+   "facade_tower_b"
+  ],
+  "Background/skyline_30": [
+   "silhouette_a",
+   "facade_tower_a"
+  ],
+  "Background/skyline_31": [
+   "silhouette_b",
+   "facade_res_a"
+  ],
+  "Background/skyline_32": [
+   "silhouette_c",
+   "facade_tower_b",
+   "light_red"
+  ],
+  "Background/skyline_33": [
+   "silhouette_a",
+   "facade_tower_b"
+  ],
+  "Background/skyline_34": [
+   "silhouette_b",
+   "light_red"
+  ],
+  "Background/skyline_35": [
+   "silhouette_c",
+   "facade_tower_a",
+   "light_red"
+  ],
+  "Background/skyline_36": [
+   "silhouette_a",
+   "facade_res_a"
+  ],
+  "Background/skyline_37": [
+   "silhouette_b",
+   "facade_res_a"
+  ],
+  "Background/skyline_38": [
+   "silhouette_c",
+   "light_red"
+  ],
+  "Background/skyline_39": [
+   "silhouette_a",
+   "facade_tower_b"
+  ],
+  "Background/skyline_40": [
+   "silhouette_b",
+   "facade_tower_a",
+   "light_red"
+  ],
+  "Background/skyline_41": [
+   "silhouette_c",
+   "facade_tower_a"
+  ],
+  "Background/skyline_42": [
+   "silhouette_a",
+   "facade_tower_a",
+   "light_red"
+  ],
+  "Background/skyline_43": [
+   "silhouette_b",
+   "facade_tower_b",
+   "light_red"
+  ],
+  "Background/skyline_44": [
+   "silhouette_c"
+  ],
+  "Background/skyline_45": [
+   "silhouette_a",
+   "facade_tower_a"
+  ],
+  "Background/skyline_46": [
+   "silhouette_b",
+   "facade_tower_a",
+   "light_red"
+  ],
+  "Background/skyline_47": [
+   "silhouette_c"
+  ],
+  "Car/sedan_0": [
+   "car_body_a",
+   "car_glass",
+   "car_light_front",
+   "car_light_rear",
+   "rubber_tyre"
+  ],
+  "Car/sedan_1": [
+   "car_body_b",
+   "car_glass",
+   "car_light_front",
+   "car_light_rear",
+   "rubber_tyre"
+  ],
+  "Car/taxi_2": [
+   "car_body_c",
+   "car_glass",
+   "car_light_front",
+   "car_light_rear",
+   "rubber_tyre",
+   "light_amber"
+  ],
+  "Car/van_3": [
+   "car_body_d",
+   "car_glass",
+   "car_light_front",
+   "car_light_rear",
+   "rubber_tyre"
+  ],
+  "Car/truck_4": [
+   "car_body_e",
+   "car_glass",
+   "car_light_front",
+   "car_light_rear",
+   "rubber_tyre"
+  ],
+  "Car/bus_5": [
+   "car_body_f",
+   "car_glass",
+   "car_light_front",
+   "car_light_rear",
+   "rubber_tyre"
+  ],
+  "Car/bike_6": [
+   "car_body_a",
+   "rubber_tyre",
+   "car_light_front"
+  ],
+  "Car/sedan_c0": [
+   "car_body_a",
+   "car_glass",
+   "car_light_front",
+   "car_light_rear",
+   "rubber_tyre"
+  ],
+  "Car/sedan_c1": [
+   "car_body_b",
+   "car_glass",
+   "car_light_front",
+   "car_light_rear",
+   "rubber_tyre"
+  ],
+  "Car/sedan_c2": [
+   "car_body_c",
+   "car_glass",
+   "car_light_front",
+   "car_light_rear",
+   "rubber_tyre"
+  ],
+  "Car/sedan_c3": [
+   "car_body_d",
+   "car_glass",
+   "car_light_front",
+   "car_light_rear",
+   "rubber_tyre"
+  ],
+  "Car/sedan_c4": [
+   "car_body_e",
+   "car_glass",
+   "car_light_front",
+   "car_light_rear",
+   "rubber_tyre"
+  ],
+  "Car/sedan_c5": [
+   "car_body_f",
+   "car_glass",
+   "car_light_front",
+   "car_light_rear",
+   "rubber_tyre"
+  ],
+  "Car/van_b": [
+   "car_body_c",
+   "car_glass",
+   "car_light_front",
+   "car_light_rear",
+   "rubber_tyre"
+  ],
+  "Car/truck_b": [
+   "car_body_e",
+   "car_glass",
+   "car_light_front",
+   "car_light_rear",
+   "rubber_tyre"
+  ],
+  "Car/bike_b": [
+   "car_body_a",
+   "rubber_tyre",
+   "car_light_front"
+  ],
+  "Combined_Building/tower_16x70_0": [
+   "concrete_a",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_a",
+   "awning_d",
+   "facade_glass_a",
+   "roof_gravel",
+   "metal_b",
+   "antenna_metal",
+   "light_red",
+   "neon_purple"
+  ],
+  "Combined_Building/tower_16x70_1": [
+   "concrete_c",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "facade_tower_a",
+   "roof_gravel",
+   "metal_b",
+   "antenna_metal",
+   "light_red",
+   "neon_purple",
+   "neon_blue",
+   "neon_white"
+  ],
+  "Combined_Building/tower_16x70_2": [
+   "concrete_c",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_d",
+   "facade_tower_a",
+   "roof_gravel",
+   "metal_b",
+   "antenna_metal",
+   "light_red",
+   "neon_orange",
+   "neon_purple"
+  ],
+  "Combined_Building/tower_18x96_0": [
+   "concrete_d",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_c",
+   "facade_glass_a",
+   "roof_gravel",
+   "metal_b",
+   "antenna_metal",
+   "light_red",
+   "neon_orange"
+  ],
+  "Combined_Building/tower_18x96_1": [
+   "concrete_a",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "facade_tower_a",
+   "roof_gravel",
+   "neon_purple"
+  ],
+  "Combined_Building/tower_18x96_2": [
+   "concrete_b",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_b",
+   "awning_d",
+   "facade_tower_a",
+   "roof_gravel",
+   "metal_b",
+   "antenna_metal",
+   "light_red",
+   "neon_red",
+   "neon_orange"
+  ],
+  "Combined_Building/tower_20x128_0": [
+   "concrete_c",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_a",
+   "awning_d",
+   "facade_glass_b",
+   "roof_gravel",
+   "metal_b",
+   "antenna_metal",
+   "light_red",
+   "neon_white"
+  ],
+  "Combined_Building/tower_20x128_1": [
+   "concrete_c",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_b",
+   "awning_c",
+   "facade_tower_c",
+   "roof_gravel",
+   "metal_b",
+   "antenna_metal",
+   "light_red",
+   "neon_cyan"
+  ],
+  "Combined_Building/tower_20x128_2": [
+   "concrete_b",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_b",
+   "awning_c",
+   "facade_tower_d",
+   "roof_gravel",
+   "metal_b",
+   "antenna_metal",
+   "light_red",
+   "neon_orange",
+   "neon_purple"
+  ],
+  "Combined_Building/tower_22x160_0": [
+   "concrete_d",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_b",
+   "awning_c",
+   "facade_glass_a",
+   "roof_gravel",
+   "metal_b",
+   "antenna_metal",
+   "light_red",
+   "neon_white",
+   "neon_orange",
+   "neon_green"
+  ],
+  "Combined_Building/tower_22x160_1": [
+   "concrete_d",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_a",
+   "awning_b",
+   "facade_tower_d",
+   "roof_gravel",
+   "metal_b",
+   "antenna_metal",
+   "light_red",
+   "neon_purple",
+   "neon_pink"
+  ],
+  "Combined_Building/tower_22x160_2": [
+   "concrete_b",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_b",
+   "facade_tower_a",
+   "roof_gravel",
+   "neon_blue",
+   "neon_cyan"
+  ],
+  "Combined_Building/tower_24x196_0": [
+   "concrete_b",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_c",
+   "awning_d",
+   "facade_glass_a",
+   "roof_gravel",
+   "neon_pink",
+   "neon_red"
+  ],
+  "Combined_Building/tower_24x196_1": [
+   "concrete_b",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_c",
+   "awning_d",
+   "facade_tower_b",
+   "roof_gravel",
+   "neon_purple",
+   "neon_white"
+  ],
+  "Combined_Building/tower_24x196_2": [
+   "concrete_c",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_d",
+   "facade_tower_c",
+   "roof_gravel",
+   "metal_b",
+   "antenna_metal",
+   "light_red",
+   "neon_blue",
+   "neon_pink"
+  ],
+  "Combined_Building/tower_26x240_0": [
+   "concrete_c",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_b",
+   "facade_glass_b",
+   "roof_gravel",
+   "metal_b",
+   "antenna_metal",
+   "light_red",
+   "neon_blue"
+  ],
+  "Combined_Building/tower_26x240_1": [
+   "concrete_d",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_b",
+   "facade_tower_c",
+   "roof_gravel",
+   "metal_b",
+   "antenna_metal",
+   "light_red",
+   "neon_blue"
+  ],
+  "Combined_Building/tower_26x240_2": [
+   "concrete_b",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "facade_tower_c",
+   "roof_gravel",
+   "metal_b",
+   "antenna_metal",
+   "light_red",
+   "neon_cyan",
+   "neon_pink"
+  ],
+  "Combined_Building/tower_30x118_0": [
+   "concrete_c",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_b",
+   "facade_glass_a",
+   "roof_gravel",
+   "metal_b",
+   "antenna_metal",
+   "light_red",
+   "neon_blue",
+   "neon_cyan"
+  ],
+  "Combined_Building/tower_30x118_1": [
+   "concrete_c",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_c",
+   "facade_tower_a",
+   "roof_gravel",
+   "metal_b",
+   "antenna_metal",
+   "light_red",
+   "neon_red",
+   "neon_cyan"
+  ],
+  "Combined_Building/tower_30x118_2": [
+   "concrete_a",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_c",
+   "awning_a",
+   "awning_b",
+   "facade_tower_d",
+   "roof_gravel",
+   "neon_blue",
+   "neon_green"
+  ],
+  "Combined_Building/tower_34x150_0": [
+   "concrete_b",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_a",
+   "facade_glass_b",
+   "roof_gravel",
+   "neon_purple",
+   "neon_green"
+  ],
+  "Combined_Building/tower_34x150_1": [
+   "concrete_a",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_d",
+   "awning_c",
+   "facade_tower_a",
+   "roof_gravel",
+   "metal_b",
+   "antenna_metal",
+   "light_red",
+   "neon_white",
+   "neon_blue"
+  ],
+  "Combined_Building/tower_34x150_2": [
+   "concrete_a",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_b",
+   "awning_c",
+   "facade_tower_d",
+   "roof_gravel",
+   "metal_b",
+   "antenna_metal",
+   "light_red",
+   "neon_orange"
+  ],
+  "Combined_Building/tower_40x92_0": [
+   "concrete_a",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "facade_glass_a",
+   "roof_gravel",
+   "metal_b",
+   "antenna_metal",
+   "light_red",
+   "neon_red",
+   "neon_green"
+  ],
+  "Combined_Building/tower_40x92_1": [
+   "concrete_a",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "facade_tower_d",
+   "roof_gravel",
+   "metal_b",
+   "antenna_metal",
+   "light_red",
+   "neon_green"
+  ],
+  "Combined_Building/tower_40x92_2": [
+   "concrete_b",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "facade_tower_d",
+   "roof_gravel",
+   "metal_b",
+   "antenna_metal",
+   "light_red",
+   "neon_orange"
+  ],
+  "Combined_Building/tower_46x66_0": [
+   "concrete_a",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_d",
+   "awning_b",
+   "facade_glass_b",
+   "roof_gravel",
+   "metal_b",
+   "antenna_metal",
+   "light_red",
+   "neon_cyan"
+  ],
+  "Combined_Building/tower_46x66_1": [
+   "concrete_a",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "facade_tower_d",
+   "roof_gravel",
+   "metal_b",
+   "antenna_metal",
+   "light_red",
+   "neon_green"
+  ],
+  "Combined_Building/tower_46x66_2": [
+   "concrete_c",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_b",
+   "facade_tower_a",
+   "roof_gravel",
+   "metal_b",
+   "antenna_metal",
+   "light_red",
+   "neon_cyan",
+   "neon_blue",
+   "neon_white"
+  ],
+  "Combined_Building/tower_19x212_0": [
+   "concrete_c",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_b",
+   "awning_c",
+   "facade_glass_a",
+   "roof_gravel",
+   "metal_b",
+   "antenna_metal",
+   "light_red",
+   "neon_blue"
+  ],
+  "Combined_Building/tower_19x212_1": [
+   "concrete_b",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_c",
+   "facade_tower_c",
+   "roof_gravel",
+   "metal_b",
+   "antenna_metal",
+   "light_red",
+   "neon_white",
+   "neon_cyan",
+   "neon_orange"
+  ],
+  "Combined_Building/tower_19x212_2": [
+   "concrete_b",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_a",
+   "facade_tower_c",
+   "roof_gravel",
+   "metal_b",
+   "antenna_metal",
+   "light_red",
+   "neon_green"
+  ],
+  "Combined_Building/tower_28x174_0": [
+   "concrete_b",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_b",
+   "facade_glass_a",
+   "roof_gravel",
+   "metal_b",
+   "antenna_metal",
+   "light_red",
+   "neon_red"
+  ],
+  "Combined_Building/tower_28x174_1": [
+   "concrete_c",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "facade_tower_d",
+   "roof_gravel",
+   "neon_blue",
+   "neon_purple"
+  ],
+  "Combined_Building/tower_28x174_2": [
+   "concrete_d",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_d",
+   "facade_tower_c",
+   "roof_gravel",
+   "metal_b",
+   "antenna_metal",
+   "light_red",
+   "neon_pink",
+   "neon_orange"
+  ],
+  "Combined_Building/slab_24x46_0": [
+   "concrete_b",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "facade_glass_b",
+   "roof_gravel",
+   "neon_pink",
+   "neon_red"
+  ],
+  "Combined_Building/slab_24x46_1": [
+   "concrete_b",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "facade_tower_d",
+   "roof_gravel",
+   "neon_orange",
+   "neon_cyan"
+  ],
+  "Combined_Building/slab_24x46_2": [
+   "concrete_b",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_d",
+   "facade_tower_c",
+   "roof_gravel",
+   "neon_cyan"
+  ],
+  "Combined_Building/slab_30x58_0": [
+   "concrete_c",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_b",
+   "facade_tower_a",
+   "roof_gravel",
+   "neon_cyan",
+   "neon_blue"
+  ],
+  "Combined_Building/slab_30x58_1": [
+   "concrete_d",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_d",
+   "awning_a",
+   "facade_tower_a",
+   "roof_gravel",
+   "neon_orange",
+   "neon_cyan"
+  ],
+  "Combined_Building/slab_30x58_2": [
+   "concrete_b",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_d",
+   "awning_a",
+   "facade_tower_d",
+   "roof_gravel",
+   "neon_green"
+  ],
+  "Combined_Building/slab_36x72_0": [
+   "concrete_d",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_c",
+   "facade_glass_a",
+   "roof_gravel",
+   "neon_cyan"
+  ],
+  "Combined_Building/slab_36x72_1": [
+   "concrete_c",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_a",
+   "facade_tower_a",
+   "roof_gravel",
+   "neon_cyan"
+  ],
+  "Combined_Building/slab_36x72_2": [
+   "concrete_c",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_a",
+   "facade_glass_a",
+   "roof_gravel",
+   "neon_cyan",
+   "neon_red"
+  ],
+  "Combined_Building/slab_44x88_0": [
+   "concrete_c",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_a",
+   "awning_d",
+   "facade_glass_b",
+   "roof_gravel",
+   "neon_cyan"
+  ],
+  "Combined_Building/slab_44x88_1": [
+   "concrete_d",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "facade_tower_a",
+   "roof_gravel",
+   "neon_green",
+   "neon_cyan",
+   "neon_blue"
+  ],
+  "Combined_Building/slab_44x88_2": [
+   "concrete_a",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_a",
+   "awning_b",
+   "awning_c",
+   "facade_tower_c",
+   "roof_gravel",
+   "neon_red",
+   "neon_pink",
+   "neon_blue",
+   "neon_orange"
+  ],
+  "Combined_Building/slab_52x40_0": [
+   "concrete_a",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_b",
+   "awning_a",
+   "facade_tower_d",
+   "roof_gravel",
+   "neon_cyan",
+   "neon_green"
+  ],
+  "Combined_Building/slab_52x40_1": [
+   "concrete_a",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_b",
+   "facade_tower_a",
+   "roof_gravel",
+   "neon_blue",
+   "neon_red",
+   "neon_green",
+   "neon_cyan"
+  ],
+  "Combined_Building/slab_52x40_2": [
+   "concrete_a",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_c",
+   "awning_d",
+   "facade_tower_a",
+   "roof_gravel",
+   "neon_orange",
+   "neon_purple"
+  ],
+  "Combined_Building/slab_60x54_0": [
+   "concrete_a",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_b",
+   "awning_c",
+   "facade_tower_a",
+   "roof_gravel",
+   "neon_white",
+   "neon_cyan",
+   "neon_pink",
+   "neon_red"
+  ],
+  "Combined_Building/slab_60x54_1": [
+   "concrete_d",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_a",
+   "facade_tower_d",
+   "roof_gravel",
+   "neon_red",
+   "neon_cyan",
+   "neon_green"
+  ],
+  "Combined_Building/slab_60x54_2": [
+   "concrete_a",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "facade_tower_b",
+   "roof_gravel",
+   "neon_orange",
+   "neon_green",
+   "neon_pink"
+  ],
+  "Combined_Building/slab_28x110_0": [
+   "concrete_a",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "facade_tower_c",
+   "roof_gravel",
+   "neon_white"
+  ],
+  "Combined_Building/slab_28x110_1": [
+   "concrete_a",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_b",
+   "awning_a",
+   "awning_c",
+   "facade_glass_a",
+   "roof_gravel",
+   "neon_green",
+   "neon_blue",
+   "neon_red",
+   "neon_purple"
+  ],
+  "Combined_Building/slab_28x110_2": [
+   "concrete_a",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_c",
+   "facade_tower_b",
+   "roof_gravel",
+   "neon_green",
+   "neon_red",
+   "neon_white"
+  ],
+  "Combined_Building/slab_34x132_0": [
+   "concrete_c",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_c",
+   "awning_a",
+   "facade_tower_b",
+   "roof_gravel",
+   "neon_purple",
+   "neon_orange"
+  ],
+  "Combined_Building/slab_34x132_1": [
+   "concrete_d",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_d",
+   "facade_glass_a",
+   "roof_gravel",
+   "neon_white",
+   "neon_blue"
+  ],
+  "Combined_Building/slab_34x132_2": [
+   "concrete_d",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_b",
+   "facade_glass_a",
+   "roof_gravel",
+   "neon_red"
+  ],
+  "Combined_Building/res_14x18_0": [
+   "plaster_b",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_a",
+   "awning_b",
+   "facade_res_a",
+   "concrete_b",
+   "grate_metal",
+   "awning_c",
+   "roof_gravel",
+   "neon_blue"
+  ],
+  "Combined_Building/res_14x18_1": [
+   "plaster_a",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_b",
+   "facade_res_b",
+   "concrete_b",
+   "grate_metal",
+   "awning_c",
+   "roof_gravel",
+   "neon_cyan",
+   "neon_blue"
+  ],
+  "Combined_Building/res_14x18_2": [
+   "brick_a",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_d",
+   "facade_res_c",
+   "concrete_b",
+   "grate_metal",
+   "roof_gravel",
+   "neon_white"
+  ],
+  "Combined_Building/res_16x24_0": [
+   "brick_b",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "facade_res_b",
+   "concrete_b",
+   "grate_metal",
+   "roof_gravel",
+   "neon_purple"
+  ],
+  "Combined_Building/res_16x24_1": [
+   "brick_a",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_a",
+   "awning_b",
+   "facade_res_b",
+   "concrete_b",
+   "grate_metal",
+   "roof_gravel"
+  ],
+  "Combined_Building/res_16x24_2": [
+   "plaster_a",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_d",
+   "awning_c",
+   "facade_res_a",
+   "concrete_b",
+   "grate_metal",
+   "roof_gravel",
+   "neon_white"
+  ],
+  "Combined_Building/res_18x30_0": [
+   "brick_b",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_c",
+   "facade_res_b",
+   "concrete_b",
+   "grate_metal",
+   "roof_gravel"
+  ],
+  "Combined_Building/res_18x30_1": [
+   "brick_a",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_c",
+   "awning_d",
+   "facade_res_c",
+   "concrete_b",
+   "grate_metal",
+   "awning_a",
+   "roof_gravel"
+  ],
+  "Combined_Building/res_18x30_2": [
+   "brick_b",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_c",
+   "facade_res_a",
+   "concrete_b",
+   "grate_metal",
+   "awning_b",
+   "roof_gravel"
+  ],
+  "Combined_Building/res_20x38_0": [
+   "brick_a",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "facade_res_c",
+   "concrete_b",
+   "grate_metal",
+   "awning_b",
+   "roof_gravel"
+  ],
+  "Combined_Building/res_20x38_1": [
+   "plaster_b",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_d",
+   "awning_a",
+   "facade_res_b",
+   "concrete_b",
+   "grate_metal",
+   "awning_b",
+   "roof_gravel"
+  ],
+  "Combined_Building/res_20x38_2": [
+   "plaster_a",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_a",
+   "facade_res_a",
+   "concrete_b",
+   "grate_metal",
+   "roof_gravel",
+   "neon_white",
+   "neon_purple"
+  ],
+  "Combined_Building/res_22x46_0": [
+   "brick_b",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_a",
+   "awning_c",
+   "facade_res_c",
+   "concrete_b",
+   "grate_metal",
+   "awning_b",
+   "roof_gravel",
+   "neon_purple"
+  ],
+  "Combined_Building/res_22x46_1": [
+   "plaster_b",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_c",
+   "awning_d",
+   "awning_a",
+   "facade_res_a",
+   "concrete_b",
+   "grate_metal",
+   "roof_gravel",
+   "neon_blue",
+   "neon_green"
+  ],
+  "Combined_Building/res_22x46_2": [
+   "brick_b",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_c",
+   "facade_res_c",
+   "concrete_b",
+   "grate_metal",
+   "roof_gravel",
+   "neon_green",
+   "neon_cyan"
+  ],
+  "Combined_Building/res_26x28_0": [
+   "plaster_b",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_c",
+   "awning_b",
+   "facade_res_b",
+   "concrete_b",
+   "grate_metal",
+   "roof_gravel"
+  ],
+  "Combined_Building/res_26x28_1": [
+   "brick_b",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_d",
+   "awning_c",
+   "facade_res_a",
+   "concrete_b",
+   "grate_metal",
+   "awning_b",
+   "roof_gravel"
+  ],
+  "Combined_Building/res_26x28_2": [
+   "plaster_a",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_b",
+   "awning_c",
+   "facade_res_a",
+   "concrete_b",
+   "grate_metal",
+   "awning_a",
+   "roof_gravel"
+  ],
+  "Combined_Building/res_30x34_0": [
+   "plaster_b",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_b",
+   "facade_res_a",
+   "concrete_b",
+   "grate_metal",
+   "awning_a",
+   "roof_gravel",
+   "neon_red",
+   "neon_purple"
+  ],
+  "Combined_Building/res_30x34_1": [
+   "brick_b",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_c",
+   "awning_d",
+   "facade_res_a",
+   "concrete_b",
+   "grate_metal",
+   "roof_gravel"
+  ],
+  "Combined_Building/res_30x34_2": [
+   "plaster_a",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_a",
+   "facade_res_b",
+   "concrete_b",
+   "grate_metal",
+   "awning_c",
+   "roof_gravel"
+  ],
+  "Combined_Building/res_12x22_0": [
+   "brick_b",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_a",
+   "awning_b",
+   "facade_res_c",
+   "concrete_b",
+   "grate_metal",
+   "roof_gravel"
+  ],
+  "Combined_Building/res_12x22_1": [
+   "plaster_a",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_d",
+   "awning_a",
+   "facade_res_a",
+   "concrete_b",
+   "grate_metal",
+   "awning_b",
+   "roof_gravel",
+   "neon_white"
+  ],
+  "Combined_Building/res_12x22_2": [
+   "brick_b",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_a",
+   "facade_res_b",
+   "concrete_b",
+   "grate_metal",
+   "roof_gravel",
+   "neon_blue",
+   "neon_pink"
+  ],
+  "Combined_Building/res_24x56_0": [
+   "brick_b",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_b",
+   "facade_res_b",
+   "concrete_b",
+   "grate_metal",
+   "awning_a",
+   "roof_gravel"
+  ],
+  "Combined_Building/res_24x56_1": [
+   "plaster_b",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_c",
+   "awning_a",
+   "facade_res_c",
+   "concrete_b",
+   "grate_metal",
+   "roof_gravel",
+   "neon_blue",
+   "neon_white"
+  ],
+  "Combined_Building/res_24x56_2": [
+   "brick_a",
+   "concrete_dark",
+   "facade_res_a",
+   "concrete_b",
+   "grate_metal",
+   "awning_b",
+   "awning_a",
+   "roof_gravel"
+  ],
+  "Combined_Building/res_28x64_0": [
+   "brick_b",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_b",
+   "facade_res_b",
+   "concrete_b",
+   "grate_metal",
+   "awning_c",
+   "awning_a",
+   "roof_gravel",
+   "neon_cyan",
+   "neon_blue"
+  ],
+  "Combined_Building/res_28x64_1": [
+   "brick_b",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_d",
+   "facade_res_c",
+   "concrete_b",
+   "grate_metal",
+   "awning_c",
+   "roof_gravel",
+   "neon_cyan"
+  ],
+  "Combined_Building/res_28x64_2": [
+   "brick_a",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "facade_res_c",
+   "concrete_b",
+   "grate_metal",
+   "awning_b",
+   "awning_a",
+   "roof_gravel",
+   "neon_pink"
+  ],
+  "Combined_Building/res_15x42_0": [
+   "brick_a",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_c",
+   "facade_res_a",
+   "concrete_b",
+   "grate_metal",
+   "awning_b",
+   "awning_a",
+   "roof_gravel",
+   "neon_white",
+   "neon_cyan"
+  ],
+  "Combined_Building/res_15x42_1": [
+   "brick_a",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "facade_res_b",
+   "concrete_b",
+   "grate_metal",
+   "roof_gravel",
+   "neon_blue",
+   "neon_cyan"
+  ],
+  "Combined_Building/res_15x42_2": [
+   "plaster_a",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_b",
+   "facade_res_b",
+   "concrete_b",
+   "grate_metal",
+   "awning_a",
+   "roof_gravel",
+   "neon_pink"
+  ],
+  "Combined_Building/res_21x26_0": [
+   "brick_a",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_c",
+   "awning_a",
+   "facade_res_a",
+   "concrete_b",
+   "grate_metal",
+   "roof_gravel",
+   "neon_cyan",
+   "neon_white"
+  ],
+  "Combined_Building/res_21x26_1": [
+   "plaster_b",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_b",
+   "facade_res_b",
+   "concrete_b",
+   "grate_metal",
+   "awning_a",
+   "awning_c",
+   "roof_gravel"
+  ],
+  "Combined_Building/res_21x26_2": [
+   "plaster_b",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_a",
+   "awning_c",
+   "facade_res_c",
+   "concrete_b",
+   "grate_metal",
+   "awning_b",
+   "roof_gravel"
+  ],
+  "Combined_Building/corner_18x34_0": [
+   "facade_tower_d",
+   "concrete_c",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_d",
+   "awning_b",
+   "roof_gravel",
+   "neon_blue",
+   "neon_white"
+  ],
+  "Combined_Building/corner_18x34_1": [
+   "facade_res_a",
+   "concrete_b",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_d",
+   "awning_a",
+   "roof_gravel",
+   "concrete_c",
+   "neon_red"
+  ],
+  "Combined_Building/corner_22x44_0": [
+   "facade_res_a",
+   "concrete_d",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_d",
+   "awning_c",
+   "roof_gravel",
+   "concrete_a",
+   "neon_cyan",
+   "neon_red"
+  ],
+  "Combined_Building/corner_22x44_1": [
+   "facade_res_a",
+   "concrete_d",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_d",
+   "awning_b",
+   "roof_gravel",
+   "neon_orange",
+   "neon_red"
+  ],
+  "Combined_Building/corner_26x58_0": [
+   "facade_res_b",
+   "concrete_d",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_b",
+   "awning_a",
+   "roof_gravel",
+   "concrete_c",
+   "neon_white",
+   "neon_cyan"
+  ],
+  "Combined_Building/corner_26x58_1": [
+   "facade_res_b",
+   "concrete_a",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_c",
+   "awning_b",
+   "roof_gravel",
+   "concrete_b",
+   "neon_cyan"
+  ],
+  "Combined_Building/corner_30x76_0": [
+   "facade_tower_a",
+   "concrete_a",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_b",
+   "roof_gravel",
+   "concrete_c",
+   "neon_blue",
+   "neon_red",
+   "neon_green"
+  ],
+  "Combined_Building/corner_30x76_1": [
+   "facade_tower_a",
+   "concrete_a",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_d",
+   "awning_b",
+   "roof_gravel",
+   "concrete_c",
+   "neon_blue",
+   "neon_orange"
+  ],
+  "Combined_Building/corner_34x96_0": [
+   "facade_tower_a",
+   "concrete_c",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_c",
+   "roof_gravel",
+   "concrete_b",
+   "neon_red",
+   "neon_blue",
+   "neon_orange"
+  ],
+  "Combined_Building/corner_34x96_1": [
+   "facade_tower_c",
+   "concrete_b",
+   "concrete_dark",
+   "glass_shop",
+   "shop_glow",
+   "awning_d",
+   "awning_a",
+   "roof_gravel",
+   "neon_blue"
+  ],
+  "Combined_Building/slum_8x9_0": [
+   "metal_rust_b",
+   "facade_slum_b",
+   "brick_a",
+   "metal_rust_a"
+  ],
+  "Combined_Building/slum_8x9_1": [
+   "metal_rust_b",
+   "facade_slum_b",
+   "plaster_a",
+   "brick_b",
+   "facade_slum_a",
+   "neon_cyan",
+   "metal_rust_a"
+  ],
+  "Combined_Building/slum_8x9_2": [
+   "metal_rust_b",
+   "facade_slum_b",
+   "metal_rust_a",
+   "brick_a"
+  ],
+  "Combined_Building/slum_10x12_0": [
+   "plaster_b",
+   "neon_red",
+   "brick_b",
+   "facade_slum_a",
+   "brick_a",
+   "facade_slum_b",
+   "metal_rust_b",
+   "metal_rust_a"
+  ],
+  "Combined_Building/slum_10x12_1": [
+   "brick_a",
+   "neon_pink",
+   "metal_rust_b",
+   "facade_slum_b",
+   "neon_green",
+   "plaster_a",
+   "facade_slum_a",
+   "metal_rust_a"
+  ],
+  "Combined_Building/slum_10x12_2": [
+   "metal_rust_b",
+   "facade_slum_a",
+   "neon_orange",
+   "metal_rust_a",
+   "facade_slum_b",
+   "plaster_a"
+  ],
+  "Combined_Building/slum_12x15_0": [
+   "plaster_b",
+   "facade_slum_a",
+   "metal_rust_b",
+   "metal_rust_a",
+   "facade_slum_b",
+   "plaster_a",
+   "neon_blue",
+   "neon_pink",
+   "brick_a",
+   "neon_red"
+  ],
+  "Combined_Building/slum_12x15_1": [
+   "metal_rust_b",
+   "facade_slum_b",
+   "plaster_b",
+   "brick_b",
+   "facade_slum_a",
+   "plaster_a",
+   "metal_rust_a"
+  ],
+  "Combined_Building/slum_12x15_2": [
+   "plaster_a",
+   "neon_blue",
+   "plaster_b",
+   "facade_slum_a",
+   "metal_rust_a",
+   "metal_rust_b",
+   "neon_pink",
+   "brick_b"
+  ],
+  "Combined_Building/slum_9x18_0": [
+   "brick_b",
+   "facade_slum_a",
+   "metal_rust_b",
+   "brick_a",
+   "metal_rust_a",
+   "neon_blue",
+   "neon_cyan",
+   "plaster_b"
+  ],
+  "Combined_Building/slum_9x18_1": [
+   "metal_rust_b",
+   "brick_a",
+   "neon_red",
+   "plaster_a",
+   "facade_slum_b",
+   "facade_slum_a",
+   "metal_rust_a",
+   "plaster_b"
+  ],
+  "Combined_Building/slum_9x18_2": [
+   "brick_a",
+   "neon_blue",
+   "plaster_a",
+   "facade_slum_a",
+   "metal_rust_b",
+   "brick_b",
+   "neon_pink",
+   "metal_rust_a",
+   "neon_green",
+   "facade_slum_b"
+  ],
+  "Combined_Building/slum_11x22_0": [
+   "plaster_b",
+   "metal_rust_b",
+   "neon_cyan",
+   "facade_slum_a",
+   "metal_rust_a",
+   "facade_slum_b",
+   "neon_pink",
+   "brick_b",
+   "plaster_a"
+  ],
+  "Combined_Building/slum_11x22_1": [
+   "brick_a",
+   "metal_rust_b",
+   "plaster_b",
+   "facade_slum_a",
+   "neon_red",
+   "brick_b",
+   "facade_slum_b",
+   "neon_orange",
+   "plaster_a",
+   "metal_rust_a"
+  ],
+  "Combined_Building/slum_11x22_2": [
+   "plaster_b",
+   "facade_slum_a",
+   "metal_rust_b",
+   "neon_pink",
+   "metal_rust_a",
+   "plaster_a",
+   "neon_purple",
+   "brick_a",
+   "facade_slum_b"
+  ],
+  "Combined_Building/slum_14x10_0": [
+   "brick_a",
+   "facade_slum_a",
+   "brick_b",
+   "facade_slum_b",
+   "metal_rust_b",
+   "metal_rust_a",
+   "neon_cyan"
+  ],
+  "Combined_Building/slum_14x10_1": [
+   "brick_b",
+   "facade_slum_a",
+   "metal_rust_b",
+   "neon_red",
+   "plaster_b",
+   "facade_slum_b",
+   "metal_rust_a"
+  ],
+  "Combined_Building/slum_14x10_2": [
+   "brick_a",
+   "plaster_a",
+   "facade_slum_b",
+   "neon_orange",
+   "plaster_b",
+   "metal_rust_a"
+  ],
+  "Combined_Building/slum_7x13_0": [
+   "brick_a",
+   "facade_slum_a",
+   "metal_rust_b",
+   "plaster_a",
+   "neon_pink",
+   "brick_b",
+   "facade_slum_b",
+   "metal_rust_a"
+  ],
+  "Combined_Building/slum_7x13_1": [
+   "plaster_a",
+   "facade_slum_b",
+   "neon_blue",
+   "metal_rust_a",
+   "metal_rust_b",
+   "brick_b",
+   "neon_white"
+  ],
+  "Combined_Building/slum_7x13_2": [
+   "metal_rust_a",
+   "facade_slum_a",
+   "metal_rust_b",
+   "plaster_a",
+   "brick_b",
+   "facade_slum_b",
+   "brick_a"
+  ],
+  "Combined_Building/slum_13x20_0": [
+   "brick_b",
+   "facade_slum_b",
+   "metal_rust_b",
+   "neon_pink",
+   "plaster_a",
+   "brick_a",
+   "neon_green",
+   "facade_slum_a",
+   "plaster_b",
+   "metal_rust_a"
+  ],
+  "Combined_Building/slum_13x20_1": [
+   "metal_rust_b",
+   "facade_slum_b",
+   "neon_blue",
+   "plaster_b",
+   "plaster_a",
+   "brick_a",
+   "facade_slum_a",
+   "metal_rust_a",
+   "neon_red"
+  ],
+  "Combined_Building/slum_13x20_2": [
+   "brick_a",
+   "plaster_b",
+   "facade_slum_b",
+   "metal_rust_b",
+   "plaster_a",
+   "neon_pink",
+   "metal_rust_a"
+  ],
+  "Combined_Building/warehouse_26x9_0": [
+   "metal_rust_a",
+   "concrete_d",
+   "metal_b",
+   "glass_dark",
+   "light_white"
+  ],
+  "Combined_Building/warehouse_26x9_1": [
+   "metal_rust_a",
+   "concrete_d",
+   "metal_b",
+   "glass_dark",
+   "light_white"
+  ],
+  "Combined_Building/warehouse_34x12_0": [
+   "metal_rust_a",
+   "concrete_d",
+   "metal_b",
+   "glass_dark",
+   "light_white"
+  ],
+  "Combined_Building/warehouse_34x12_1": [
+   "metal_rust_a",
+   "concrete_d",
+   "metal_b",
+   "glass_dark",
+   "light_white"
+  ],
+  "Combined_Building/warehouse_44x14_0": [
+   "metal_rust_a",
+   "concrete_d",
+   "metal_b",
+   "glass_dark",
+   "light_white"
+  ],
+  "Combined_Building/warehouse_44x14_1": [
+   "metal_rust_a",
+   "concrete_d",
+   "metal_b",
+   "glass_dark",
+   "light_white"
+  ],
+  "Combined_Building/warehouse_56x11_0": [
+   "metal_rust_a",
+   "concrete_d",
+   "metal_b",
+   "glass_dark",
+   "light_white"
+  ],
+  "Combined_Building/warehouse_56x11_1": [
+   "metal_rust_a",
+   "concrete_d",
+   "metal_b",
+   "glass_dark",
+   "light_white"
+  ],
+  "Combined_Building/parking_28x17_0": [
+   "concrete_b",
+   "concrete_d",
+   "light_white",
+   "concrete_a"
+  ],
+  "Combined_Building/parking_28x17_1": [
+   "concrete_b",
+   "concrete_d",
+   "light_white",
+   "concrete_a"
+  ],
+  "Combined_Building/parking_34x24_0": [
+   "concrete_b",
+   "concrete_d",
+   "light_white",
+   "concrete_a"
+  ],
+  "Combined_Building/parking_34x24_1": [
+   "concrete_b",
+   "concrete_d",
+   "light_white",
+   "concrete_a"
+  ],
+  "Combined_Building/parking_40x31_0": [
+   "concrete_b",
+   "concrete_d",
+   "light_white",
+   "concrete_a"
+  ],
+  "Combined_Building/parking_40x31_1": [
+   "concrete_b",
+   "concrete_d",
+   "light_white",
+   "concrete_a"
+  ],
+  "Decals/road_lines_8x40": [
+   "decal_road_lines"
+  ],
+  "Decals/road_lines_10x60": [
+   "decal_road_lines"
+  ],
+  "Decals/road_lines_14x80": [
+   "decal_road_lines"
+  ],
+  "Decals/road_lines_18x40": [
+   "decal_road_lines"
+  ],
+  "Decals/crosswalk_0": [
+   "decal_road_lines"
+  ],
+  "Decals/crosswalk_1": [
+   "decal_road_lines"
+  ],
+  "Decals/crosswalk_2": [
+   "decal_road_lines"
+  ],
+  "Decals/crosswalk_3": [
+   "decal_road_lines"
+  ],
+  "Decals/stain_2": [
+   "decal_grime"
+  ],
+  "Decals/stain_3": [
+   "decal_grime"
+  ],
+  "Decals/stain_5": [
+   "decal_grime"
+  ],
+  "Decals/stain_8": [
+   "decal_grime"
+  ],
+  "Decals/wall_grime_3x5": [
+   "decal_grime"
+  ],
+  "Decals/wall_grime_5x8": [
+   "decal_grime"
+  ],
+  "Decals/wall_grime_8x12": [
+   "decal_grime"
+  ],
+  "Decals/wall_grime_12x18": [
+   "decal_grime"
+  ],
+  "Decals/wall_grime_16x26": [
+   "decal_grime"
+  ],
+  "Decals/wall_grime_6x14": [
+   "decal_grime"
+  ],
+  "Decals/plate_1": [
+   "sign_plate_1"
+  ],
+  "Decals/plate_2": [
+   "sign_plate_2"
+  ],
+  "Decals/plate_3": [
+   "sign_plate_3"
+  ],
+  "Decals/plate_4": [
+   "sign_plate_4"
+  ],
+  "Decals/plate_5": [
+   "sign_plate_5"
+  ],
+  "Decals/plate_6": [
+   "sign_plate_6"
+  ],
+  "Decals/ad_flat_1": [
+   "ad_screen_1"
+  ],
+  "Decals/ad_flat_2": [
+   "ad_screen_2"
+  ],
+  "Decals/ad_flat_3": [
+   "ad_screen_3"
+  ],
+  "Decals/ad_flat_4": [
+   "ad_screen_4"
+  ],
+  "Decals/ad_flat_5": [
+   "ad_screen_5"
+  ],
+  "Decals/ad_flat_6": [
+   "ad_screen_6"
+  ],
+  "Decals/ad_flat_7": [
+   "ad_screen_7"
+  ],
+  "Decals/ad_flat_8": [
+   "ad_screen_8"
+  ],
+  "Decals/puddle_3": [
+   "decal_grime"
+  ],
+  "Decals/puddle_5": [
+   "decal_grime"
+  ],
+  "Decals/puddle_7": [
+   "decal_grime"
+  ],
+  "Decals/hazard_0": [
+   "decal_road_lines"
+  ],
+  "Decals/hazard_1": [
+   "decal_road_lines"
+  ],
+  "Decals/hazard_2": [
+   "decal_road_lines"
+  ],
+  "Decals/arrow_0": [
+   "decal_road_lines"
+  ],
+  "Decals/arrow_1": [
+   "decal_road_lines"
+  ],
+  "Decals/arrow_2": [
+   "decal_road_lines"
+  ],
+  "Decals/arrow_3": [
+   "decal_road_lines"
+  ],
+  "Environment/cloud_60": [
+   "cloud_billboard"
+  ],
+  "Environment/cloud_110": [
+   "cloud_billboard"
+  ],
+  "Environment/cloud_180": [
+   "cloud_billboard"
+  ],
+  "Environment/cloud_260": [
+   "cloud_billboard"
+  ],
+  "Environment/cloud_360": [
+   "cloud_billboard"
+  ],
+  "Environment/cloud_480": [
+   "cloud_billboard"
+  ],
+  "Environment/water_tank_env_0.9": [
+   "wood_a",
+   "metal_rust_b",
+   "metal_rust_a"
+  ],
+  "Environment/water_tank_env_1.2": [
+   "wood_a",
+   "metal_rust_b",
+   "metal_rust_a"
+  ],
+  "Environment/water_tank_env_1.6": [
+   "wood_a",
+   "metal_rust_b",
+   "metal_rust_a"
+  ],
+  "Environment/bridge_40": [
+   "concrete_b",
+   "asphalt_a",
+   "metal_b",
+   "light_amber"
+  ],
+  "Environment/bridge_60": [
+   "concrete_b",
+   "asphalt_a",
+   "metal_b",
+   "light_amber"
+  ],
+  "Environment/bridge_90": [
+   "concrete_b",
+   "asphalt_a",
+   "metal_b",
+   "light_amber"
+  ],
+  "Environment/bridge_130": [
+   "concrete_b",
+   "asphalt_a",
+   "metal_b",
+   "light_amber"
+  ],
+  "Environment/pylon_22": [
+   "antenna_metal",
+   "light_red"
+  ],
+  "Environment/pylon_34": [
+   "antenna_metal",
+   "light_red"
+  ],
+  "Environment/pylon_48": [
+   "antenna_metal",
+   "light_red"
+  ],
+  "Environment/tree_0": [
+   "wood_a"
+  ],
+  "Environment/tree_1": [
+   "wood_a"
+  ],
+  "Environment/tree_2": [
+   "wood_a"
+  ],
+  "Environment/tree_3": [
+   "wood_a"
+  ],
+  "Environment/smokestack_26": [
+   "brick_b",
+   "metal_rust_b",
+   "light_red"
+  ],
+  "Environment/smokestack_38": [
+   "brick_b",
+   "metal_rust_b",
+   "light_red"
+  ],
+  "Environment/smokestack_52": [
+   "brick_b",
+   "metal_rust_b",
+   "light_red"
+  ],
+  "Environment/gantry_16": [
+   "metal_b",
+   "ad_screen_4",
+   "ad_screen_1",
+   "light_white"
+  ],
+  "Environment/gantry_24": [
+   "metal_b",
+   "ad_screen_8",
+   "ad_screen_6",
+   "ad_screen_3",
+   "light_white"
+  ],
+  "Environment/gantry_34": [
+   "metal_b",
+   "ad_screen_7",
+   "ad_screen_2",
+   "ad_screen_8",
+   "ad_screen_4",
+   "light_white"
+  ],
+  "Environment/pipebridge_10": [
+   "pipe_metal",
+   "grate_metal",
+   "metal_rust_b"
+  ],
+  "Environment/pipebridge_18": [
+   "pipe_metal",
+   "grate_metal",
+   "metal_rust_b"
+  ],
+  "Environment/pipebridge_26": [
+   "pipe_metal",
+   "grate_metal",
+   "metal_rust_b"
+  ],
+  "Environment/safety_floor_30x30": [
+   "safety_floor"
+  ],
+  "Environment/safety_floor_50x40": [
+   "safety_floor"
+  ],
+  "Environment/safety_floor_70x60": [
+   "safety_floor"
+  ],
+  "Environment/safety_floor_400x400": [
+   "safety_floor"
+  ],
+  "Environment/water_20x20": [
+   "water_dark"
+  ],
+  "Environment/water_34x26": [
+   "water_dark"
+  ],
+  "Environment/podium_12": [
+   "podium_concrete"
+  ],
+  "Environment/podium_20": [
+   "podium_concrete"
+  ],
+  "Environment/podium_30": [
+   "podium_concrete"
+  ],
+  "Environment/rubble_0": [
+   "metal_rust_b",
+   "brick_b",
+   "concrete_d"
+  ],
+  "Environment/rubble_1": [
+   "concrete_d",
+   "brick_b",
+   "metal_rust_b"
+  ],
+  "Environment/rubble_2": [
+   "concrete_d",
+   "metal_rust_b",
+   "brick_b"
+  ],
+  "Environment/rubble_3": [
+   "metal_rust_b",
+   "brick_b",
+   "concrete_d"
+  ],
+  "Environment/rubble_4": [
+   "concrete_d",
+   "brick_b",
+   "metal_rust_b"
+  ],
+  "Environment/rubble_5": [
+   "concrete_d",
+   "brick_b",
+   "metal_rust_b"
+  ],
+  "Environment/hoarding_12": [
+   "metal_rust_a",
+   "ad_screen_7",
+   "ad_screen_6",
+   "metal_rust_b"
+  ],
+  "Environment/hoarding_20": [
+   "metal_rust_a",
+   "ad_screen_2",
+   "ad_screen_4",
+   "metal_rust_b"
+  ],
+  "Environment/hoarding_30": [
+   "metal_rust_a",
+   "ad_screen_7",
+   "ad_screen_3",
+   "metal_rust_b"
+  ],
+  "Environment/hoarding_44": [
+   "metal_rust_a",
+   "ad_screen_2",
+   "ad_screen_5",
+   "metal_rust_b"
+  ],
+  "Environment/roof_garden_0": [
+   "concrete_b",
+   "awning_d"
+  ],
+  "Environment/roof_garden_1": [
+   "concrete_b",
+   "awning_d"
+  ],
+  "Environment/roof_garden_2": [
+   "concrete_b",
+   "awning_d"
+  ],
+  "Environment/roof_garden_3": [
+   "concrete_b",
+   "awning_d"
+  ],
+  "Environment/roof_garden_4": [
+   "concrete_b",
+   "awning_d"
+  ],
+  "Environment/chimneys_0": [
+   "brick_b"
+  ],
+  "Environment/chimneys_1": [
+   "brick_b"
+  ],
+  "Environment/chimneys_2": [
+   "brick_b"
+  ],
+  "Environment/chimneys_3": [
+   "brick_b"
+  ],
+  "Environment/chimneys_4": [
+   "brick_b"
+  ],
+  "Facade_Details/ac_unit_0": [
+   "metal_a",
+   "grate_metal",
+   "metal_b"
+  ],
+  "Facade_Details/ac_unit_1": [
+   "metal_a",
+   "grate_metal",
+   "metal_b"
+  ],
+  "Facade_Details/ac_unit_2": [
+   "metal_a",
+   "grate_metal",
+   "metal_b"
+  ],
+  "Facade_Details/ac_bank_2": [
+   "metal_a",
+   "grate_metal",
+   "pipe_metal"
+  ],
+  "Facade_Details/ac_bank_3": [
+   "metal_a",
+   "grate_metal",
+   "pipe_metal"
+  ],
+  "Facade_Details/ac_bank_4": [
+   "metal_a",
+   "grate_metal",
+   "pipe_metal"
+  ],
+  "Facade_Details/ac_bank_5": [
+   "metal_a",
+   "grate_metal",
+   "pipe_metal"
+  ],
+  "Facade_Details/pipe_v_6": [
+   "pipe_metal",
+   "metal_b"
+  ],
+  "Facade_Details/pipe_v3_6": [
+   "pipe_metal",
+   "metal_b"
+  ],
+  "Facade_Details/pipe_v_10": [
+   "pipe_metal",
+   "metal_b"
+  ],
+  "Facade_Details/pipe_v3_10": [
+   "pipe_metal",
+   "metal_b"
+  ],
+  "Facade_Details/pipe_v_16": [
+   "pipe_metal",
+   "metal_b"
+  ],
+  "Facade_Details/pipe_v3_16": [
+   "pipe_metal",
+   "metal_b"
+  ],
+  "Facade_Details/pipe_v_24": [
+   "pipe_metal",
+   "metal_b"
+  ],
+  "Facade_Details/pipe_v3_24": [
+   "pipe_metal",
+   "metal_b"
+  ],
+  "Facade_Details/pipe_v_34": [
+   "pipe_metal",
+   "metal_b"
+  ],
+  "Facade_Details/pipe_v3_34": [
+   "pipe_metal",
+   "metal_b"
+  ],
+  "Facade_Details/pipe_h_6": [
+   "pipe_metal",
+   "metal_b"
+  ],
+  "Facade_Details/pipe_h_10": [
+   "pipe_metal",
+   "metal_b"
+  ],
+  "Facade_Details/pipe_h_16": [
+   "pipe_metal",
+   "metal_b"
+  ],
+  "Facade_Details/balcony_2.4": [
+   "concrete_b",
+   "grate_metal",
+   "plastic_dark"
+  ],
+  "Facade_Details/balcony_3.2": [
+   "concrete_b",
+   "grate_metal",
+   "plastic_dark"
+  ],
+  "Facade_Details/balcony_4.4": [
+   "concrete_b",
+   "grate_metal",
+   "plastic_dark"
+  ],
+  "Facade_Details/balcony_6": [
+   "concrete_b",
+   "grate_metal",
+   "plastic_dark"
+  ],
+  "Facade_Details/wall_sign_s_1": [
+   "metal_b",
+   "sign_plate_1"
+  ],
+  "Facade_Details/wall_sign_s_2": [
+   "metal_b",
+   "sign_plate_2"
+  ],
+  "Facade_Details/wall_sign_s_3": [
+   "metal_b",
+   "sign_plate_3"
+  ],
+  "Facade_Details/wall_sign_s_4": [
+   "metal_b",
+   "sign_plate_4"
+  ],
+  "Facade_Details/wall_sign_s_5": [
+   "metal_b",
+   "sign_plate_5"
+  ],
+  "Facade_Details/wall_sign_s_6": [
+   "metal_b",
+   "sign_plate_6"
+  ],
+  "Facade_Details/wall_ad_1": [
+   "metal_b",
+   "ad_screen_1"
+  ],
+  "Facade_Details/wall_ad_2": [
+   "metal_b",
+   "ad_screen_2"
+  ],
+  "Facade_Details/wall_ad_3": [
+   "metal_b",
+   "ad_screen_3"
+  ],
+  "Facade_Details/wall_ad_4": [
+   "metal_b",
+   "ad_screen_4"
+  ],
+  "Facade_Details/wall_ad_5": [
+   "metal_b",
+   "ad_screen_5"
+  ],
+  "Facade_Details/wall_ad_6": [
+   "metal_b",
+   "ad_screen_6"
+  ],
+  "Facade_Details/wall_ad_7": [
+   "metal_b",
+   "ad_screen_7"
+  ],
+  "Facade_Details/wall_ad_8": [
+   "metal_b",
+   "ad_screen_8"
+  ],
+  "Facade_Details/neon_v_3": [
+   "metal_b",
+   "neon_orange",
+   "neon_red",
+   "metal_a"
+  ],
+  "Facade_Details/neon_v_5": [
+   "metal_b",
+   "neon_white",
+   "neon_blue",
+   "metal_a"
+  ],
+  "Facade_Details/neon_v_7": [
+   "metal_b",
+   "neon_orange",
+   "neon_pink",
+   "metal_a"
+  ],
+  "Facade_Details/neon_v_9": [
+   "metal_b",
+   "neon_red",
+   "neon_pink",
+   "metal_a"
+  ],
+  "Facade_Details/neon_v_12": [
+   "metal_b",
+   "neon_cyan",
+   "neon_green",
+   "metal_a"
+  ],
+  "Facade_Details/neon_h_3": [
+   "metal_b",
+   "neon_pink",
+   "neon_white"
+  ],
+  "Facade_Details/neon_h_5": [
+   "metal_b",
+   "neon_purple",
+   "neon_green"
+  ],
+  "Facade_Details/neon_h_8": [
+   "metal_b",
+   "neon_green"
+  ],
+  "Facade_Details/neon_h_12": [
+   "metal_b",
+   "neon_green",
+   "neon_orange"
+  ],
+  "Facade_Details/fire_escape_3": [
+   "grate_metal",
+   "metal_rust_b"
+  ],
+  "Facade_Details/fire_escape_5": [
+   "grate_metal",
+   "metal_rust_b"
+  ],
+  "Facade_Details/fire_escape_7": [
+   "grate_metal",
+   "metal_rust_b"
+  ],
+  "Facade_Details/fire_escape_9": [
+   "grate_metal",
+   "metal_rust_b"
+  ],
+  "Facade_Details/drainpipe_8": [
+   "metal_rust_b",
+   "metal_b"
+  ],
+  "Facade_Details/drainpipe_14": [
+   "metal_rust_b",
+   "metal_b"
+  ],
+  "Facade_Details/drainpipe_22": [
+   "metal_rust_b",
+   "metal_b"
+  ],
+  "Facade_Details/drainpipe_32": [
+   "metal_rust_b",
+   "metal_b"
+  ],
+  "Facade_Details/cables_14": [
+   "catenary"
+  ],
+  "Facade_Details/cables_22": [
+   "catenary"
+  ],
+  "Facade_Details/cables_32": [
+   "catenary"
+  ],
+  "Facade_Details/cables_44": [
+   "catenary"
+  ],
+  "Facade_Details/wall_light_0": [
+   "metal_b",
+   "light_warm"
+  ],
+  "Facade_Details/wall_light_1": [
+   "metal_b",
+   "light_warm"
+  ],
+  "Facade_Details/wall_light_2": [
+   "metal_b",
+   "light_warm"
+  ],
+  "Facade_Details/window_box_0": [
+   "concrete_b",
+   "plastic_dark"
+  ],
+  "Facade_Details/window_box_1": [
+   "concrete_b",
+   "plastic_dark"
+  ],
+  "Facade_Details/window_box_2": [
+   "concrete_b",
+   "plastic_dark"
+  ],
+  "Facade_Details/laundry_4": [
+   "catenary",
+   "cloth_white",
+   "awning_b",
+   "awning_c",
+   "awning_d",
+   "awning_a"
+  ],
+  "Facade_Details/laundry_7": [
+   "catenary",
+   "awning_c",
+   "awning_d",
+   "awning_b",
+   "cloth_white"
+  ],
+  "Facade_Details/laundry_10": [
+   "catenary",
+   "cloth_white",
+   "awning_d",
+   "awning_b"
+  ],
+  "Facade_Details/vent_1": [
+   "metal_b",
+   "metal_a",
+   "metal_rust_b"
+  ],
+  "Facade_Details/vent_1.4": [
+   "metal_b",
+   "metal_a",
+   "metal_rust_b"
+  ],
+  "Facade_Details/vent_1.9": [
+   "metal_b",
+   "metal_a",
+   "metal_rust_b"
+  ],
+  "Facade_Details/satellite_0": [
+   "metal_a",
+   "metal_b"
+  ],
+  "Facade_Details/satellite_1": [
+   "metal_a",
+   "metal_b"
+  ],
+  "Facade_Details/satellite_2": [
+   "metal_a",
+   "metal_b"
+  ],
+  "Facade_Details/satellite_3": [
+   "metal_a",
+   "metal_b"
+  ],
+  "Facade_Details/antenna_4": [
+   "antenna_metal"
+  ],
+  "Facade_Details/antenna_7": [
+   "antenna_metal"
+  ],
+  "Facade_Details/antenna_11": [
+   "antenna_metal"
+  ],
+  "Facade_Details/awning_2.5": [
+   "awning_b",
+   "metal_rust_b"
+  ],
+  "Facade_Details/awning_4": [
+   "awning_a",
+   "metal_rust_b"
+  ],
+  "Facade_Details/awning_6": [
+   "awning_d",
+   "metal_rust_b"
+  ],
+  "Facade_Details/awning_9": [
+   "awning_a",
+   "metal_rust_b"
+  ],
+  "Facade_Details/vent_grille_0": [
+   "grate_metal",
+   "metal_b"
+  ],
+  "Facade_Details/vent_grille_1": [
+   "grate_metal",
+   "metal_b"
+  ],
+  "Facade_Details/vent_grille_2": [
+   "grate_metal",
+   "metal_b"
+  ],
+  "Facade_Details/vent_grille_3": [
+   "grate_metal",
+   "metal_b"
+  ],
+  "Facade_Details/vent_grille_4": [
+   "grate_metal",
+   "metal_b"
+  ],
+  "Facade_Details/conduit_box_0": [
+   "plastic_dark",
+   "catenary"
+  ],
+  "Facade_Details/conduit_box_1": [
+   "plastic_dark",
+   "catenary"
+  ],
+  "Facade_Details/conduit_box_2": [
+   "plastic_dark",
+   "catenary"
+  ],
+  "Facade_Details/conduit_box_3": [
+   "plastic_dark",
+   "catenary"
+  ],
+  "Facade_Details/conduit_box_4": [
+   "plastic_dark",
+   "catenary"
+  ],
+  "Facade_Details/ledge_2.5": [
+   "concrete_b",
+   "concrete_d"
+  ],
+  "Facade_Details/ledge_4": [
+   "concrete_b",
+   "concrete_d"
+  ],
+  "Facade_Details/ledge_6": [
+   "concrete_b",
+   "concrete_d"
+  ],
+  "Metro/rail_40": [
+   "rail_steel",
+   "sleeper_concrete",
+   "concrete_d"
+  ],
+  "Metro/rail_80": [
+   "rail_steel",
+   "sleeper_concrete",
+   "concrete_d"
+  ],
+  "Metro/rail_120": [
+   "rail_steel",
+   "sleeper_concrete",
+   "concrete_d"
+  ],
+  "Metro/platform_40x6": [
+   "tile_metro",
+   "concrete_d",
+   "light_amber",
+   "light_white",
+   "metal_b"
+  ],
+  "Metro/platform_40x9": [
+   "tile_metro",
+   "concrete_d",
+   "light_amber",
+   "light_white",
+   "metal_b"
+  ],
+  "Metro/platform_80x6": [
+   "tile_metro",
+   "concrete_d",
+   "light_amber",
+   "light_white",
+   "metal_b"
+  ],
+  "Metro/platform_80x9": [
+   "tile_metro",
+   "concrete_d",
+   "light_amber",
+   "light_white",
+   "metal_b"
+  ],
+  "Metro/column_5": [
+   "tile_metro",
+   "metal_b",
+   "sign_plate_3"
+  ],
+  "Metro/column_7": [
+   "tile_metro",
+   "metal_b",
+   "sign_plate_3"
+  ],
+  "Metro/column_9": [
+   "tile_metro",
+   "metal_b",
+   "sign_plate_3"
+  ],
+  "Metro/column_12": [
+   "tile_metro",
+   "metal_b",
+   "sign_plate_3"
+  ],
+  "Metro/tunnel_40x6": [
+   "concrete_dark"
+  ],
+  "Metro/tunnel_40x8": [
+   "concrete_dark"
+  ],
+  "Metro/tunnel_80x6": [
+   "concrete_dark"
+  ],
+  "Metro/tunnel_80x8": [
+   "concrete_dark"
+  ],
+  "Metro/canopy_30": [
+   "metal_b",
+   "glass_dark",
+   "light_white",
+   "sign_plate_4"
+  ],
+  "Metro/canopy_50": [
+   "metal_b",
+   "glass_dark",
+   "light_white",
+   "sign_plate_4"
+  ],
+  "Metro/canopy_70": [
+   "metal_b",
+   "glass_dark",
+   "light_white",
+   "sign_plate_4"
+  ],
+  "Metro/train_0": [
+   "metal_c",
+   "glass_dark",
+   "neon_red",
+   "light_white",
+   "plastic_dark"
+  ],
+  "Metro/train_1": [
+   "metal_c",
+   "glass_dark",
+   "neon_white",
+   "light_white",
+   "plastic_dark"
+  ],
+  "Metro/train_2": [
+   "metal_c",
+   "glass_dark",
+   "neon_red",
+   "light_white",
+   "plastic_dark"
+  ],
+  "Metro/escalator_4": [
+   "metal_a",
+   "glass_dark",
+   "light_white"
+  ],
+  "Metro/escalator_6": [
+   "metal_a",
+   "glass_dark",
+   "light_white"
+  ],
+  "Metro/escalator_8": [
+   "metal_a",
+   "glass_dark",
+   "light_white"
+  ],
+  "Metro/turnstile_0": [
+   "metal_a",
+   "light_white"
+  ],
+  "Metro/turnstile_1": [
+   "metal_a",
+   "light_white"
+  ],
+  "Metro/tunnel_light_0": [
+   "metal_b",
+   "light_warm"
+  ],
+  "Metro/tunnel_light_1": [
+   "metal_b",
+   "light_warm"
+  ],
+  "Metro/tunnel_light_2": [
+   "metal_b",
+   "light_warm"
+  ],
+  "Metro/tunnel_light_3": [
+   "metal_b",
+   "light_warm"
+  ],
+  "Metro/stair_3": [
+   "concrete_b",
+   "grate_metal"
+  ],
+  "Metro/stair_5": [
+   "concrete_b",
+   "grate_metal"
+  ],
+  "Metro/stair_8": [
+   "concrete_b",
+   "grate_metal"
+  ],
+  "Metro/stair_12": [
+   "concrete_b",
+   "grate_metal"
+  ],
+  "Metro/tunnel_wall_0": [
+   "tile_metro",
+   "sign_plate_1",
+   "light_white"
+  ],
+  "Metro/tunnel_wall_1": [
+   "tile_metro",
+   "sign_plate_2",
+   "light_white"
+  ],
+  "Metro/tunnel_wall_2": [
+   "tile_metro",
+   "sign_plate_3",
+   "light_white"
+  ],
+  "Metro/tunnel_wall_3": [
+   "tile_metro",
+   "sign_plate_4",
+   "light_white"
+  ],
+  "Metro/vent_shaft_10": [
+   "concrete_dark",
+   "grate_metal"
+  ],
+  "Metro/vent_shaft_16": [
+   "concrete_dark",
+   "grate_metal"
+  ],
+  "Metro/vent_shaft_24": [
+   "concrete_dark",
+   "grate_metal"
+  ],
+  "Metro/signal_0": [
+   "metal_b",
+   "light_red",
+   "light_white"
+  ],
+  "Metro/signal_1": [
+   "metal_b",
+   "light_red",
+   "light_white"
+  ],
+  "Metro/signal_2": [
+   "metal_b",
+   "light_red",
+   "light_white"
+  ],
+  "Modules/roof_equip_0": [
+   "metal_rust_a",
+   "metal_c",
+   "pipe_metal"
+  ],
+  "Modules/roof_equip_1": [
+   "metal_rust_a",
+   "pipe_metal",
+   "metal_a",
+   "metal_c"
+  ],
+  "Modules/roof_equip_2": [
+   "metal_rust_a",
+   "pipe_metal",
+   "metal_b",
+   "metal_c",
+   "light_red"
+  ],
+  "Modules/roof_equip_3": [
+   "metal_rust_a",
+   "metal_a",
+   "metal_c",
+   "pipe_metal",
+   "metal_b",
+   "light_red"
+  ],
+  "Modules/roof_equip_4": [
+   "metal_a",
+   "metal_b",
+   "metal_c",
+   "pipe_metal",
+   "metal_rust_a"
+  ],
+  "Modules/roof_equip_5": [
+   "metal_b",
+   "metal_c",
+   "metal_a",
+   "pipe_metal"
+  ],
+  "Modules/roof_equip_6": [
+   "metal_b",
+   "metal_a",
+   "metal_c",
+   "pipe_metal"
+  ],
+  "Modules/roof_equip_7": [
+   "metal_b",
+   "pipe_metal",
+   "metal_c",
+   "light_red"
+  ],
+  "Modules/stair_hut_0": [
+   "concrete_b",
+   "concrete_dark",
+   "metal_b",
+   "light_warm"
+  ],
+  "Modules/stair_hut_1": [
+   "concrete_b",
+   "concrete_dark",
+   "metal_b",
+   "light_warm"
+  ],
+  "Modules/stair_hut_2": [
+   "concrete_b",
+   "concrete_dark",
+   "metal_b",
+   "light_warm"
+  ],
+  "Modules/cooling_0.8": [
+   "metal_b",
+   "grate_metal",
+   "metal_a"
+  ],
+  "Modules/cooling_1.1": [
+   "metal_b",
+   "grate_metal",
+   "metal_a"
+  ],
+  "Modules/cooling_1.5": [
+   "metal_b",
+   "grate_metal",
+   "metal_a"
+  ],
+  "Modules/billboard_1": [
+   "metal_b",
+   "ad_screen_1",
+   "metal_rust_b",
+   "light_white"
+  ],
+  "Modules/billboard_2": [
+   "metal_b",
+   "ad_screen_2",
+   "metal_rust_b",
+   "light_white"
+  ],
+  "Modules/billboard_3": [
+   "metal_b",
+   "ad_screen_3",
+   "metal_rust_b",
+   "light_white"
+  ],
+  "Modules/billboard_4": [
+   "metal_b",
+   "ad_screen_4",
+   "metal_rust_b",
+   "light_white"
+  ],
+  "Modules/billboard_5": [
+   "metal_b",
+   "ad_screen_5",
+   "metal_rust_b",
+   "light_white"
+  ],
+  "Modules/billboard_6": [
+   "metal_b",
+   "ad_screen_6",
+   "metal_rust_b",
+   "light_white"
+  ],
+  "Modules/billboard_7": [
+   "metal_b",
+   "ad_screen_7",
+   "metal_rust_b",
+   "light_white"
+  ],
+  "Modules/billboard_8": [
+   "metal_b",
+   "ad_screen_8",
+   "metal_rust_b",
+   "light_white"
+  ],
+  "Modules/catwalk_6": [
+   "grate_metal",
+   "metal_rust_b"
+  ],
+  "Modules/catwalk_10": [
+   "grate_metal",
+   "metal_rust_b"
+  ],
+  "Modules/catwalk_16": [
+   "grate_metal",
+   "metal_rust_b"
+  ],
+  "Modules/catwalk_24": [
+   "grate_metal",
+   "metal_rust_b"
+  ],
+  "Modules/ladder_4": [
+   "metal_rust_b"
+  ],
+  "Modules/ladder_7": [
+   "metal_rust_b"
+  ],
+  "Modules/ladder_11": [
+   "metal_rust_b"
+  ],
+  "Modules/ladder_16": [
+   "metal_rust_b"
+  ],
+  "Modules/railing_4": [
+   "grate_metal"
+  ],
+  "Modules/railing_8": [
+   "grate_metal"
+  ],
+  "Modules/railing_14": [
+   "grate_metal"
+  ],
+  "Modules/railing_20": [
+   "grate_metal"
+  ],
+  "Modules/platform_8x6": [
+   "metal_rust_a",
+   "metal_rust_b"
+  ],
+  "Modules/platform_12x8": [
+   "concrete_b",
+   "metal_rust_b"
+  ],
+  "Modules/platform_16x10": [
+   "concrete_b",
+   "metal_rust_b"
+  ],
+  "Modules/platform_22x14": [
+   "metal_rust_a",
+   "metal_rust_b"
+  ],
+  "Modules/platform_6x4": [
+   "concrete_d",
+   "metal_rust_b"
+  ],
+  "Modules/platform_10x20": [
+   "concrete_d",
+   "metal_rust_b"
+  ],
+  "Modules/platform_26x18": [
+   "concrete_d",
+   "metal_rust_b"
+  ],
+  "Modules/platform_30x24": [
+   "concrete_d",
+   "metal_rust_b"
+  ],
+  "Modules/scaffold_6x8": [
+   "metal_rust_b",
+   "wood_a",
+   "awning_a"
+  ],
+  "Modules/scaffold_8x12": [
+   "metal_rust_b",
+   "wood_a",
+   "awning_b"
+  ],
+  "Modules/scaffold_10x18": [
+   "metal_rust_b",
+   "wood_a"
+  ],
+  "Modules/scaffold_5x24": [
+   "metal_rust_b",
+   "wood_a"
+  ],
+  "Modules/walkway_10": [
+   "grate_metal",
+   "metal_b",
+   "metal_rust_b",
+   "neon_purple"
+  ],
+  "Modules/walkway_16": [
+   "grate_metal",
+   "metal_b",
+   "metal_rust_b",
+   "neon_white"
+  ],
+  "Modules/walkway_24": [
+   "grate_metal",
+   "metal_b",
+   "metal_rust_b"
+  ],
+  "Modules/walkway_34": [
+   "grate_metal",
+   "metal_b",
+   "metal_rust_b",
+   "neon_red"
+  ],
+  "Modules/stairs_2.6": [
+   "concrete_b",
+   "grate_metal"
+  ],
+  "Modules/stairs_4": [
+   "concrete_b",
+   "grate_metal"
+  ],
+  "Modules/stairs_6": [
+   "concrete_b",
+   "grate_metal"
+  ],
+  "Modules/stairs_9": [
+   "concrete_b",
+   "grate_metal"
+  ],
+  "Modules/water_tank_0.8": [
+   "wood_a",
+   "metal_rust_b",
+   "metal_rust_a"
+  ],
+  "Modules/water_tank_1.1": [
+   "wood_a",
+   "metal_rust_b",
+   "metal_rust_a"
+  ],
+  "Modules/water_tank_1.4": [
+   "wood_a",
+   "metal_rust_b",
+   "metal_rust_a"
+  ],
+  "Modules/crates_0": [
+   "wood_a",
+   "metal_rust_a",
+   "plastic_dark"
+  ],
+  "Modules/crates_1": [
+   "plastic_dark"
+  ],
+  "Modules/crates_2": [
+   "metal_rust_a"
+  ],
+  "Modules/crates_3": [
+   "metal_rust_a",
+   "wood_a",
+   "plastic_dark"
+  ],
+  "Modules/crates_4": [
+   "plastic_dark",
+   "wood_a"
+  ],
+  "Modules/helipad": [
+   "concrete_dark",
+   "light_white",
+   "concrete_b",
+   "light_red"
+  ],
+  "Modules/vent_stack_2": [
+   "metal_b",
+   "metal_a",
+   "metal_rust_b"
+  ],
+  "Modules/vent_stack_3.5": [
+   "metal_b",
+   "metal_a",
+   "metal_rust_b"
+  ],
+  "Modules/vent_stack_5": [
+   "metal_b",
+   "metal_a",
+   "metal_rust_b"
+  ],
+  "Modules/solar_0": [
+   "metal_b",
+   "plastic_dark"
+  ],
+  "Modules/solar_1": [
+   "metal_b",
+   "plastic_dark"
+  ],
+  "Modules/solar_2": [
+   "metal_b",
+   "plastic_dark"
+  ],
+  "Modules/solar_3": [
+   "metal_b",
+   "plastic_dark"
+  ],
+  "Modules/coop_0": [
+   "metal_rust_a",
+   "grate_metal",
+   "metal_rust_b"
+  ],
+  "Modules/coop_1": [
+   "metal_rust_a",
+   "grate_metal",
+   "metal_rust_b"
+  ],
+  "Modules/coop_2": [
+   "metal_rust_a",
+   "grate_metal",
+   "metal_rust_b"
+  ],
+  "Modules/coop_3": [
+   "metal_rust_a",
+   "grate_metal",
+   "metal_rust_b"
+  ],
+  "Modules/roof_bar_0": [
+   "metal_b",
+   "neon_pink",
+   "plastic_dark"
+  ],
+  "Modules/roof_bar_1": [
+   "metal_b",
+   "neon_green",
+   "plastic_dark"
+  ],
+  "Modules/roof_bar_2": [
+   "metal_b",
+   "neon_purple",
+   "plastic_dark"
+  ],
+  "Street/road_10x40": [
+   "asphalt_a"
+  ],
+  "Street/road_10x80": [
+   "asphalt_wet"
+  ],
+  "Street/road_14x40": [
+   "asphalt_a"
+  ],
+  "Street/road_14x80": [
+   "asphalt_wet"
+  ],
+  "Street/road_18x40": [
+   "asphalt_wet"
+  ],
+  "Street/road_18x80": [
+   "asphalt_a"
+  ],
+  "Street/road_24x40": [
+   "asphalt_a"
+  ],
+  "Street/road_24x80": [
+   "asphalt_a"
+  ],
+  "Street/sidewalk_3x40": [
+   "sidewalk_a",
+   "concrete_d"
+  ],
+  "Street/sidewalk_3x80": [
+   "sidewalk_a",
+   "concrete_d"
+  ],
+  "Street/sidewalk_4.5x40": [
+   "sidewalk_a",
+   "concrete_d"
+  ],
+  "Street/sidewalk_4.5x80": [
+   "sidewalk_a",
+   "concrete_d"
+  ],
+  "Street/sidewalk_6x40": [
+   "sidewalk_a",
+   "concrete_d"
+  ],
+  "Street/sidewalk_6x80": [
+   "sidewalk_a",
+   "concrete_d"
+  ],
+  "Street/intersection_18": [
+   "asphalt_a"
+  ],
+  "Street/intersection_24": [
+   "asphalt_a"
+  ],
+  "Street/block_ground_concrete_c": [
+   "concrete_c"
+  ],
+  "Street/block_ground_asphalt_a": [
+   "asphalt_a"
+  ],
+  "Street/block_ground_concrete_b": [
+   "concrete_b"
+  ],
+  "Street/lamp_a_5": [
+   "metal_b",
+   "light_warm",
+   "sign_plate_1"
+  ],
+  "Street/lamp_b_5": [
+   "metal_b",
+   "light_white"
+  ],
+  "Street/lamp_a_7": [
+   "metal_b",
+   "light_warm"
+  ],
+  "Street/lamp_b_7": [
+   "metal_b",
+   "light_white",
+   "neon_red"
+  ],
+  "Street/lamp_a_9": [
+   "metal_b",
+   "light_warm",
+   "sign_plate_1"
+  ],
+  "Street/lamp_b_9": [
+   "metal_b",
+   "light_white",
+   "sign_plate_1"
+  ],
+  "Street/traffic_light_0": [
+   "metal_b",
+   "plastic_dark",
+   "light_red",
+   "light_amber",
+   "light_white"
+  ],
+  "Street/traffic_light_1": [
+   "metal_b",
+   "plastic_dark",
+   "light_red",
+   "light_amber",
+   "light_white"
+  ],
+  "Street/vending_0": [
+   "metal_a",
+   "ad_screen_1",
+   "neon_green",
+   "plastic_dark"
+  ],
+  "Street/vending_1": [
+   "metal_a",
+   "ad_screen_2",
+   "neon_orange",
+   "plastic_dark"
+  ],
+  "Street/vending_2": [
+   "metal_a",
+   "ad_screen_3",
+   "neon_orange",
+   "plastic_dark"
+  ],
+  "Street/vending_3": [
+   "metal_a",
+   "ad_screen_4",
+   "neon_white",
+   "plastic_dark"
+  ],
+  "Street/vending_4": [
+   "metal_a",
+   "ad_screen_5",
+   "neon_white",
+   "plastic_dark"
+  ],
+  "Street/vending_5": [
+   "metal_a",
+   "ad_screen_6",
+   "neon_orange",
+   "plastic_dark"
+  ],
+  "Street/vending_6": [
+   "metal_a",
+   "ad_screen_7",
+   "neon_blue",
+   "plastic_dark"
+  ],
+  "Street/vending_7": [
+   "metal_a",
+   "ad_screen_8",
+   "neon_cyan",
+   "plastic_dark"
+  ],
+  "Street/stall_0": [
+   "metal_rust_a",
+   "metal_a",
+   "metal_rust_b",
+   "awning_a",
+   "neon_red",
+   "light_warm",
+   "plastic_dark"
+  ],
+  "Street/stall_1": [
+   "metal_rust_a",
+   "metal_a",
+   "metal_rust_b",
+   "awning_d",
+   "neon_white",
+   "light_warm",
+   "plastic_dark"
+  ],
+  "Street/stall_2": [
+   "metal_rust_a",
+   "metal_a",
+   "metal_rust_b",
+   "awning_b",
+   "neon_cyan",
+   "light_warm",
+   "plastic_dark"
+  ],
+  "Street/stall_3": [
+   "metal_rust_a",
+   "metal_a",
+   "metal_rust_b",
+   "awning_b",
+   "neon_purple",
+   "light_warm",
+   "plastic_dark"
+  ],
+  "Street/dumpster_0": [
+   "metal_rust_a",
+   "metal_b",
+   "rubber_tyre"
+  ],
+  "Street/dumpster_1": [
+   "metal_rust_a",
+   "metal_b",
+   "rubber_tyre"
+  ],
+  "Street/dumpster_2": [
+   "metal_rust_a",
+   "metal_b",
+   "rubber_tyre"
+  ],
+  "Street/barrier_2": [
+   "concrete_c",
+   "light_amber"
+  ],
+  "Street/barrier_3.5": [
+   "concrete_c",
+   "light_amber"
+  ],
+  "Street/barrier_6": [
+   "concrete_c",
+   "light_amber"
+  ],
+  "Street/utility_box_0.8": [
+   "metal_a",
+   "grate_metal",
+   "decal_grime"
+  ],
+  "Street/utility_box_1": [
+   "metal_a",
+   "grate_metal",
+   "decal_grime"
+  ],
+  "Street/utility_box_1.3": [
+   "metal_a",
+   "grate_metal",
+   "decal_grime"
+  ],
+  "Street/cable_pole_7": [
+   "wood_a",
+   "plastic_dark",
+   "metal_a"
+  ],
+  "Street/cable_pole_9": [
+   "wood_a",
+   "plastic_dark"
+  ],
+  "Street/cable_pole_12": [
+   "wood_a",
+   "plastic_dark",
+   "metal_a"
+  ],
+  "Street/phone_booth_0": [
+   "metal_a",
+   "glass_shop",
+   "neon_red",
+   "light_white"
+  ],
+  "Street/phone_booth_1": [
+   "metal_a",
+   "glass_shop",
+   "neon_blue",
+   "light_white"
+  ],
+  "Street/bus_stop_0": [
+   "metal_b",
+   "glass_shop",
+   "ad_screen_8",
+   "wood_a",
+   "light_white"
+  ],
+  "Street/bus_stop_1": [
+   "metal_b",
+   "glass_shop",
+   "ad_screen_6",
+   "wood_a",
+   "light_white"
+  ],
+  "Street/fence_4": [
+   "grate_metal",
+   "metal_rust_b"
+  ],
+  "Street/fence_8": [
+   "grate_metal",
+   "metal_rust_b"
+  ],
+  "Street/fence_14": [
+   "grate_metal",
+   "metal_rust_b"
+  ],
+  "Street/fence_20": [
+   "grate_metal",
+   "metal_rust_b"
+  ],
+  "Street/kiosk_0": [
+   "metal_a",
+   "glass_shop",
+   "sign_plate_1",
+   "light_warm",
+   "neon_green"
+  ],
+  "Street/kiosk_1": [
+   "metal_a",
+   "glass_shop",
+   "sign_plate_2",
+   "light_warm",
+   "neon_purple"
+  ],
+  "Street/kiosk_2": [
+   "metal_a",
+   "glass_shop",
+   "sign_plate_3",
+   "light_warm",
+   "neon_orange"
+  ],
+  "Street/kiosk_3": [
+   "metal_a",
+   "glass_shop",
+   "sign_plate_4",
+   "light_warm",
+   "neon_red"
+  ],
+  "Street/pillar_8": [
+   "concrete_b",
+   "concrete_d",
+   "decal_grime"
+  ],
+  "Street/pillar_12": [
+   "concrete_b",
+   "concrete_d",
+   "decal_grime"
+  ],
+  "Street/pillar_17": [
+   "concrete_b",
+   "concrete_d",
+   "decal_grime"
+  ],
+  "Street/pillar_23": [
+   "concrete_b",
+   "concrete_d",
+   "decal_grime"
+  ],
+  "Street/elevated_40": [
+   "asphalt_a",
+   "concrete_b",
+   "concrete_c",
+   "light_amber"
+  ],
+  "Street/elevated_wide_40": [
+   "asphalt_a",
+   "concrete_b",
+   "concrete_c",
+   "light_amber"
+  ],
+  "Street/elevated_60": [
+   "asphalt_a",
+   "concrete_b",
+   "concrete_c",
+   "light_amber"
+  ],
+  "Street/elevated_wide_60": [
+   "asphalt_a",
+   "concrete_b",
+   "concrete_c",
+   "light_amber"
+  ],
+  "Street/elevated_80": [
+   "asphalt_a",
+   "concrete_b",
+   "concrete_c",
+   "light_amber"
+  ],
+  "Street/elevated_wide_80": [
+   "asphalt_a",
+   "concrete_b",
+   "concrete_c",
+   "light_amber"
+  ],
+  "Street/stairs_down_0": [
+   "concrete_b",
+   "grate_metal",
+   "sign_plate_2"
+  ],
+  "Street/stairs_down_1": [
+   "concrete_b",
+   "grate_metal",
+   "sign_plate_2"
+  ],
+  "Street/stairs_down_2": [
+   "concrete_b",
+   "grate_metal",
+   "sign_plate_2"
+  ],
+  "Street/bollard_0": [
+   "metal_b",
+   "light_amber"
+  ],
+  "Street/bollard_1": [
+   "metal_b",
+   "light_amber"
+  ],
+  "Street/bollard_2": [
+   "metal_b",
+   "light_amber"
+  ],
+  "Street/bench_0": [
+   "wood_a",
+   "metal_rust_b"
+  ],
+  "Street/bench_1": [
+   "wood_a",
+   "metal_rust_b"
+  ],
+  "Street/bench_2": [
+   "wood_a",
+   "metal_rust_b"
+  ],
+  "Street/trash_0": [
+   "metal_rust_a",
+   "metal_b"
+  ],
+  "Street/trash_1": [
+   "metal_rust_a",
+   "metal_b"
+  ],
+  "Street/trash_2": [
+   "metal_rust_a",
+   "metal_b"
+  ],
+  "Street/sign_pole_2.4": [
+   "metal_b",
+   "ad_screen_6"
+  ],
+  "Street/sign_pole_3.4": [
+   "metal_b",
+   "ad_screen_8"
+  ],
+  "Street/sign_pole_4.6": [
+   "metal_b",
+   "ad_screen_7"
+  ],
+  "Street/planter_0": [
+   "concrete_c",
+   "plaster_a",
+   "awning_d"
+  ],
+  "Street/planter_1": [
+   "concrete_c",
+   "plaster_a",
+   "awning_d"
+  ],
+  "Street/planter_2": [
+   "concrete_c",
+   "plaster_a",
+   "awning_d"
+  ],
+  "Street/gutter_grate_0": [
+   "grate_metal"
+  ],
+  "Street/gutter_grate_1": [
+   "grate_metal"
+  ],
+  "Street/gutter_grate_2": [
+   "grate_metal"
+  ],
+  "Street/gutter_grate_3": [
+   "grate_metal"
+  ],
+  "Street/hydrant_0": [
+   "light_red",
+   "metal_b"
+  ],
+  "Street/hydrant_1": [
+   "light_red",
+   "metal_b"
+  ],
+  "Street/hydrant_2": [
+   "light_red",
+   "metal_b"
+  ],
+  "Street/bike_rack_0": [
+   "metal_b"
+  ],
+  "Street/bike_rack_1": [
+   "metal_b"
+  ],
+  "Street/bike_rack_2": [
+   "metal_b"
+  ]
+ }
+}
