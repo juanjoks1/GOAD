@@ -1,0 +1,26 @@
+{
+  "name": "cyberpunk-megapolis",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "CYBERPUNK MEGAPOLIS — Web-Swing Edition. Frontend-only WebGL2 game; this package.json only exists for the offline asset generators and the acceptance tests. The game itself needs no build step and no dependencies.",
+  "scripts": {
+    "serve": "node tests/serve.mjs",
+    "gen": "node tools/gen_all.mjs",
+    "gen:textures": "node tools/gen_textures.mjs",
+    "gen:prefabs": "node tools/gen_prefabs.mjs",
+    "gen:scene": "node tools/gen_scene.mjs",
+    "gen:chars": "node tools/gen_chars.mjs",
+    "test": "node tests/acceptance.mjs",
+    "test:mobile": "node tests/mobile.mjs",
+    "test:single": "node tests/singlefile.mjs",
+    "build:single": "node tools/build_single.mjs",
+    "smoke": "node tests/smoke.mjs"
+  },
+  "devDependencies": {
+    "draco3d": "1.5.7",
+    "esbuild": "^0.28.2",
+    "playwright": "1.56.1",
+    "sharp": "0.33.5"
+  }
+}

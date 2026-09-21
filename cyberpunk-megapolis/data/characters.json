@@ -1,0 +1,101 @@
+{
+ "note": "Both characters share one 22-bone skeleton and the same clip names, so the animation state machine is character-agnostic.",
+ "clips": [
+  {
+   "name": "Idle",
+   "dur": 3.2,
+   "loop": true,
+   "rootMotion": true
+  },
+  {
+   "name": "WalkForward",
+   "dur": 1.04,
+   "loop": true,
+   "rootMotion": true
+  },
+  {
+   "name": "RunForward",
+   "dur": 0.64,
+   "loop": true,
+   "rootMotion": true
+  },
+  {
+   "name": "JumpFromRun",
+   "dur": 0.5,
+   "loop": false,
+   "rootMotion": false
+  },
+  {
+   "name": "JumpLoop",
+   "dur": 0.9,
+   "loop": true,
+   "rootMotion": false
+  },
+  {
+   "name": "FallingLoop",
+   "dur": 1.1,
+   "loop": true,
+   "rootMotion": false
+  },
+  {
+   "name": "SoftLanding",
+   "dur": 0.45,
+   "loop": false,
+   "rootMotion": false
+  },
+  {
+   "name": "LandingRoll",
+   "dur": 1.15,
+   "loop": false,
+   "rootMotion": false
+  },
+  {
+   "name": "SwingLoop",
+   "dur": 1.25,
+   "loop": true,
+   "rootMotion": false
+  },
+  {
+   "name": "SwingRelease",
+   "dur": 0.5,
+   "loop": false,
+   "rootMotion": false
+  }
+ ],
+ "characters": [
+  {
+   "id": "man",
+   "file": "chars/survival_man.glb",
+   "code": "RUNNER 01",
+   "name": "SURVIVAL MAN",
+   "tags": "camouflage jacket · tactical vest",
+   "height": 1.78
+  },
+  {
+   "id": "girl",
+   "file": "chars/survival_girl.glb",
+   "code": "RUNNER 02",
+   "name": "SURVIVAL GIRL",
+   "tags": "baseball cap · backpack",
+   "height": 1.68
+  }
+ ],
+ "built": [
+  {
+   "kind": "man",
+   "bytes": 173096,
+   "tris": 1976,
+   "materials": 16,
+   "bones": 21,
+   "clips": 10
+  },
+  {
+   "kind": "girl",
+   "bytes": 175384,
+   "tris": 2056,
+   "materials": 17,
+   "bones": 21,
+   "clips": 10
+  }
+ ]
+}

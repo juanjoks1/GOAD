@@ -1,0 +1,4524 @@
+{
+ "note": "Per-prefab placement scale policy used by the scene generator and validated at load.",
+ "scales": {
+  "Background/skyline_0": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Background/skyline_1": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Background/skyline_2": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Background/skyline_3": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Background/skyline_4": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Background/skyline_5": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Background/skyline_6": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Background/skyline_7": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Background/skyline_8": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Background/skyline_9": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Background/skyline_10": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Background/skyline_11": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Background/skyline_12": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Background/skyline_13": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Background/skyline_14": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Background/skyline_15": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Background/skyline_16": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Background/skyline_17": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Background/skyline_18": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Background/skyline_19": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Background/skyline_20": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Background/skyline_21": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Background/skyline_22": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Background/skyline_23": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Background/skyline_24": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Background/skyline_25": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Background/skyline_26": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Background/skyline_27": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Background/skyline_28": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Background/skyline_29": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Background/skyline_30": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Background/skyline_31": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Background/skyline_32": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Background/skyline_33": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Background/skyline_34": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Background/skyline_35": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Background/skyline_36": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Background/skyline_37": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Background/skyline_38": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Background/skyline_39": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Background/skyline_40": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Background/skyline_41": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Background/skyline_42": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Background/skyline_43": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Background/skyline_44": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Background/skyline_45": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Background/skyline_46": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Background/skyline_47": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Car/sedan_0": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Car/sedan_1": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Car/taxi_2": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Car/van_3": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Car/truck_4": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Car/bus_5": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Car/bike_6": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Car/sedan_c0": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Car/sedan_c1": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Car/sedan_c2": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Car/sedan_c3": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Car/sedan_c4": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Car/sedan_c5": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Car/van_b": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Car/truck_b": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Car/bike_b": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Combined_Building/tower_16x70_0": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/tower_16x70_1": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/tower_16x70_2": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/tower_18x96_0": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/tower_18x96_1": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/tower_18x96_2": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/tower_20x128_0": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/tower_20x128_1": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/tower_20x128_2": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/tower_22x160_0": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/tower_22x160_1": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/tower_22x160_2": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/tower_24x196_0": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/tower_24x196_1": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/tower_24x196_2": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/tower_26x240_0": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/tower_26x240_1": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/tower_26x240_2": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/tower_30x118_0": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/tower_30x118_1": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/tower_30x118_2": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/tower_34x150_0": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/tower_34x150_1": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/tower_34x150_2": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/tower_40x92_0": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/tower_40x92_1": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/tower_40x92_2": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/tower_46x66_0": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/tower_46x66_1": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/tower_46x66_2": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/tower_19x212_0": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/tower_19x212_1": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/tower_19x212_2": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/tower_28x174_0": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/tower_28x174_1": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/tower_28x174_2": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/slab_24x46_0": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/slab_24x46_1": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/slab_24x46_2": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/slab_30x58_0": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/slab_30x58_1": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/slab_30x58_2": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/slab_36x72_0": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/slab_36x72_1": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/slab_36x72_2": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/slab_44x88_0": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/slab_44x88_1": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/slab_44x88_2": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/slab_52x40_0": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/slab_52x40_1": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/slab_52x40_2": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/slab_60x54_0": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/slab_60x54_1": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/slab_60x54_2": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/slab_28x110_0": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/slab_28x110_1": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/slab_28x110_2": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/slab_34x132_0": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/slab_34x132_1": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/slab_34x132_2": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/res_14x18_0": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/res_14x18_1": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/res_14x18_2": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/res_16x24_0": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/res_16x24_1": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/res_16x24_2": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/res_18x30_0": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/res_18x30_1": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/res_18x30_2": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/res_20x38_0": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/res_20x38_1": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/res_20x38_2": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/res_22x46_0": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/res_22x46_1": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/res_22x46_2": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/res_26x28_0": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/res_26x28_1": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/res_26x28_2": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/res_30x34_0": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/res_30x34_1": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/res_30x34_2": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/res_12x22_0": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/res_12x22_1": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/res_12x22_2": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/res_24x56_0": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/res_24x56_1": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/res_24x56_2": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/res_28x64_0": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/res_28x64_1": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/res_28x64_2": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/res_15x42_0": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/res_15x42_1": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/res_15x42_2": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/res_21x26_0": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/res_21x26_1": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/res_21x26_2": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/corner_18x34_0": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/corner_18x34_1": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/corner_22x44_0": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/corner_22x44_1": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/corner_26x58_0": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/corner_26x58_1": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/corner_30x76_0": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/corner_30x76_1": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/corner_34x96_0": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/corner_34x96_1": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/slum_8x9_0": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/slum_8x9_1": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/slum_8x9_2": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/slum_10x12_0": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/slum_10x12_1": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/slum_10x12_2": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/slum_12x15_0": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/slum_12x15_1": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/slum_12x15_2": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/slum_9x18_0": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/slum_9x18_1": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/slum_9x18_2": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/slum_11x22_0": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/slum_11x22_1": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/slum_11x22_2": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/slum_14x10_0": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/slum_14x10_1": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/slum_14x10_2": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/slum_7x13_0": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/slum_7x13_1": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/slum_7x13_2": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/slum_13x20_0": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/slum_13x20_1": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/slum_13x20_2": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/warehouse_26x9_0": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/warehouse_26x9_1": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/warehouse_34x12_0": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/warehouse_34x12_1": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/warehouse_44x14_0": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/warehouse_44x14_1": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/warehouse_56x11_0": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/warehouse_56x11_1": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/parking_28x17_0": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/parking_28x17_1": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/parking_34x24_0": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/parking_34x24_1": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/parking_40x31_0": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Combined_Building/parking_40x31_1": {
+   "uniform": [
+    1,
+    1
+   ],
+   "nonUniform": false,
+   "reason": "UVs baked in metres - scaling would change texel density"
+  },
+  "Decals/road_lines_8x40": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Decals/road_lines_10x60": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Decals/road_lines_14x80": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Decals/road_lines_18x40": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Decals/crosswalk_0": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Decals/crosswalk_1": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Decals/crosswalk_2": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Decals/crosswalk_3": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Decals/stain_2": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Decals/stain_3": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Decals/stain_5": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Decals/stain_8": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Decals/wall_grime_3x5": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Decals/wall_grime_5x8": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Decals/wall_grime_8x12": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Decals/wall_grime_12x18": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Decals/wall_grime_16x26": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Decals/wall_grime_6x14": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Decals/plate_1": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Decals/plate_2": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Decals/plate_3": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Decals/plate_4": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Decals/plate_5": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Decals/plate_6": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Decals/ad_flat_1": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Decals/ad_flat_2": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Decals/ad_flat_3": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Decals/ad_flat_4": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Decals/ad_flat_5": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Decals/ad_flat_6": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Decals/ad_flat_7": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Decals/ad_flat_8": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Decals/puddle_3": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Decals/puddle_5": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Decals/puddle_7": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Decals/hazard_0": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Decals/hazard_1": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Decals/hazard_2": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Decals/arrow_0": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Decals/arrow_1": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Decals/arrow_2": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Decals/arrow_3": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Environment/cloud_60": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Environment/cloud_110": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Environment/cloud_180": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Environment/cloud_260": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Environment/cloud_360": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Environment/cloud_480": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Environment/water_tank_env_0.9": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Environment/water_tank_env_1.2": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Environment/water_tank_env_1.6": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Environment/bridge_40": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Environment/bridge_60": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Environment/bridge_90": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Environment/bridge_130": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Environment/pylon_22": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Environment/pylon_34": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Environment/pylon_48": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Environment/tree_0": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Environment/tree_1": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Environment/tree_2": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Environment/tree_3": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Environment/smokestack_26": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Environment/smokestack_38": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Environment/smokestack_52": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Environment/gantry_16": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Environment/gantry_24": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Environment/gantry_34": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Environment/pipebridge_10": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Environment/pipebridge_18": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Environment/pipebridge_26": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Environment/safety_floor_30x30": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Environment/safety_floor_50x40": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Environment/safety_floor_70x60": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Environment/safety_floor_400x400": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Environment/water_20x20": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Environment/water_34x26": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Environment/podium_12": {
+   "uniform": [
+    0.5,
+    6
+   ],
+   "nonUniform": true
+  },
+  "Environment/podium_20": {
+   "uniform": [
+    0.5,
+    6
+   ],
+   "nonUniform": true
+  },
+  "Environment/podium_30": {
+   "uniform": [
+    0.5,
+    6
+   ],
+   "nonUniform": true
+  },
+  "Environment/rubble_0": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Environment/rubble_1": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Environment/rubble_2": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Environment/rubble_3": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Environment/rubble_4": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Environment/rubble_5": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Environment/hoarding_12": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Environment/hoarding_20": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Environment/hoarding_30": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Environment/hoarding_44": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Environment/roof_garden_0": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Environment/roof_garden_1": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Environment/roof_garden_2": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Environment/roof_garden_3": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Environment/roof_garden_4": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Environment/chimneys_0": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Environment/chimneys_1": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Environment/chimneys_2": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Environment/chimneys_3": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Environment/chimneys_4": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/ac_unit_0": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/ac_unit_1": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/ac_unit_2": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/ac_bank_2": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/ac_bank_3": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/ac_bank_4": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/ac_bank_5": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/pipe_v_6": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/pipe_v3_6": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/pipe_v_10": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/pipe_v3_10": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/pipe_v_16": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/pipe_v3_16": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/pipe_v_24": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/pipe_v3_24": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/pipe_v_34": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/pipe_v3_34": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/pipe_h_6": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/pipe_h_10": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/pipe_h_16": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/balcony_2.4": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/balcony_3.2": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/balcony_4.4": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/balcony_6": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/wall_sign_s_1": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/wall_sign_s_2": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/wall_sign_s_3": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/wall_sign_s_4": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/wall_sign_s_5": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/wall_sign_s_6": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/wall_ad_1": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/wall_ad_2": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/wall_ad_3": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/wall_ad_4": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/wall_ad_5": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/wall_ad_6": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/wall_ad_7": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/wall_ad_8": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/neon_v_3": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/neon_v_5": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/neon_v_7": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/neon_v_9": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/neon_v_12": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/neon_h_3": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/neon_h_5": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/neon_h_8": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/neon_h_12": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/fire_escape_3": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/fire_escape_5": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/fire_escape_7": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/fire_escape_9": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/drainpipe_8": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/drainpipe_14": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/drainpipe_22": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/drainpipe_32": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/cables_14": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/cables_22": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/cables_32": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/cables_44": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/wall_light_0": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/wall_light_1": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/wall_light_2": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/window_box_0": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/window_box_1": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/window_box_2": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/laundry_4": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/laundry_7": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/laundry_10": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/vent_1": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/vent_1.4": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/vent_1.9": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/satellite_0": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/satellite_1": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/satellite_2": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/satellite_3": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/antenna_4": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/antenna_7": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/antenna_11": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/awning_2.5": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/awning_4": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/awning_6": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/awning_9": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/vent_grille_0": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/vent_grille_1": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/vent_grille_2": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/vent_grille_3": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/vent_grille_4": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/conduit_box_0": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/conduit_box_1": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/conduit_box_2": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/conduit_box_3": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/conduit_box_4": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/ledge_2.5": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/ledge_4": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Facade_Details/ledge_6": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Metro/rail_40": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Metro/rail_80": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Metro/rail_120": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Metro/platform_40x6": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Metro/platform_40x9": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Metro/platform_80x6": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Metro/platform_80x9": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Metro/column_5": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Metro/column_7": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Metro/column_9": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Metro/column_12": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Metro/tunnel_40x6": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Metro/tunnel_40x8": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Metro/tunnel_80x6": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Metro/tunnel_80x8": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Metro/canopy_30": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Metro/canopy_50": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Metro/canopy_70": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Metro/train_0": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Metro/train_1": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Metro/train_2": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Metro/escalator_4": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Metro/escalator_6": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Metro/escalator_8": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Metro/turnstile_0": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Metro/turnstile_1": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Metro/tunnel_light_0": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Metro/tunnel_light_1": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Metro/tunnel_light_2": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Metro/tunnel_light_3": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Metro/stair_3": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Metro/stair_5": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Metro/stair_8": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Metro/stair_12": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Metro/tunnel_wall_0": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Metro/tunnel_wall_1": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Metro/tunnel_wall_2": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Metro/tunnel_wall_3": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Metro/vent_shaft_10": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Metro/vent_shaft_16": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Metro/vent_shaft_24": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Metro/signal_0": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Metro/signal_1": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Metro/signal_2": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Modules/roof_equip_0": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Modules/roof_equip_1": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Modules/roof_equip_2": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Modules/roof_equip_3": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Modules/roof_equip_4": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Modules/roof_equip_5": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Modules/roof_equip_6": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Modules/roof_equip_7": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Modules/stair_hut_0": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Modules/stair_hut_1": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Modules/stair_hut_2": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Modules/cooling_0.8": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Modules/cooling_1.1": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Modules/cooling_1.5": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Modules/billboard_1": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Modules/billboard_2": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Modules/billboard_3": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Modules/billboard_4": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Modules/billboard_5": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Modules/billboard_6": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Modules/billboard_7": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Modules/billboard_8": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Modules/catwalk_6": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Modules/catwalk_10": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Modules/catwalk_16": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Modules/catwalk_24": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Modules/ladder_4": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Modules/ladder_7": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Modules/ladder_11": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Modules/ladder_16": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Modules/railing_4": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Modules/railing_8": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Modules/railing_14": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Modules/railing_20": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Modules/platform_8x6": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Modules/platform_12x8": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Modules/platform_16x10": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Modules/platform_22x14": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Modules/platform_6x4": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Modules/platform_10x20": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Modules/platform_26x18": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Modules/platform_30x24": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Modules/scaffold_6x8": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Modules/scaffold_8x12": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Modules/scaffold_10x18": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Modules/scaffold_5x24": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Modules/walkway_10": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Modules/walkway_16": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Modules/walkway_24": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Modules/walkway_34": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Modules/stairs_2.6": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Modules/stairs_4": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Modules/stairs_6": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Modules/stairs_9": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Modules/water_tank_0.8": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Modules/water_tank_1.1": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Modules/water_tank_1.4": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Modules/crates_0": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Modules/crates_1": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Modules/crates_2": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Modules/crates_3": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Modules/crates_4": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Modules/helipad": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Modules/vent_stack_2": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Modules/vent_stack_3.5": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Modules/vent_stack_5": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Modules/solar_0": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Modules/solar_1": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Modules/solar_2": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Modules/solar_3": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Modules/coop_0": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Modules/coop_1": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Modules/coop_2": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Modules/coop_3": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Modules/roof_bar_0": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Modules/roof_bar_1": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Modules/roof_bar_2": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/road_10x40": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/road_10x80": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/road_14x40": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/road_14x80": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/road_18x40": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/road_18x80": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/road_24x40": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/road_24x80": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/sidewalk_3x40": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/sidewalk_3x80": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/sidewalk_4.5x40": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/sidewalk_4.5x80": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/sidewalk_6x40": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/sidewalk_6x80": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/intersection_18": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/intersection_24": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/block_ground_concrete_c": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/block_ground_asphalt_a": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/block_ground_concrete_b": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/lamp_a_5": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/lamp_b_5": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/lamp_a_7": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/lamp_b_7": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/lamp_a_9": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/lamp_b_9": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/traffic_light_0": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/traffic_light_1": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/vending_0": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/vending_1": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/vending_2": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/vending_3": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/vending_4": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/vending_5": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/vending_6": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/vending_7": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/stall_0": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/stall_1": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/stall_2": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/stall_3": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/dumpster_0": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/dumpster_1": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/dumpster_2": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/barrier_2": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/barrier_3.5": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/barrier_6": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/utility_box_0.8": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/utility_box_1": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/utility_box_1.3": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/cable_pole_7": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/cable_pole_9": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/cable_pole_12": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/phone_booth_0": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/phone_booth_1": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/bus_stop_0": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/bus_stop_1": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/fence_4": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/fence_8": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/fence_14": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/fence_20": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/kiosk_0": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/kiosk_1": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/kiosk_2": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/kiosk_3": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/pillar_8": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/pillar_12": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/pillar_17": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/pillar_23": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/elevated_40": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/elevated_wide_40": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/elevated_60": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/elevated_wide_60": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/elevated_80": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/elevated_wide_80": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/stairs_down_0": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/stairs_down_1": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/stairs_down_2": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/bollard_0": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/bollard_1": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/bollard_2": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/bench_0": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/bench_1": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/bench_2": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/trash_0": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/trash_1": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/trash_2": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/sign_pole_2.4": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/sign_pole_3.4": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/sign_pole_4.6": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/planter_0": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/planter_1": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/planter_2": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/gutter_grate_0": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/gutter_grate_1": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/gutter_grate_2": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/gutter_grate_3": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/hydrant_0": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/hydrant_1": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/hydrant_2": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/bike_rack_0": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/bike_rack_1": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  },
+  "Street/bike_rack_2": {
+   "uniform": [
+    0.85,
+    1.25
+   ],
+   "nonUniform": false
+  }
+ }
+}

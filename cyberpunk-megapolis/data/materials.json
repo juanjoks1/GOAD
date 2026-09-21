@@ -1,0 +1,1298 @@
+{
+ "note": "City + character material catalogue. `ms` is a Unity MetallicSmoothness map: R -> metalness, (1 - A) -> roughness. uvScale becomes texture.repeat because prefab UVs are baked in metres. Each category maps onto a renderGroup: one GPU material shared by every category in the group, tinted per category through vertex colours / instanceColor.",
+ "renderGroups": {
+  "g_concrete": {
+   "map": "concrete",
+   "normalMap": "concrete_n",
+   "metallicSmoothness": "concrete_ms",
+   "roughness": 0.94,
+   "uvScale": 0.2,
+   "normalScale": 0.7
+  },
+  "g_concrete_dark": {
+   "map": "concrete_dark",
+   "normalMap": "concrete_n",
+   "roughness": 0.95,
+   "uvScale": 0.22,
+   "normalScale": 0.6
+  },
+  "g_sidewalk": {
+   "map": "sidewalk",
+   "normalMap": "concrete_n",
+   "roughness": 0.93,
+   "uvScale": 0.28,
+   "normalScale": 0.5
+  },
+  "g_asphalt": {
+   "map": "asphalt",
+   "normalMap": "asphalt_n",
+   "roughness": 0.86,
+   "uvScale": 0.14,
+   "normalScale": 0.5
+  },
+  "g_brick": {
+   "map": "brick",
+   "normalMap": "brick_n",
+   "roughness": 0.93,
+   "uvScale": 0.3,
+   "normalScale": 0.8
+  },
+  "g_plaster": {
+   "map": "plaster",
+   "roughness": 0.95,
+   "uvScale": 0.26
+  },
+  "g_tile_metro": {
+   "map": "tile_metro",
+   "normalMap": "tile_metro_n",
+   "roughness": 0.72,
+   "uvScale": 0.35,
+   "normalScale": 0.6
+  },
+  "g_roof_gravel": {
+   "map": "roof_gravel",
+   "roughness": 0.97,
+   "uvScale": 0.3
+  },
+  "g_facade_tower": {
+   "map": "facade_tower",
+   "emissiveMap": "facade_tower_emis",
+   "normalMap": "facade_tower_n",
+   "emissiveIntensity": 1.7,
+   "roughness": 0.82,
+   "metalness": 0.04,
+   "uvScale": 0.08333333333333333,
+   "normalScale": 0.55
+  },
+  "g_facade_res": {
+   "map": "facade_res",
+   "emissiveMap": "facade_res_emis",
+   "emissiveIntensity": 1.7,
+   "roughness": 0.82,
+   "metalness": 0.04,
+   "uvScale": 0.1
+  },
+  "g_facade_glass": {
+   "map": "facade_glass",
+   "emissiveMap": "facade_glass_emis",
+   "metallicSmoothness": "facade_glass_ms",
+   "emissiveIntensity": 1.5,
+   "roughness": 0.28,
+   "metalness": 0.55,
+   "uvScale": 0.07142857142857142
+  },
+  "g_facade_slum": {
+   "map": "facade_slum",
+   "emissiveMap": "facade_slum_emis",
+   "normalMap": "facade_slum_n",
+   "emissiveIntensity": 1.6,
+   "roughness": 0.84,
+   "uvScale": 0.125,
+   "normalScale": 0.55
+  },
+  "g_metal": {
+   "map": "metal_panel",
+   "normalMap": "metal_panel_n",
+   "metallicSmoothness": "metal_ms",
+   "roughness": 0.5,
+   "metalness": 0.8,
+   "uvScale": 0.5,
+   "normalScale": 0.9
+  },
+  "g_metal_rust": {
+   "map": "metal_rust",
+   "normalMap": "metal_panel_n",
+   "roughness": 0.84,
+   "metalness": 0.4,
+   "uvScale": 0.45,
+   "normalScale": 0.8
+  },
+  "g_grate": {
+   "map": "metal_panel",
+   "roughness": 0.7,
+   "metalness": 0.7,
+   "uvScale": 1.4
+  },
+  "g_painted": {
+   "roughness": 0.34,
+   "metalness": 0.72
+  },
+  "g_flatdark": {
+   "roughness": 0.62,
+   "metalness": 0.06
+  },
+  "g_wood": {
+   "map": "plaster",
+   "roughness": 0.9,
+   "uvScale": 0.5
+  },
+  "g_fabric": {
+   "roughness": 0.8,
+   "side": "double"
+  },
+  "g_glass": {
+   "roughness": 0.1,
+   "metalness": 0.6,
+   "transparent": true,
+   "opacity": 0.5
+  },
+  "g_emissive": {
+   "emissiveFromVertexColor": true,
+   "emissiveIntensity": 3.2,
+   "roughness": 0.45,
+   "bloom": true
+  },
+  "g_neon_bars": {
+   "emissiveMap": "neon_bars",
+   "emissiveIntensity": 2.8,
+   "roughness": 0.5,
+   "bloom": true,
+   "emissiveFromVertexColor": true
+  },
+  "g_cloud": {
+   "map": "cloud_puff",
+   "transparent": true,
+   "opacity": 0.32,
+   "depthWrite": false,
+   "unlit": true
+  },
+  "g_silhouette": {
+   "roughness": 1
+  },
+  "g_water": {
+   "roughness": 0.15,
+   "metalness": 0.5
+  },
+  "g_decal_lines": {
+   "map": "road_lines",
+   "transparent": true,
+   "alphaTest": 0.35,
+   "roughness": 0.9,
+   "polygonOffset": true
+  },
+  "g_decal_grime": {
+   "map": "grime_decal",
+   "transparent": true,
+   "alphaTest": 0.08,
+   "opacity": 0.8,
+   "roughness": 0.95,
+   "polygonOffset": true
+  },
+  "g_ad_1": {
+   "canvas": "ad1",
+   "emissiveIntensity": 1.55,
+   "roughness": 0.55,
+   "bloom": true,
+   "emissiveFromCanvas": true
+  },
+  "g_ad_2": {
+   "canvas": "ad2",
+   "emissiveIntensity": 1.55,
+   "roughness": 0.55,
+   "bloom": true,
+   "emissiveFromCanvas": true
+  },
+  "g_ad_3": {
+   "canvas": "ad3",
+   "emissiveIntensity": 1.55,
+   "roughness": 0.55,
+   "bloom": true,
+   "emissiveFromCanvas": true
+  },
+  "g_ad_4": {
+   "canvas": "ad4",
+   "emissiveIntensity": 1.55,
+   "roughness": 0.55,
+   "bloom": true,
+   "emissiveFromCanvas": true
+  },
+  "g_ad_5": {
+   "canvas": "ad5",
+   "emissiveIntensity": 1.55,
+   "roughness": 0.55,
+   "bloom": true,
+   "emissiveFromCanvas": true
+  },
+  "g_ad_6": {
+   "canvas": "ad6",
+   "emissiveIntensity": 1.55,
+   "roughness": 0.55,
+   "bloom": true,
+   "emissiveFromCanvas": true
+  },
+  "g_ad_7": {
+   "canvas": "ad7",
+   "emissiveIntensity": 1.55,
+   "roughness": 0.55,
+   "bloom": true,
+   "emissiveFromCanvas": true
+  },
+  "g_ad_8": {
+   "canvas": "ad8",
+   "emissiveIntensity": 1.55,
+   "roughness": 0.55,
+   "bloom": true,
+   "emissiveFromCanvas": true
+  },
+  "g_sign_1": {
+   "canvas": "sign1",
+   "emissiveIntensity": 1.8,
+   "roughness": 0.5,
+   "bloom": true,
+   "emissiveFromCanvas": true
+  },
+  "g_sign_2": {
+   "canvas": "sign2",
+   "emissiveIntensity": 1.8,
+   "roughness": 0.5,
+   "bloom": true,
+   "emissiveFromCanvas": true
+  },
+  "g_sign_3": {
+   "canvas": "sign3",
+   "emissiveIntensity": 1.8,
+   "roughness": 0.5,
+   "bloom": true,
+   "emissiveFromCanvas": true
+  },
+  "g_sign_4": {
+   "canvas": "sign4",
+   "emissiveIntensity": 1.8,
+   "roughness": 0.5,
+   "bloom": true,
+   "emissiveFromCanvas": true
+  },
+  "g_sign_5": {
+   "canvas": "sign5",
+   "emissiveIntensity": 1.8,
+   "roughness": 0.5,
+   "bloom": true,
+   "emissiveFromCanvas": true
+  },
+  "g_sign_6": {
+   "canvas": "sign6",
+   "emissiveIntensity": 1.8,
+   "roughness": 0.5,
+   "bloom": true,
+   "emissiveFromCanvas": true
+  }
+ },
+ "city": {
+  "concrete_a": {
+   "map": "concrete",
+   "normalMap": "concrete_n",
+   "metallicSmoothness": "concrete_ms",
+   "color": "#b9bab6",
+   "roughness": 0.94,
+   "metalness": 0,
+   "uvScale": 0.2,
+   "normalScale": 0.7,
+   "group": "g_concrete",
+   "tint": "#b9bab6"
+  },
+  "concrete_b": {
+   "map": "concrete",
+   "normalMap": "concrete_n",
+   "metallicSmoothness": "concrete_ms",
+   "color": "#8e8f8c",
+   "roughness": 0.94,
+   "metalness": 0,
+   "uvScale": 0.2,
+   "normalScale": 0.7,
+   "group": "g_concrete",
+   "tint": "#8e8f8c"
+  },
+  "concrete_c": {
+   "map": "concrete",
+   "normalMap": "concrete_n",
+   "metallicSmoothness": "concrete_ms",
+   "color": "#a6a09a",
+   "roughness": 0.94,
+   "metalness": 0,
+   "uvScale": 0.2,
+   "normalScale": 0.7,
+   "group": "g_concrete",
+   "tint": "#a6a09a"
+  },
+  "concrete_d": {
+   "map": "concrete",
+   "normalMap": "concrete_n",
+   "metallicSmoothness": "concrete_ms",
+   "color": "#6f7173",
+   "roughness": 0.94,
+   "metalness": 0,
+   "uvScale": 0.2,
+   "normalScale": 0.7,
+   "group": "g_concrete",
+   "tint": "#6f7173"
+  },
+  "concrete_dark": {
+   "map": "concrete_dark",
+   "normalMap": "concrete_n",
+   "color": "#6a6c70",
+   "roughness": 0.96,
+   "uvScale": 0.22,
+   "normalScale": 0.6,
+   "group": "g_concrete_dark",
+   "tint": "#6a6c70"
+  },
+  "podium_concrete": {
+   "map": "concrete",
+   "normalMap": "concrete_n",
+   "color": "#8c8d8a",
+   "roughness": 0.95,
+   "uvScale": 0.16,
+   "normalScale": 0.5,
+   "note": "auto-generated foundation podiums under floating buildings",
+   "group": "g_concrete",
+   "tint": "#8c8d8a"
+  },
+  "safety_floor": {
+   "map": "concrete",
+   "normalMap": "concrete_n",
+   "color": "#7f7d79",
+   "roughness": 0.97,
+   "uvScale": 0.1,
+   "normalScale": 0.4,
+   "note": "visible safety floor for unfinished blocks",
+   "group": "g_concrete",
+   "tint": "#7f7d79"
+  },
+  "sidewalk_a": {
+   "map": "sidewalk",
+   "normalMap": "concrete_n",
+   "color": "#9b9a95",
+   "roughness": 0.93,
+   "uvScale": 0.28,
+   "normalScale": 0.5,
+   "group": "g_sidewalk",
+   "tint": "#9b9a95"
+  },
+  "sidewalk_b": {
+   "map": "sidewalk",
+   "color": "#7d7c78",
+   "roughness": 0.95,
+   "uvScale": 0.28,
+   "group": "g_sidewalk",
+   "tint": "#7d7c78"
+  },
+  "asphalt_a": {
+   "map": "asphalt",
+   "normalMap": "asphalt_n",
+   "color": "#8f929a",
+   "roughness": 0.88,
+   "uvScale": 0.14,
+   "normalScale": 0.45,
+   "group": "g_asphalt",
+   "tint": "#8f929a"
+  },
+  "asphalt_wet": {
+   "map": "asphalt",
+   "normalMap": "asphalt_n",
+   "color": "#7f848f",
+   "roughness": 0.55,
+   "metalness": 0.12,
+   "uvScale": 0.14,
+   "normalScale": 0.6,
+   "group": "g_asphalt",
+   "tint": "#7f848f"
+  },
+  "brick_a": {
+   "map": "brick",
+   "normalMap": "brick_n",
+   "color": "#b08a77",
+   "roughness": 0.93,
+   "uvScale": 0.3,
+   "normalScale": 0.8,
+   "group": "g_brick",
+   "tint": "#b08a77"
+  },
+  "brick_b": {
+   "map": "brick",
+   "normalMap": "brick_n",
+   "color": "#8a7568",
+   "roughness": 0.94,
+   "uvScale": 0.3,
+   "normalScale": 0.8,
+   "group": "g_brick",
+   "tint": "#8a7568"
+  },
+  "plaster_a": {
+   "map": "plaster",
+   "color": "#a9a49b",
+   "roughness": 0.95,
+   "uvScale": 0.26,
+   "group": "g_plaster",
+   "tint": "#a9a49b"
+  },
+  "plaster_b": {
+   "map": "plaster",
+   "color": "#7e7a72",
+   "roughness": 0.96,
+   "uvScale": 0.26,
+   "group": "g_plaster",
+   "tint": "#7e7a72"
+  },
+  "tile_metro": {
+   "map": "tile_metro",
+   "normalMap": "tile_metro_n",
+   "color": "#b6b8b4",
+   "roughness": 0.72,
+   "uvScale": 0.35,
+   "normalScale": 0.6,
+   "group": "g_tile_metro",
+   "tint": "#b6b8b4"
+  },
+  "roof_gravel": {
+   "map": "roof_gravel",
+   "color": "#8d8b86",
+   "roughness": 0.97,
+   "uvScale": 0.3,
+   "group": "g_roof_gravel",
+   "tint": "#8d8b86"
+  },
+  "facade_tower_a": {
+   "map": "facade_tower",
+   "emissiveMap": "facade_tower_emis",
+   "emissive": "#ffffff",
+   "emissiveIntensity": 1.7,
+   "color": "#a8adb6",
+   "roughness": 0.82,
+   "metalness": 0.04,
+   "uvScale": 0.08333333333333333,
+   "note": "one texture tile = 12 m of wall",
+   "normalMap": "facade_tower_n",
+   "normalScale": 0.55,
+   "group": "g_facade_tower",
+   "tint": "#a8adb6"
+  },
+  "facade_tower_b": {
+   "map": "facade_tower",
+   "emissiveMap": "facade_tower_emis",
+   "emissive": "#ffffff",
+   "emissiveIntensity": 1.7,
+   "color": "#8d939c",
+   "roughness": 0.82,
+   "metalness": 0.04,
+   "uvScale": 0.08333333333333333,
+   "note": "one texture tile = 12 m of wall",
+   "normalMap": "facade_tower_n",
+   "normalScale": 0.55,
+   "group": "g_facade_tower",
+   "tint": "#8d939c"
+  },
+  "facade_tower_c": {
+   "map": "facade_tower",
+   "emissiveMap": "facade_tower_emis",
+   "emissive": "#ffffff",
+   "emissiveIntensity": 1.7,
+   "color": "#b9b3ad",
+   "roughness": 0.82,
+   "metalness": 0.04,
+   "uvScale": 0.08333333333333333,
+   "note": "one texture tile = 12 m of wall",
+   "normalMap": "facade_tower_n",
+   "normalScale": 0.55,
+   "group": "g_facade_tower",
+   "tint": "#b9b3ad"
+  },
+  "facade_tower_d": {
+   "map": "facade_tower",
+   "emissiveMap": "facade_tower_emis",
+   "emissive": "#ffffff",
+   "emissiveIntensity": 1.7,
+   "color": "#787f8a",
+   "roughness": 0.82,
+   "metalness": 0.04,
+   "uvScale": 0.08333333333333333,
+   "note": "one texture tile = 12 m of wall",
+   "normalMap": "facade_tower_n",
+   "normalScale": 0.55,
+   "group": "g_facade_tower",
+   "tint": "#787f8a"
+  },
+  "facade_res_a": {
+   "map": "facade_res",
+   "emissiveMap": "facade_res_emis",
+   "emissive": "#ffffff",
+   "emissiveIntensity": 1.7,
+   "color": "#a89f95",
+   "roughness": 0.82,
+   "metalness": 0.04,
+   "uvScale": 0.1,
+   "note": "one texture tile = 10 m of wall",
+   "group": "g_facade_res",
+   "tint": "#a89f95"
+  },
+  "facade_res_b": {
+   "map": "facade_res",
+   "emissiveMap": "facade_res_emis",
+   "emissive": "#ffffff",
+   "emissiveIntensity": 1.7,
+   "color": "#8e8579",
+   "roughness": 0.82,
+   "metalness": 0.04,
+   "uvScale": 0.1,
+   "note": "one texture tile = 10 m of wall",
+   "group": "g_facade_res",
+   "tint": "#8e8579"
+  },
+  "facade_res_c": {
+   "map": "facade_res",
+   "emissiveMap": "facade_res_emis",
+   "emissive": "#ffffff",
+   "emissiveIntensity": 1.7,
+   "color": "#9aa0a4",
+   "roughness": 0.82,
+   "metalness": 0.04,
+   "uvScale": 0.1,
+   "note": "one texture tile = 10 m of wall",
+   "group": "g_facade_res",
+   "tint": "#9aa0a4"
+  },
+  "facade_glass_a": {
+   "map": "facade_glass",
+   "emissiveMap": "facade_glass_emis",
+   "emissive": "#ffffff",
+   "emissiveIntensity": 1.5,
+   "color": "#93a3b5",
+   "roughness": 0.28,
+   "metalness": 0.55,
+   "uvScale": 0.07142857142857142,
+   "note": "one texture tile = 14 m of wall",
+   "metallicSmoothness": "facade_glass_ms",
+   "group": "g_facade_glass",
+   "tint": "#93a3b5"
+  },
+  "facade_glass_b": {
+   "map": "facade_glass",
+   "emissiveMap": "facade_glass_emis",
+   "emissive": "#ffffff",
+   "emissiveIntensity": 1.5,
+   "color": "#7d8fa4",
+   "roughness": 0.28,
+   "metalness": 0.55,
+   "uvScale": 0.07142857142857142,
+   "note": "one texture tile = 14 m of wall",
+   "metallicSmoothness": "facade_glass_ms",
+   "group": "g_facade_glass",
+   "tint": "#7d8fa4"
+  },
+  "facade_slum_a": {
+   "map": "facade_slum",
+   "emissiveMap": "facade_slum_emis",
+   "emissive": "#ffffff",
+   "emissiveIntensity": 1.6,
+   "color": "#9a8f82",
+   "roughness": 0.82,
+   "metalness": 0.04,
+   "uvScale": 0.125,
+   "note": "one texture tile = 8 m of wall",
+   "normalMap": "facade_slum_n",
+   "normalScale": 0.55,
+   "group": "g_facade_slum",
+   "tint": "#9a8f82"
+  },
+  "facade_slum_b": {
+   "map": "facade_slum",
+   "emissiveMap": "facade_slum_emis",
+   "emissive": "#ffffff",
+   "emissiveIntensity": 1.6,
+   "color": "#7d7468",
+   "roughness": 0.82,
+   "metalness": 0.04,
+   "uvScale": 0.125,
+   "note": "one texture tile = 8 m of wall",
+   "normalMap": "facade_slum_n",
+   "normalScale": 0.55,
+   "group": "g_facade_slum",
+   "tint": "#7d7468"
+  },
+  "metal_a": {
+   "map": "metal_panel",
+   "normalMap": "metal_panel_n",
+   "metallicSmoothness": "metal_ms",
+   "color": "#9ca1a6",
+   "roughness": 0.5,
+   "metalness": 0.8,
+   "uvScale": 0.5,
+   "normalScale": 0.9,
+   "group": "g_metal",
+   "tint": "#9ca1a6"
+  },
+  "metal_b": {
+   "map": "metal_panel",
+   "normalMap": "metal_panel_n",
+   "metallicSmoothness": "metal_ms",
+   "color": "#6d7276",
+   "roughness": 0.62,
+   "metalness": 0.78,
+   "uvScale": 0.5,
+   "normalScale": 0.9,
+   "group": "g_metal",
+   "tint": "#6d7276"
+  },
+  "metal_c": {
+   "map": "metal_panel",
+   "metallicSmoothness": "metal_ms",
+   "color": "#c2c8cc",
+   "roughness": 0.34,
+   "metalness": 0.9,
+   "uvScale": 0.6,
+   "group": "g_metal",
+   "tint": "#c2c8cc"
+  },
+  "metal_rust_a": {
+   "map": "metal_rust",
+   "normalMap": "metal_panel_n",
+   "color": "#9a7a62",
+   "roughness": 0.8,
+   "metalness": 0.45,
+   "uvScale": 0.45,
+   "normalScale": 0.8,
+   "group": "g_metal_rust",
+   "tint": "#9a7a62"
+  },
+  "metal_rust_b": {
+   "map": "metal_rust",
+   "color": "#6f5a4c",
+   "roughness": 0.88,
+   "metalness": 0.35,
+   "uvScale": 0.45,
+   "group": "g_metal_rust",
+   "tint": "#6f5a4c"
+  },
+  "pipe_metal": {
+   "map": "metal_panel",
+   "metallicSmoothness": "metal_ms",
+   "color": "#8b9095",
+   "roughness": 0.45,
+   "metalness": 0.85,
+   "uvScale": 1.1,
+   "group": "g_metal",
+   "tint": "#8b9095"
+  },
+  "rail_steel": {
+   "color": "#b7bdc2",
+   "roughness": 0.3,
+   "metalness": 0.95,
+   "group": "g_painted",
+   "tint": "#b7bdc2"
+  },
+  "sleeper_concrete": {
+   "map": "concrete_dark",
+   "color": "#7a7c7e",
+   "roughness": 0.95,
+   "uvScale": 0.5,
+   "group": "g_concrete_dark",
+   "tint": "#7a7c7e"
+  },
+  "catenary": {
+   "color": "#2b2e33",
+   "roughness": 0.6,
+   "metalness": 0.6,
+   "group": "g_painted",
+   "tint": "#2b2e33"
+  },
+  "antenna_metal": {
+   "color": "#a7adb2",
+   "roughness": 0.4,
+   "metalness": 0.9,
+   "group": "g_painted",
+   "tint": "#a7adb2"
+  },
+  "grate_metal": {
+   "map": "metal_panel",
+   "color": "#5d6367",
+   "roughness": 0.7,
+   "metalness": 0.7,
+   "uvScale": 1.4,
+   "group": "g_grate",
+   "tint": "#5d6367"
+  },
+  "glass_dark": {
+   "color": "#1b2430",
+   "roughness": 0.08,
+   "metalness": 0.7,
+   "transparent": true,
+   "opacity": 0.42,
+   "note": "windows / shopfront glazing",
+   "group": "g_glass",
+   "tint": "#1b2430"
+  },
+  "glass_shop": {
+   "color": "#28323f",
+   "roughness": 0.12,
+   "metalness": 0.5,
+   "transparent": true,
+   "opacity": 0.5,
+   "group": "g_glass",
+   "tint": "#28323f"
+  },
+  "plastic_dark": {
+   "color": "#23262b",
+   "roughness": 0.55,
+   "metalness": 0.08,
+   "group": "g_flatdark",
+   "tint": "#23262b"
+  },
+  "rubber_tyre": {
+   "color": "#141518",
+   "roughness": 0.9,
+   "group": "g_flatdark",
+   "tint": "#141518"
+  },
+  "wood_a": {
+   "map": "plaster",
+   "color": "#7b5c41",
+   "roughness": 0.9,
+   "uvScale": 0.5,
+   "group": "g_wood",
+   "tint": "#7b5c41"
+  },
+  "awning_a": {
+   "color": "#d8354f",
+   "roughness": 0.8,
+   "side": "double",
+   "group": "g_fabric",
+   "tint": "#d8354f"
+  },
+  "awning_b": {
+   "color": "#2f8fbf",
+   "roughness": 0.8,
+   "side": "double",
+   "group": "g_fabric",
+   "tint": "#2f8fbf"
+  },
+  "awning_c": {
+   "color": "#d9a22c",
+   "roughness": 0.8,
+   "side": "double",
+   "group": "g_fabric",
+   "tint": "#d9a22c"
+  },
+  "awning_d": {
+   "color": "#31a06a",
+   "roughness": 0.8,
+   "side": "double",
+   "group": "g_fabric",
+   "tint": "#31a06a"
+  },
+  "cloth_white": {
+   "color": "#cfd2cc",
+   "roughness": 0.85,
+   "side": "double",
+   "note": "laundry lines strung between the slum blocks",
+   "group": "g_fabric",
+   "tint": "#cfd2cc"
+  },
+  "neon_pink": {
+   "color": "#0a0a0c",
+   "emissive": "#ff4fd8",
+   "emissiveIntensity": 3.4,
+   "roughness": 0.4,
+   "bloom": true,
+   "group": "g_emissive",
+   "tint": "#ff4fd8"
+  },
+  "neon_cyan": {
+   "color": "#0a0a0c",
+   "emissive": "#42e8ff",
+   "emissiveIntensity": 3.4,
+   "roughness": 0.4,
+   "bloom": true,
+   "group": "g_emissive",
+   "tint": "#42e8ff"
+  },
+  "neon_red": {
+   "color": "#0a0a0c",
+   "emissive": "#ff2f3c",
+   "emissiveIntensity": 3.4,
+   "roughness": 0.4,
+   "bloom": true,
+   "group": "g_emissive",
+   "tint": "#ff2f3c"
+  },
+  "neon_white": {
+   "color": "#0a0a0c",
+   "emissive": "#fff4e8",
+   "emissiveIntensity": 3.4,
+   "roughness": 0.4,
+   "bloom": true,
+   "group": "g_emissive",
+   "tint": "#fff4e8"
+  },
+  "neon_purple": {
+   "color": "#0a0a0c",
+   "emissive": "#9b5cff",
+   "emissiveIntensity": 3.4,
+   "roughness": 0.4,
+   "bloom": true,
+   "group": "g_emissive",
+   "tint": "#9b5cff"
+  },
+  "neon_green": {
+   "color": "#0a0a0c",
+   "emissive": "#49ff9e",
+   "emissiveIntensity": 3.4,
+   "roughness": 0.4,
+   "bloom": true,
+   "group": "g_emissive",
+   "tint": "#49ff9e"
+  },
+  "neon_orange": {
+   "color": "#0a0a0c",
+   "emissive": "#ff9a2e",
+   "emissiveIntensity": 3.4,
+   "roughness": 0.4,
+   "bloom": true,
+   "group": "g_emissive",
+   "tint": "#ff9a2e"
+  },
+  "neon_blue": {
+   "color": "#0a0a0c",
+   "emissive": "#4a7bff",
+   "emissiveIntensity": 3.4,
+   "roughness": 0.4,
+   "bloom": true,
+   "group": "g_emissive",
+   "tint": "#4a7bff"
+  },
+  "neon_bars_a": {
+   "emissiveMap": "neon_bars",
+   "emissive": "#ffffff",
+   "emissiveIntensity": 2.8,
+   "color": "#0b0b0d",
+   "roughness": 0.5,
+   "uvScale": 1,
+   "bloom": true,
+   "group": "g_neon_bars",
+   "tint": "#ffffff"
+  },
+  "light_warm": {
+   "color": "#141210",
+   "emissive": "#ffb469",
+   "emissiveIntensity": 3,
+   "bloom": true,
+   "group": "g_emissive",
+   "tint": "#ffb469"
+  },
+  "light_white": {
+   "color": "#121314",
+   "emissive": "#e8f2ff",
+   "emissiveIntensity": 3.6,
+   "bloom": true,
+   "group": "g_emissive",
+   "tint": "#e8f2ff"
+  },
+  "light_red": {
+   "color": "#140d0e",
+   "emissive": "#ff2b33",
+   "emissiveIntensity": 3.2,
+   "bloom": true,
+   "group": "g_emissive",
+   "tint": "#ff2b33"
+  },
+  "light_amber": {
+   "color": "#141008",
+   "emissive": "#ffa02a",
+   "emissiveIntensity": 2.8,
+   "bloom": true,
+   "group": "g_emissive",
+   "tint": "#ffa02a"
+  },
+  "shop_glow": {
+   "color": "#15120f",
+   "emissive": "#ffc979",
+   "emissiveIntensity": 2.2,
+   "bloom": true,
+   "group": "g_emissive",
+   "tint": "#ffc979"
+  },
+  "ad_screen_1": {
+   "canvas": "ad1",
+   "emissive": "#ffffff",
+   "emissiveIntensity": 1.55,
+   "color": "#101013",
+   "roughness": 0.55,
+   "bloom": true,
+   "note": "billboard drawn at runtime into a canvas (JP/EN/numeric signage)",
+   "group": "g_ad_1",
+   "tint": "#101013"
+  },
+  "ad_screen_2": {
+   "canvas": "ad2",
+   "emissive": "#ffffff",
+   "emissiveIntensity": 1.55,
+   "color": "#101013",
+   "roughness": 0.55,
+   "bloom": true,
+   "note": "billboard drawn at runtime into a canvas (JP/EN/numeric signage)",
+   "group": "g_ad_2",
+   "tint": "#101013"
+  },
+  "ad_screen_3": {
+   "canvas": "ad3",
+   "emissive": "#ffffff",
+   "emissiveIntensity": 1.55,
+   "color": "#101013",
+   "roughness": 0.55,
+   "bloom": true,
+   "note": "billboard drawn at runtime into a canvas (JP/EN/numeric signage)",
+   "group": "g_ad_3",
+   "tint": "#101013"
+  },
+  "ad_screen_4": {
+   "canvas": "ad4",
+   "emissive": "#ffffff",
+   "emissiveIntensity": 1.55,
+   "color": "#101013",
+   "roughness": 0.55,
+   "bloom": true,
+   "note": "billboard drawn at runtime into a canvas (JP/EN/numeric signage)",
+   "group": "g_ad_4",
+   "tint": "#101013"
+  },
+  "ad_screen_5": {
+   "canvas": "ad5",
+   "emissive": "#ffffff",
+   "emissiveIntensity": 1.55,
+   "color": "#101013",
+   "roughness": 0.55,
+   "bloom": true,
+   "note": "billboard drawn at runtime into a canvas (JP/EN/numeric signage)",
+   "group": "g_ad_5",
+   "tint": "#101013"
+  },
+  "ad_screen_6": {
+   "canvas": "ad6",
+   "emissive": "#ffffff",
+   "emissiveIntensity": 1.55,
+   "color": "#101013",
+   "roughness": 0.55,
+   "bloom": true,
+   "note": "billboard drawn at runtime into a canvas (JP/EN/numeric signage)",
+   "group": "g_ad_6",
+   "tint": "#101013"
+  },
+  "ad_screen_7": {
+   "canvas": "ad7",
+   "emissive": "#ffffff",
+   "emissiveIntensity": 1.55,
+   "color": "#101013",
+   "roughness": 0.55,
+   "bloom": true,
+   "note": "billboard drawn at runtime into a canvas (JP/EN/numeric signage)",
+   "group": "g_ad_7",
+   "tint": "#101013"
+  },
+  "ad_screen_8": {
+   "canvas": "ad8",
+   "emissive": "#ffffff",
+   "emissiveIntensity": 1.55,
+   "color": "#101013",
+   "roughness": 0.55,
+   "bloom": true,
+   "note": "billboard drawn at runtime into a canvas (JP/EN/numeric signage)",
+   "group": "g_ad_8",
+   "tint": "#101013"
+  },
+  "sign_plate_1": {
+   "canvas": "sign1",
+   "emissive": "#ffffff",
+   "emissiveIntensity": 1.8,
+   "color": "#0f1012",
+   "roughness": 0.5,
+   "bloom": true,
+   "group": "g_sign_1",
+   "tint": "#0f1012"
+  },
+  "sign_plate_2": {
+   "canvas": "sign2",
+   "emissive": "#ffffff",
+   "emissiveIntensity": 1.8,
+   "color": "#0f1012",
+   "roughness": 0.5,
+   "bloom": true,
+   "group": "g_sign_2",
+   "tint": "#0f1012"
+  },
+  "sign_plate_3": {
+   "canvas": "sign3",
+   "emissive": "#ffffff",
+   "emissiveIntensity": 1.8,
+   "color": "#0f1012",
+   "roughness": 0.5,
+   "bloom": true,
+   "group": "g_sign_3",
+   "tint": "#0f1012"
+  },
+  "sign_plate_4": {
+   "canvas": "sign4",
+   "emissive": "#ffffff",
+   "emissiveIntensity": 1.8,
+   "color": "#0f1012",
+   "roughness": 0.5,
+   "bloom": true,
+   "group": "g_sign_4",
+   "tint": "#0f1012"
+  },
+  "sign_plate_5": {
+   "canvas": "sign5",
+   "emissive": "#ffffff",
+   "emissiveIntensity": 1.8,
+   "color": "#0f1012",
+   "roughness": 0.5,
+   "bloom": true,
+   "group": "g_sign_5",
+   "tint": "#0f1012"
+  },
+  "sign_plate_6": {
+   "canvas": "sign6",
+   "emissive": "#ffffff",
+   "emissiveIntensity": 1.8,
+   "color": "#0f1012",
+   "roughness": 0.5,
+   "bloom": true,
+   "group": "g_sign_6",
+   "tint": "#0f1012"
+  },
+  "car_body_a": {
+   "color": "#1f2b3a",
+   "roughness": 0.32,
+   "metalness": 0.62,
+   "group": "g_painted",
+   "tint": "#1f2b3a"
+  },
+  "car_body_b": {
+   "color": "#6b1f26",
+   "roughness": 0.32,
+   "metalness": 0.62,
+   "group": "g_painted",
+   "tint": "#6b1f26"
+  },
+  "car_body_c": {
+   "color": "#22333a",
+   "roughness": 0.32,
+   "metalness": 0.62,
+   "group": "g_painted",
+   "tint": "#22333a"
+  },
+  "car_body_d": {
+   "color": "#c9c9cc",
+   "roughness": 0.32,
+   "metalness": 0.62,
+   "group": "g_painted",
+   "tint": "#c9c9cc"
+  },
+  "car_body_e": {
+   "color": "#2c2f36",
+   "roughness": 0.32,
+   "metalness": 0.62,
+   "group": "g_painted",
+   "tint": "#2c2f36"
+  },
+  "car_body_f": {
+   "color": "#3e2a44",
+   "roughness": 0.32,
+   "metalness": 0.62,
+   "group": "g_painted",
+   "tint": "#3e2a44"
+  },
+  "car_glass": {
+   "color": "#10161e",
+   "roughness": 0.1,
+   "metalness": 0.6,
+   "transparent": true,
+   "opacity": 0.6,
+   "group": "g_glass",
+   "tint": "#10161e"
+  },
+  "car_light_front": {
+   "color": "#1a1a1a",
+   "emissive": "#fff0d0",
+   "emissiveIntensity": 3.4,
+   "bloom": true,
+   "group": "g_emissive",
+   "tint": "#fff0d0"
+  },
+  "car_light_rear": {
+   "color": "#1a1010",
+   "emissive": "#ff2222",
+   "emissiveIntensity": 3,
+   "bloom": true,
+   "group": "g_emissive",
+   "tint": "#ff2222"
+  },
+  "cloud_billboard": {
+   "map": "cloud_puff",
+   "transparent": true,
+   "opacity": 0.32,
+   "depthWrite": false,
+   "roughness": 1,
+   "unlit": true,
+   "note": "camera-facing billboard, never a solid slab",
+   "group": "g_cloud",
+   "tint": "#ffffff"
+  },
+  "silhouette_a": {
+   "color": "#3a3644",
+   "roughness": 1,
+   "unlit": false,
+   "note": "distant skyline, fog does the work",
+   "group": "g_silhouette",
+   "tint": "#3a3644"
+  },
+  "silhouette_b": {
+   "color": "#2f2d3c",
+   "group": "g_silhouette",
+   "tint": "#2f2d3c"
+  },
+  "silhouette_c": {
+   "color": "#474156",
+   "group": "g_silhouette",
+   "tint": "#474156"
+  },
+  "water_dark": {
+   "color": "#1a222c",
+   "roughness": 0.15,
+   "metalness": 0.5,
+   "group": "g_water",
+   "tint": "#1a222c"
+  },
+  "decal_road_lines": {
+   "map": "road_lines",
+   "transparent": true,
+   "alphaTest": 0.35,
+   "roughness": 0.9,
+   "uvScale": 1,
+   "polygonOffset": true,
+   "note": "alphaTest so it never writes a grey quad",
+   "group": "g_decal_lines",
+   "tint": "#ffffff"
+  },
+  "decal_grime": {
+   "map": "grime_decal",
+   "transparent": true,
+   "alphaTest": 0.08,
+   "opacity": 0.8,
+   "roughness": 0.95,
+   "polygonOffset": true,
+   "group": "g_decal_grime",
+   "tint": "#ffffff"
+  }
+ },
+ "character": {
+  "char_skin": {
+   "color": "#c79a78",
+   "roughness": 0.62,
+   "metalness": 0
+  },
+  "char_skin_dark": {
+   "color": "#a97a5c",
+   "roughness": 0.64
+  },
+  "char_eye_white": {
+   "color": "#e9e9ea",
+   "roughness": 0.28
+  },
+  "char_eye_iris": {
+   "color": "#2a3c46",
+   "roughness": 0.18,
+   "metalness": 0.05
+  },
+  "char_cornea": {
+   "color": "#ffffff",
+   "roughness": 0.05,
+   "metalness": 0,
+   "transparent": true,
+   "opacity": 0.22,
+   "depthWrite": false,
+   "note": "corneal transparency"
+  },
+  "char_hair": {
+   "color": "#1d1a19",
+   "roughness": 0.52
+  },
+  "char_hair_light": {
+   "color": "#4a3527",
+   "roughness": 0.55
+  },
+  "char_jacket_camo": {
+   "color": "#5c6448",
+   "roughness": 0.84,
+   "camo": true,
+   "note": "camouflage jacket - runtime canvas camo pattern"
+  },
+  "char_jacket_trim": {
+   "color": "#33372a",
+   "roughness": 0.8
+  },
+  "char_vest": {
+   "color": "#2f3237",
+   "roughness": 0.74
+  },
+  "char_vest_pouch": {
+   "color": "#3c4046",
+   "roughness": 0.78
+  },
+  "char_vest_buckle": {
+   "color": "#9aa0a6",
+   "roughness": 0.35,
+   "metalness": 0.85
+  },
+  "char_pants_grey": {
+   "color": "#a9a8a4",
+   "roughness": 0.86
+  },
+  "char_pants_dark": {
+   "color": "#4c4f55",
+   "roughness": 0.86
+  },
+  "char_boots": {
+   "color": "#211f1e",
+   "roughness": 0.68
+  },
+  "char_boot_sole": {
+   "color": "#141414",
+   "roughness": 0.9
+  },
+  "char_gloves": {
+   "color": "#2a2b2e",
+   "roughness": 0.7
+  },
+  "char_cap": {
+   "color": "#b8343f",
+   "roughness": 0.76,
+   "note": "baseball cap"
+  },
+  "char_cap_brim": {
+   "color": "#8d2831",
+   "roughness": 0.74
+  },
+  "char_backpack": {
+   "color": "#3a4250",
+   "roughness": 0.8,
+   "note": "backpack"
+  },
+  "char_backpack_strap": {
+   "color": "#23262c",
+   "roughness": 0.82
+  },
+  "char_shirt": {
+   "color": "#d8d4cb",
+   "roughness": 0.84
+  },
+  "char_belt": {
+   "color": "#26231f",
+   "roughness": 0.7
+  },
+  "char_web_fiber": {
+   "color": "#e8ecf0",
+   "emissive": "#c8d6e4",
+   "emissiveIntensity": 0.22,
+   "roughness": 0.55,
+   "note": "web strand fibre"
+  }
+ }
+}

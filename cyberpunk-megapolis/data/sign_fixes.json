@@ -1,0 +1,1723 @@
+{
+ "note": "Advertisements the generator found floating off their host facade, with the corrected transform already applied in scene.json. The runtime re-checks the gap and logs any that drift.",
+ "tolerance": 0.25,
+ "fixes": [
+  {
+   "prefab": "Decals/ad_flat_3",
+   "building": "Combined_Building/res_22x46_0",
+   "side": 2,
+   "from": [
+    -995.99,
+    40.98,
+    427.8
+   ],
+   "to": [
+    -1000.65,
+    40.98,
+    427.8
+   ],
+   "gap": 4.66,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Decals/ad_flat_7",
+   "building": "Combined_Building/res_16x24_2",
+   "side": 3,
+   "from": [
+    -1071.09,
+    14.1,
+    499.28
+   ],
+   "to": [
+    -1068.27,
+    14.1,
+    499.28
+   ],
+   "gap": 2.81,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Facade_Details/wall_ad_5",
+   "building": "Combined_Building/res_22x46_0",
+   "side": 1,
+   "from": [
+    -1007.84,
+    26.09,
+    570.82
+   ],
+   "to": [
+    -1007.84,
+    26.09,
+    573.29
+   ],
+   "gap": 2.47,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Facade_Details/wall_ad_1",
+   "building": "Combined_Building/res_22x46_0",
+   "side": 0,
+   "from": [
+    -1079.79,
+    19.74,
+    627.6
+   ],
+   "to": [
+    -1079.79,
+    19.74,
+    624.67
+   ],
+   "gap": 2.93,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Facade_Details/wall_ad_5",
+   "building": "Combined_Building/corner_30x76_0",
+   "side": 2,
+   "from": [
+    -1059.35,
+    25.01,
+    690.37
+   ],
+   "to": [
+    -1060.86,
+    25.01,
+    690.37
+   ],
+   "gap": 1.51,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Facade_Details/wall_ad_4",
+   "building": "Combined_Building/res_15x42_2",
+   "side": 3,
+   "from": [
+    -1022.84,
+    21.57,
+    660.21
+   ],
+   "to": [
+    -1018.87,
+    21.57,
+    660.21
+   ],
+   "gap": 3.97,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Decals/ad_flat_4",
+   "building": "Combined_Building/res_28x64_2",
+   "side": 2,
+   "from": [
+    -1055.51,
+    54.25,
+    825.66
+   ],
+   "to": [
+    -1057.63,
+    54.25,
+    825.66
+   ],
+   "gap": 2.13,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Facade_Details/wall_ad_1",
+   "building": "Combined_Building/res_15x42_2",
+   "side": 1,
+   "from": [
+    -1023.43,
+    11,
+    838.3
+   ],
+   "to": [
+    -1023.43,
+    11,
+    840.94
+   ],
+   "gap": 2.64,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Decals/ad_flat_2",
+   "building": "Combined_Building/res_20x38_0",
+   "side": 3,
+   "from": [
+    -1090.03,
+    26.93,
+    922.1
+   ],
+   "to": [
+    -1088.43,
+    26.93,
+    922.1
+   ],
+   "gap": 1.61,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Decals/ad_flat_4",
+   "building": "Combined_Building/res_16x24_2",
+   "side": 1,
+   "from": [
+    -946,
+    16.99,
+    432.05
+   ],
+   "to": [
+    -946,
+    16.99,
+    435.93
+   ],
+   "gap": 3.88,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Decals/ad_flat_3",
+   "building": "Combined_Building/corner_30x76_0",
+   "side": 2,
+   "from": [
+    -879.7,
+    36.96,
+    611.68
+   ],
+   "to": [
+    -883.3,
+    36.96,
+    611.68
+   ],
+   "gap": 3.6,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Facade_Details/wall_ad_1",
+   "building": "Combined_Building/corner_30x76_0",
+   "side": 1,
+   "from": [
+    -958.88,
+    24.97,
+    676.62
+   ],
+   "to": [
+    -958.88,
+    24.97,
+    680.07
+   ],
+   "gap": 3.45,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Facade_Details/wall_ad_5",
+   "building": "Combined_Building/res_28x64_2",
+   "side": 3,
+   "from": [
+    -946.64,
+    55.59,
+    667.87
+   ],
+   "to": [
+    -942.46,
+    55.59,
+    667.87
+   ],
+   "gap": 4.18,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Decals/ad_flat_2",
+   "building": "Combined_Building/res_16x24_2",
+   "side": 1,
+   "from": [
+    -892.69,
+    19.6,
+    794.98
+   ],
+   "to": [
+    -892.69,
+    19.6,
+    798.96
+   ],
+   "gap": 3.98,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Facade_Details/wall_ad_8",
+   "building": "Combined_Building/res_15x42_1",
+   "side": 0,
+   "from": [
+    -965.23,
+    12.89,
+    901.28
+   ],
+   "to": [
+    -965.23,
+    12.89,
+    898.33
+   ],
+   "gap": 2.96,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Decals/ad_flat_5",
+   "building": "Combined_Building/res_21x26_1",
+   "side": 0,
+   "from": [
+    -932.92,
+    13.94,
+    965.94
+   ],
+   "to": [
+    -932.92,
+    13.94,
+    962.04
+   ],
+   "gap": 3.9,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Facade_Details/wall_ad_8",
+   "building": "Combined_Building/res_18x30_1",
+   "side": 0,
+   "from": [
+    -891.58,
+    17.85,
+    976.73
+   ],
+   "to": [
+    -891.58,
+    17.85,
+    972.88
+   ],
+   "gap": 3.85,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Facade_Details/wall_ad_7",
+   "building": "Combined_Building/res_20x38_1",
+   "side": 1,
+   "from": [
+    -777.3,
+    24.58,
+    536.95
+   ],
+   "to": [
+    -777.3,
+    24.58,
+    537.95
+   ],
+   "gap": 1,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Decals/ad_flat_3",
+   "building": "Combined_Building/res_22x46_1",
+   "side": 3,
+   "from": [
+    -794.87,
+    38.11,
+    663.92
+   ],
+   "to": [
+    -791.75,
+    38.11,
+    663.92
+   ],
+   "gap": 3.12,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Facade_Details/wall_ad_5",
+   "building": "Combined_Building/corner_30x76_1",
+   "side": 3,
+   "from": [
+    -861.95,
+    21.34,
+    697.07
+   ],
+   "to": [
+    -857.17,
+    21.34,
+    697.07
+   ],
+   "gap": 4.78,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Facade_Details/wall_ad_8",
+   "building": "Combined_Building/res_24x56_0",
+   "side": 1,
+   "from": [
+    -841.71,
+    10.48,
+    767.44
+   ],
+   "to": [
+    -841.71,
+    10.48,
+    768.75
+   ],
+   "gap": 1.31,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Facade_Details/wall_ad_7",
+   "building": "Combined_Building/res_22x46_1",
+   "side": 0,
+   "from": [
+    -779.74,
+    45.28,
+    791.16
+   ],
+   "to": [
+    -779.74,
+    45.28,
+    789.35
+   ],
+   "gap": 1.82,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Decals/ad_flat_3",
+   "building": "Combined_Building/res_20x38_1",
+   "side": 3,
+   "from": [
+    -805.86,
+    27.21,
+    818.77
+   ],
+   "to": [
+    -801.41,
+    27.21,
+    818.77
+   ],
+   "gap": 4.45,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Decals/ad_flat_3",
+   "building": "Combined_Building/res_26x28_1",
+   "side": 0,
+   "from": [
+    -803.46,
+    19.5,
+    913.2
+   ],
+   "to": [
+    -803.46,
+    19.5,
+    910.73
+   ],
+   "gap": 2.47,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Decals/ad_flat_8",
+   "building": "Combined_Building/res_18x30_0",
+   "side": 1,
+   "from": [
+    -732.87,
+    17.36,
+    422.36
+   ],
+   "to": [
+    -732.87,
+    17.36,
+    424.19
+   ],
+   "gap": 1.84,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Decals/ad_flat_4",
+   "building": "Combined_Building/res_22x46_1",
+   "side": 3,
+   "from": [
+    -677.95,
+    28.34,
+    432.25
+   ],
+   "to": [
+    -673.46,
+    28.34,
+    432.25
+   ],
+   "gap": 4.48,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Facade_Details/wall_ad_5",
+   "building": "Combined_Building/res_18x30_0",
+   "side": 0,
+   "from": [
+    -732.09,
+    23.35,
+    557.13
+   ],
+   "to": [
+    -732.09,
+    23.35,
+    553.68
+   ],
+   "gap": 3.45,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Decals/ad_flat_2",
+   "building": "Combined_Building/res_21x26_1",
+   "side": 1,
+   "from": [
+    -731.67,
+    15.88,
+    598.35
+   ],
+   "to": [
+    -731.67,
+    15.88,
+    602.68
+   ],
+   "gap": 4.33,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Decals/ad_flat_3",
+   "building": "Combined_Building/res_18x30_0",
+   "side": 2,
+   "from": [
+    -649.07,
+    10.06,
+    601.24
+   ],
+   "to": [
+    -651.83,
+    10.06,
+    601.24
+   ],
+   "gap": 2.76,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Decals/ad_flat_4",
+   "building": "Combined_Building/corner_30x76_1",
+   "side": 1,
+   "from": [
+    -667.61,
+    64.97,
+    713.03
+   ],
+   "to": [
+    -667.61,
+    64.97,
+    714.22
+   ],
+   "gap": 1.2,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Facade_Details/wall_ad_3",
+   "building": "Combined_Building/res_18x30_0",
+   "side": 3,
+   "from": [
+    -744.33,
+    19.95,
+    732.22
+   ],
+   "to": [
+    -740.59,
+    19.95,
+    732.22
+   ],
+   "gap": 3.74,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Facade_Details/wall_ad_8",
+   "building": "Combined_Building/res_18x30_2",
+   "side": 3,
+   "from": [
+    -715.38,
+    18.45,
+    731.51
+   ],
+   "to": [
+    -712.39,
+    18.45,
+    731.51
+   ],
+   "gap": 2.99,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Decals/ad_flat_5",
+   "building": "Combined_Building/res_20x38_1",
+   "side": 1,
+   "from": [
+    -730.78,
+    21.26,
+    833.27
+   ],
+   "to": [
+    -730.78,
+    21.26,
+    835.51
+   ],
+   "gap": 2.23,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Decals/ad_flat_1",
+   "building": "Combined_Building/res_20x38_1",
+   "side": 2,
+   "from": [
+    -653.44,
+    20.19,
+    777.13
+   ],
+   "to": [
+    -655.69,
+    20.19,
+    777.13
+   ],
+   "gap": 2.25,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Decals/ad_flat_2",
+   "building": "Combined_Building/res_24x56_0",
+   "side": 1,
+   "from": [
+    -698.14,
+    19.92,
+    764.05
+   ],
+   "to": [
+    -698.14,
+    19.92,
+    767.26
+   ],
+   "gap": 3.22,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Facade_Details/wall_ad_6",
+   "building": "Combined_Building/res_22x46_1",
+   "side": 2,
+   "from": [
+    -532.21,
+    16.67,
+    434.95
+   ],
+   "to": [
+    -536.38,
+    16.67,
+    434.95
+   ],
+   "gap": 4.17,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Facade_Details/wall_ad_7",
+   "building": "Combined_Building/res_21x26_1",
+   "side": 1,
+   "from": [
+    -613.68,
+    11.68,
+    415.82
+   ],
+   "to": [
+    -613.68,
+    11.68,
+    419.17
+   ],
+   "gap": 3.35,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Decals/ad_flat_7",
+   "building": "Combined_Building/res_22x46_1",
+   "side": 0,
+   "from": [
+    -612.19,
+    19.21,
+    626.12
+   ],
+   "to": [
+    -612.19,
+    19.21,
+    622.06
+   ],
+   "gap": 4.06,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Facade_Details/wall_ad_5",
+   "building": "Combined_Building/res_18x30_2",
+   "side": 2,
+   "from": [
+    -577.42,
+    14.14,
+    577.69
+   ],
+   "to": [
+    -580.75,
+    14.14,
+    577.69
+   ],
+   "gap": 3.33,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Decals/ad_flat_5",
+   "building": "Combined_Building/res_21x26_1",
+   "side": 0,
+   "from": [
+    -547.62,
+    19.57,
+    673.57
+   ],
+   "to": [
+    -547.62,
+    19.57,
+    669.1
+   ],
+   "gap": 4.47,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Facade_Details/wall_ad_1",
+   "building": "Combined_Building/res_18x30_2",
+   "side": 1,
+   "from": [
+    -614.22,
+    14.48,
+    680.02
+   ],
+   "to": [
+    -614.22,
+    14.48,
+    681.45
+   ],
+   "gap": 1.43,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Decals/ad_flat_4",
+   "building": "Combined_Building/res_18x30_2",
+   "side": 3,
+   "from": [
+    -560.16,
+    15.99,
+    778.26
+   ],
+   "to": [
+    -555.27,
+    15.99,
+    778.26
+   ],
+   "gap": 4.89,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Facade_Details/wall_ad_8",
+   "building": "Combined_Building/res_24x56_0",
+   "side": 3,
+   "from": [
+    -447.39,
+    19.97,
+    494.88
+   ],
+   "to": [
+    -444.27,
+    19.97,
+    494.88
+   ],
+   "gap": 3.12,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Facade_Details/wall_ad_8",
+   "building": "Combined_Building/res_21x26_1",
+   "side": 2,
+   "from": [
+    -484.24,
+    11.08,
+    427.61
+   ],
+   "to": [
+    -486.97,
+    11.08,
+    427.61
+   ],
+   "gap": 2.73,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Decals/ad_flat_4",
+   "building": "Combined_Building/res_18x30_2",
+   "side": 1,
+   "from": [
+    -312.35,
+    27.9,
+    183.92
+   ],
+   "to": [
+    -312.35,
+    27.9,
+    187.1
+   ],
+   "gap": 3.17,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Decals/ad_flat_6",
+   "building": "Combined_Building/res_18x30_0",
+   "side": 3,
+   "from": [
+    -324.52,
+    15.31,
+    259.51
+   ],
+   "to": [
+    -322.33,
+    15.31,
+    259.51
+   ],
+   "gap": 2.19,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Decals/ad_flat_1",
+   "building": "Combined_Building/res_18x30_0",
+   "side": 1,
+   "from": [
+    -311.29,
+    15.49,
+    371.46
+   ],
+   "to": [
+    -311.29,
+    15.49,
+    373.32
+   ],
+   "gap": 1.86,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Facade_Details/wall_ad_7",
+   "building": "Combined_Building/res_21x26_1",
+   "side": 0,
+   "from": [
+    -381.28,
+    12.54,
+    325.33
+   ],
+   "to": [
+    -381.28,
+    12.54,
+    321.73
+   ],
+   "gap": 3.6,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Facade_Details/wall_ad_1",
+   "building": "Combined_Building/res_18x30_0",
+   "side": 2,
+   "from": [
+    -346.93,
+    11.51,
+    490.13
+   ],
+   "to": [
+    -350.03,
+    11.51,
+    490.13
+   ],
+   "gap": 3.1,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Facade_Details/wall_ad_3",
+   "building": "Combined_Building/corner_34x96_1",
+   "side": 3,
+   "from": [
+    -226.28,
+    19.98,
+    25.78
+   ],
+   "to": [
+    -222.47,
+    19.98,
+    25.78
+   ],
+   "gap": 3.81,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Decals/ad_flat_3",
+   "building": "Combined_Building/res_20x38_1",
+   "side": 3,
+   "from": [
+    -262.01,
+    26.79,
+    136.66
+   ],
+   "to": [
+    -258.99,
+    26.79,
+    136.66
+   ],
+   "gap": 3.02,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Facade_Details/wall_ad_7",
+   "building": "Combined_Building/res_24x56_0",
+   "side": 2,
+   "from": [
+    -243.91,
+    31.14,
+    317.61
+   ],
+   "to": [
+    -246.48,
+    31.14,
+    317.61
+   ],
+   "gap": 2.57,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Facade_Details/wall_ad_4",
+   "building": "Combined_Building/res_21x26_1",
+   "side": 0,
+   "from": [
+    -227.81,
+    13.11,
+    393.33
+   ],
+   "to": [
+    -227.81,
+    13.11,
+    391.87
+   ],
+   "gap": 1.46,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Decals/ad_flat_4",
+   "building": "Combined_Building/corner_34x96_1",
+   "side": 1,
+   "from": [
+    -230.47,
+    69.07,
+    469.22
+   ],
+   "to": [
+    -230.47,
+    69.07,
+    473.95
+   ],
+   "gap": 4.73,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Facade_Details/wall_ad_2",
+   "building": "Combined_Building/res_20x38_1",
+   "side": 0,
+   "from": [
+    -198.91,
+    15.15,
+    606.39
+   ],
+   "to": [
+    -198.91,
+    15.15,
+    602.49
+   ],
+   "gap": 3.91,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Decals/ad_flat_3",
+   "building": "Combined_Building/res_24x56_0",
+   "side": 2,
+   "from": [
+    -249.41,
+    27.31,
+    589.69
+   ],
+   "to": [
+    -251.31,
+    27.31,
+    589.69
+   ],
+   "gap": 1.91,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Facade_Details/wall_ad_3",
+   "building": "Combined_Building/res_18x30_2",
+   "side": 0,
+   "from": [
+    -149.33,
+    20.41,
+    95.76
+   ],
+   "to": [
+    -149.33,
+    20.41,
+    91.73
+   ],
+   "gap": 4.03,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Decals/ad_flat_5",
+   "building": "Combined_Building/res_18x30_0",
+   "side": 1,
+   "from": [
+    -150.83,
+    14.49,
+    183.21
+   ],
+   "to": [
+    -150.83,
+    14.49,
+    187.84
+   ],
+   "gap": 4.63,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Decals/ad_flat_5",
+   "building": "Combined_Building/res_21x26_1",
+   "side": 3,
+   "from": [
+    -97.66,
+    11.97,
+    729.12
+   ],
+   "to": [
+    -94.5,
+    11.97,
+    729.12
+   ],
+   "gap": 3.17,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Decals/ad_flat_6",
+   "building": "Combined_Building/tower_22x160_2",
+   "side": 1,
+   "from": [
+    33.67,
+    13.83,
+    -17.49
+   ],
+   "to": [
+    33.67,
+    13.83,
+    -16.34
+   ],
+   "gap": 1.15,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Decals/ad_flat_2",
+   "building": "Combined_Building/tower_19x212_2",
+   "side": 1,
+   "from": [
+    -34.81,
+    54.46,
+    22.73
+   ],
+   "to": [
+    -34.81,
+    54.46,
+    24.19
+   ],
+   "gap": 1.46,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Facade_Details/wall_ad_4",
+   "building": "Combined_Building/slab_24x46_0",
+   "side": 1,
+   "from": [
+    -29.71,
+    36.86,
+    -7.75
+   ],
+   "to": [
+    -29.71,
+    36.86,
+    -4.21
+   ],
+   "gap": 3.54,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Decals/ad_flat_1",
+   "building": "Combined_Building/tower_18x96_1",
+   "side": 1,
+   "from": [
+    35.36,
+    31.36,
+    -47.15
+   ],
+   "to": [
+    35.36,
+    31.36,
+    -44.27
+   ],
+   "gap": 2.88,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Decals/ad_flat_7",
+   "building": "Combined_Building/slab_44x88_2",
+   "side": 2,
+   "from": [
+    47.39,
+    32.56,
+    108.58
+   ],
+   "to": [
+    43.86,
+    32.56,
+    108.58
+   ],
+   "gap": 3.53,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Decals/ad_flat_5",
+   "building": "Combined_Building/tower_24x196_0",
+   "side": 3,
+   "from": [
+    -49.09,
+    28.17,
+    111.45
+   ],
+   "to": [
+    -45.06,
+    28.17,
+    111.45
+   ],
+   "gap": 4.03,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Decals/ad_flat_3",
+   "building": "Combined_Building/tower_19x212_2",
+   "side": 3,
+   "from": [
+    20.26,
+    14.43,
+    150.69
+   ],
+   "to": [
+    24.56,
+    14.43,
+    150.69
+   ],
+   "gap": 4.3,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Decals/ad_flat_8",
+   "building": "Combined_Building/slab_60x54_0",
+   "side": 3,
+   "from": [
+    -18.77,
+    25.39,
+    251.74
+   ],
+   "to": [
+    -16.61,
+    25.39,
+    251.74
+   ],
+   "gap": 2.16,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Decals/ad_flat_3",
+   "building": "Combined_Building/slab_60x54_0",
+   "side": 1,
+   "from": [
+    20.59,
+    15.37,
+    329.06
+   ],
+   "to": [
+    20.59,
+    15.37,
+    332.38
+   ],
+   "gap": 3.32,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Decals/ad_flat_4",
+   "building": "Combined_Building/tower_24x196_0",
+   "side": 3,
+   "from": [
+    -46.84,
+    66.4,
+    315.84
+   ],
+   "to": [
+    -44.39,
+    66.4,
+    315.84
+   ],
+   "gap": 2.45,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Facade_Details/wall_ad_8",
+   "building": "Combined_Building/res_15x42_2",
+   "side": 1,
+   "from": [
+    -36.53,
+    17.16,
+    416.49
+   ],
+   "to": [
+    -36.53,
+    17.16,
+    419.45
+   ],
+   "gap": 2.96,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Facade_Details/wall_ad_4",
+   "building": "Combined_Building/res_30x34_1",
+   "side": 1,
+   "from": [
+    26.47,
+    14.19,
+    414.4
+   ],
+   "to": [
+    26.47,
+    14.19,
+    418.97
+   ],
+   "gap": 4.57,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Decals/ad_flat_7",
+   "building": "Combined_Building/res_28x64_0",
+   "side": 1,
+   "from": [
+    85.74,
+    32.74,
+    -492.53
+   ],
+   "to": [
+    85.74,
+    32.74,
+    -491.35
+   ],
+   "gap": 1.18,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Decals/ad_flat_2",
+   "building": "Combined_Building/slab_60x54_0",
+   "side": 0,
+   "from": [
+    130.43,
+    14.02,
+    160.61
+   ],
+   "to": [
+    130.43,
+    14.02,
+    159.28
+   ],
+   "gap": 1.33,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Facade_Details/wall_ad_2",
+   "building": "Combined_Building/tower_20x128_0",
+   "side": 1,
+   "from": [
+    81.86,
+    30.56,
+    109.32
+   ],
+   "to": [
+    81.86,
+    30.56,
+    113.22
+   ],
+   "gap": 3.9,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Facade_Details/wall_ad_7",
+   "building": "Combined_Building/tower_20x128_0",
+   "side": 3,
+   "from": [
+    137.83,
+    63.88,
+    266.39
+   ],
+   "to": [
+    141.49,
+    63.88,
+    266.39
+   ],
+   "gap": 3.66,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Facade_Details/wall_ad_1",
+   "building": "Combined_Building/slab_30x58_1",
+   "side": 3,
+   "from": [
+    137.45,
+    46.94,
+    377.43
+   ],
+   "to": [
+    140.5,
+    46.94,
+    377.43
+   ],
+   "gap": 3.05,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Decals/ad_flat_2",
+   "building": "Combined_Building/tower_18x96_1",
+   "side": 3,
+   "from": [
+    67.77,
+    23,
+    458.43
+   ],
+   "to": [
+    71.09,
+    23,
+    458.43
+   ],
+   "gap": 3.32,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Decals/ad_flat_7",
+   "building": "Combined_Building/slab_24x46_0",
+   "side": 1,
+   "from": [
+    152.76,
+    27.85,
+    480.23
+   ],
+   "to": [
+    152.76,
+    27.85,
+    483.69
+   ],
+   "gap": 3.46,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Decals/ad_flat_4",
+   "building": "Combined_Building/tower_30x118_0",
+   "side": 0,
+   "from": [
+    126.33,
+    30.91,
+    510.39
+   ],
+   "to": [
+    126.33,
+    30.91,
+    507.49
+   ],
+   "gap": 2.9,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Decals/ad_flat_4",
+   "building": "Combined_Building/slab_24x46_0",
+   "side": 1,
+   "from": [
+    152.64,
+    25.52,
+    448.75
+   ],
+   "to": [
+    152.64,
+    25.52,
+    452.24
+   ],
+   "gap": 3.49,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Decals/ad_flat_6",
+   "building": "Combined_Building/tower_22x160_2",
+   "side": 2,
+   "from": [
+    97.1,
+    40.55,
+    614.43
+   ],
+   "to": [
+    93.49,
+    40.55,
+    614.43
+   ],
+   "gap": 3.61,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Facade_Details/wall_ad_3",
+   "building": "Combined_Building/tower_24x196_0",
+   "side": 1,
+   "from": [
+    148.54,
+    98.22,
+    583.5
+   ],
+   "to": [
+    148.54,
+    98.22,
+    585.99
+   ],
+   "gap": 2.49,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Facade_Details/wall_ad_3",
+   "building": "Combined_Building/res_26x28_2",
+   "side": 1,
+   "from": [
+    263.61,
+    15.62,
+    -626.6
+   ],
+   "to": [
+    263.61,
+    15.62,
+    -624.41
+   ],
+   "gap": 2.19,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Facade_Details/wall_ad_2",
+   "building": "Combined_Building/res_24x56_2",
+   "side": 2,
+   "from": [
+    214.33,
+    23.92,
+    -376.08
+   ],
+   "to": [
+    212.39,
+    23.92,
+    -376.08
+   ],
+   "gap": 1.94,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Facade_Details/wall_ad_8",
+   "building": "Combined_Building/res_28x64_0",
+   "side": 3,
+   "from": [
+    247.5,
+    28.21,
+    -352.3
+   ],
+   "to": [
+    248.69,
+    28.21,
+    -352.3
+   ],
+   "gap": 1.2,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Facade_Details/wall_ad_3",
+   "building": "Combined_Building/res_15x42_2",
+   "side": 2,
+   "from": [
+    279.74,
+    35.25,
+    35.98
+   ],
+   "to": [
+    276.46,
+    35.25,
+    35.98
+   ],
+   "gap": 3.28,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Decals/ad_flat_5",
+   "building": "Combined_Building/tower_22x160_2",
+   "side": 2,
+   "from": [
+    278.83,
+    40.35,
+    314.79
+   ],
+   "to": [
+    275.35,
+    40.35,
+    314.79
+   ],
+   "gap": 3.48,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Facade_Details/wall_ad_2",
+   "building": "Combined_Building/slab_30x58_1",
+   "side": 0,
+   "from": [
+    214.81,
+    26.94,
+    463.43
+   ],
+   "to": [
+    214.81,
+    26.94,
+    461.16
+   ],
+   "gap": 2.28,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Facade_Details/wall_ad_7",
+   "building": "Combined_Building/res_22x46_1",
+   "side": 3,
+   "from": [
+    300.71,
+    19.61,
+    -381.07
+   ],
+   "to": [
+    304.52,
+    19.61,
+    -381.07
+   ],
+   "gap": 3.81,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Facade_Details/wall_ad_7",
+   "building": "Combined_Building/res_20x38_0",
+   "side": 0,
+   "from": [
+    382.53,
+    24.46,
+    -374.04
+   ],
+   "to": [
+    382.53,
+    24.46,
+    -376.78
+   ],
+   "gap": 2.74,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Facade_Details/wall_ad_8",
+   "building": "Combined_Building/res_22x46_1",
+   "side": 1,
+   "from": [
+    366.52,
+    18.62,
+    -279.68
+   ],
+   "to": [
+    366.52,
+    18.62,
+    -276.94
+   ],
+   "gap": 2.74,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Decals/ad_flat_2",
+   "building": "Combined_Building/res_26x28_2",
+   "side": 2,
+   "from": [
+    508.53,
+    13.47,
+    -551.79
+   ],
+   "to": [
+    507.21,
+    13.47,
+    -551.79
+   ],
+   "gap": 1.32,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Decals/ad_flat_6",
+   "building": "Combined_Building/res_15x42_0",
+   "side": 1,
+   "from": [
+    498.9,
+    23.02,
+    -322.85
+   ],
+   "to": [
+    498.9,
+    23.02,
+    -318.96
+   ],
+   "gap": 3.88,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Decals/ad_flat_1",
+   "building": "Combined_Building/res_28x64_2",
+   "side": 3,
+   "from": [
+    416.21,
+    43.78,
+    -259.55
+   ],
+   "to": [
+    419.95,
+    43.78,
+    -259.55
+   ],
+   "gap": 3.74,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Decals/ad_flat_1",
+   "building": "Combined_Building/res_22x46_1",
+   "side": 0,
+   "from": [
+    483.27,
+    30.94,
+    -72.86
+   ],
+   "to": [
+    483.27,
+    30.94,
+    -77.13
+   ],
+   "gap": 4.27,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Decals/ad_flat_6",
+   "building": "Combined_Building/slab_30x58_1",
+   "side": 1,
+   "from": [
+    462.16,
+    43.41,
+    22.44
+   ],
+   "to": [
+    462.16,
+    43.41,
+    23.96
+   ],
+   "gap": 1.53,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Decals/ad_flat_1",
+   "building": "Combined_Building/tower_24x196_0",
+   "side": 0,
+   "from": [
+    496.09,
+    96.94,
+    -17.96
+   ],
+   "to": [
+    496.09,
+    96.94,
+    -19.63
+   ],
+   "gap": 1.66,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Decals/ad_flat_6",
+   "building": "Combined_Building/tower_18x96_1",
+   "side": 3,
+   "from": [
+    417.21,
+    20.47,
+    80.98
+   ],
+   "to": [
+    419.57,
+    20.47,
+    80.98
+   ],
+   "gap": 2.36,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Facade_Details/wall_ad_6",
+   "building": "Combined_Building/res_28x64_0",
+   "side": 2,
+   "from": [
+    629.37,
+    20.66,
+    -433.69
+   ],
+   "to": [
+    625.11,
+    20.66,
+    -433.69
+   ],
+   "gap": 4.25,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Decals/ad_flat_2",
+   "building": "Combined_Building/tower_20x128_0",
+   "side": 2,
+   "from": [
+    627.68,
+    17.71,
+    33.21
+   ],
+   "to": [
+    624.36,
+    17.71,
+    33.21
+   ],
+   "gap": 3.32,
+   "reason": "floating advertisement snapped to nearest real facade"
+  },
+  {
+   "prefab": "Facade_Details/wall_ad_5",
+   "building": "Combined_Building/res_26x28_2",
+   "side": 1,
+   "from": [
+    664.86,
+    13.51,
+    -216.93
+   ],
+   "to": [
+    664.86,
+    13.51,
+    -214.15
+   ],
+   "gap": 2.78,
+   "reason": "floating advertisement snapped to nearest real facade"
+  }
+ ]
+}
