@@ -15,6 +15,7 @@ import { createVegetation } from './vegetation.js';
 import { createProps } from './props.js';
 import { createHut } from './hut.js';
 import { createUnderground } from './underground.js';
+import { createEntities } from './entities.js';
 
 /** Identificador de la escena que se cargará al cruzar la puerta metálica (todavía no existe). */
 export const NEXT_LEVEL_ID = 'subterraneo-2';
@@ -45,6 +46,7 @@ export function createSwampLevel({ textures, timeUniform }) {
   scene.add(hemi, sun);
 
   const underground = createUnderground(textures);
+  const entities = createEntities(textures, timeUniform);
   scene.add(
     createSky(textures, timeUniform),
     createTerrain(textures),
@@ -53,6 +55,7 @@ export function createSwampLevel({ textures, timeUniform }) {
     createProps(textures),
     createHut(textures),
     underground.group,
+    entities.group,
   );
 
   const physics = createSwampPhysics();
@@ -64,6 +67,7 @@ export function createSwampLevel({ textures, timeUniform }) {
     physics,
     spawn: { x: SPAWN.x, y: heightAt(SPAWN.x, SPAWN.z), z: SPAWN.z, yaw: SPAWN.yaw, pitch: 0 },
     debugSpawns: DEBUG_SPAWNS,
+    entities: entities.state,
     interactables: [
       {
         id: 'puerta-metalica',
@@ -85,7 +89,12 @@ export function createSwampLevel({ textures, timeUniform }) {
       };
     },
 
-    update(dt, time, position) {
+    /**
+     * @param {{ feet, eye, forward, active: boolean }} view  posición de los pies, ojos y mirada
+     * @returns {{ interference: number, sounds: string[] }} efectos para el render y el audio
+     */
+    update(dt, time, view) {
+      const position = view.feet;
       underground.update(time);
       // La niebla cambia con la zona: gris verdosa afuera, casi negra bajo tierra.
       const target = interiorFactor(position.x, position.y, position.z);
@@ -101,6 +110,12 @@ export function createSwampLevel({ textures, timeUniform }) {
         fog.density = ATMOSPHERE.hut.fogDensity + (ATMOSPHERE.underground.fogDensity - ATMOSPHERE.hut.fogDensity) * t;
       }
       scene.background.copy(fog.color);
+
+      // Entidades: solo avanzan mientras se juega (no en la intro ni en pausa).
+      if (!view.active) return { interference: 0, sounds: [] };
+      const fx = entities.update({ time, dt, zone: target, feet: position, eye: view.eye, forward: view.forward });
+      underground.setLightLevel(fx.lightLevel);
+      return fx;
     },
 
     dispose() {

@@ -8,8 +8,10 @@ import { hexFloorCanvas, archWallCanvas, dampWallCanvas, wetFloorCanvas } from '
 import { spiralCanvas, restrictedSignCanvas } from '../src/textures/symbols.js';
 import { metalDoorCanvas, steelCanvas } from '../src/textures/metal.js';
 import { cloudsCanvas, waterNoiseCanvas, glowCanvas } from '../src/textures/sky.js';
+import { grinnerCanvas, stalkerCanvas, watcherCanvas, percherCanvas } from '../src/textures/entities.js';
 
 const textures = {
+  grinnerCanvas, stalkerCanvas, watcherCanvas, percherCanvas,
   mudCanvas, birchBarkCanvas, darkBarkCanvas, postWoodCanvas, plankCanvas, hutLogsCanvas,
   willowLeavesCanvas, birchLeavesCanvas, bushCanvas, reedsCanvas, grassCanvas,
   thatchCanvas, thatchFringeCanvas, hexFloorCanvas, archWallCanvas, dampWallCanvas, wetFloorCanvas,

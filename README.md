@@ -2,7 +2,7 @@
 
 Prototipo de exploración en primera persona con estética de **juego de PC perdido de ~2005** y terror analógico/liminal tranquilo: sin sustos, solo atmósfera, aislamiento y arquitectura que no debería estar ahí.
 
-Un pantano bajo niebla, una choza circular de troncos y paja, y debajo, una escalera de concreto que baja a un pasillo húmedo que termina en una puerta metálica moderna.
+Un pantano bajo niebla, una choza circular de troncos y paja, y debajo, una escalera de concreto que baja a un pasillo húmedo que termina en una puerta metálica moderna. Hay cosas que solo se mueven cuando no las miras.
 
 > Estado: **Fase 1** jugable. Pantalla inicial shareware, pantano explorable, choza con descenso subterráneo, render 4:3 a baja resolución y audio 100 % procedural. La puerta del fondo lleva a una pantalla final (gancho para la escena 2).
 

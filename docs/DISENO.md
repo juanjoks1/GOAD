@@ -6,7 +6,7 @@ En 2004 un topógrafo registró una construcción circular en una ciénaga que n
 
 ## Pilares
 
-1. **Atmósfera antes que amenaza.** No hay enemigos ni sustos. La inquietud viene del aislamiento, el silencio y la arquitectura que no encaja.
+1. **Atmósfera, y luego algo que te mira.** La mayor parte del tiempo es aislamiento, silencio y arquitectura que no encaja. Las entidades aparecen poco, solo se mueven cuando no las miras, y hay un único susto directo.
 2. **Un juego perdido de 2005.** 4:3, baja resolución, texturas sucias de 128 px, luz plana, niebla espesa, color de 16 bits, pantalla shareware.
 3. **Lo natural cede a lo construido.** Barro y paja → concreto con patrones geométricos → una puerta metálica moderna. Cada paso hacia adentro es más artificial y más silencioso.
 
@@ -21,6 +21,19 @@ En 2004 un topógrafo registró una construcción circular en una ciénaga que n
 | Interior | Concreto gastado con arcada ciega, piso de hexágonos, espiral pintada frente a una escalera que baja | Contraste |
 | Subterráneo | Pasillo estrecho y húmedo, bombillas cálidas (una fundida), tubería, gotas | Descenso |
 | Puerta | Puerta cortafuegos moderna, luz de emergencia fría, LED verde, luz bajo la puerta, zumbido eléctrico | Fuera de lugar |
+
+## Entidades
+
+Recortes pintados con grano de foto, como si alguien los hubiera pegado en el mundo. Diseños propios inspirados en referencias de terror analógico. Al mirarlas, la imagen sufre fallas de cinta (filas rasgadas, colores separados, estática) y suena un siseo con retumbo grave.
+
+| Entidad | Dónde | Qué hace |
+| --- | --- | --- |
+| **El Alto** | Pantano | Columna negra de 8 m erizada de espinas, cabeza roja. Reaparece entre la niebla, cada vez más cerca, solo fuera de tu vista. Si lo miras demasiado o te acercas, se esfuma. |
+| **La Aguja** | Techo de la choza | Capucha cónica, cara pálida diminuta, patas de araña. Agazapada en el techo; si la miras o te acercas, huye trepando por detrás. |
+| **El del Sombrero** | Choza → escalera | Silueta con un ala plana anchísima y ojos que brillan. De pie en un rincón; si lo miras se esfuma y te espera al pie de la escalera. |
+| **El Sonriente** | Pasillo | Flaco, brazos hasta el suelo, ojos de anillo y una sonrisa que no le cabe. Asoma al fondo; al acercarte se apagan las luces y aparece frente a tu cara (el susto). |
+
+Lógica en `src/world/entities.js`, ajustes en `ENTITIES` (`src/config.js`).
 
 ## Estética visual
 

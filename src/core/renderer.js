@@ -30,6 +30,7 @@ export function createRetroRenderer(canvas) {
     uVignette: { value: POST.vignette },
     uSaturation: { value: POST.saturation },
     uTint: { value: new THREE.Vector3(...POST.tint) },
+    uInterference: { value: 0 },
   };
   const quad = new THREE.Mesh(
     new THREE.PlaneGeometry(2, 2),
@@ -48,6 +49,10 @@ export function createRetroRenderer(canvas) {
     },
     set fade(v) {
       uniforms.uFade.value = v;
+    },
+    /** Falla de cinta (0..1), la controlan las entidades. */
+    set interference(v) {
+      uniforms.uInterference.value = v;
     },
     render(scene, camera, time) {
       uniforms.uTime.value = time;

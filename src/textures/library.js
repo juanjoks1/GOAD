@@ -9,6 +9,7 @@ import { hexFloorCanvas, archWallCanvas, dampWallCanvas, wetFloorCanvas } from '
 import { spiralCanvas, restrictedSignCanvas } from './symbols.js';
 import { metalDoorCanvas, steelCanvas } from './metal.js';
 import { cloudsCanvas, waterNoiseCanvas, glowCanvas } from './sky.js';
+import { grinnerCanvas, stalkerCanvas, watcherCanvas, percherCanvas } from './entities.js';
 
 export function createTextureLibrary() {
   return {
@@ -36,6 +37,10 @@ export function createTextureLibrary() {
     clouds: toTexture(cloudsCanvas()),
     waterNoise: toTexture(waterNoiseCanvas(), { mag: 'linear', min: 'linear-mipmap' }),
     glow: toTexture(glowCanvas(), { wrap: false }),
+    grinner: toTexture(grinnerCanvas(), { wrap: false }),
+    stalker: toTexture(stalkerCanvas(), { wrap: false }),
+    watcher: toTexture(watcherCanvas(), { wrap: false }),
+    percher: toTexture(percherCanvas(), { wrap: false }),
   };
 }
 

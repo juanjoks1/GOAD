@@ -4,7 +4,7 @@ Lee esto primero. (Gemini y otros asistentes: esta es también vuestra guía; ve
 
 ## Qué es
 
-Prototipo de exploración en primera persona, terror analógico/liminal tranquilo (sin jumpscares), con estética de juego de PC de ~2005: render 4:3 a 480×360 escalado sin suavizado, color de 16 bits con tramado, niebla densa, luz plana sin sombras.
+Prototipo de exploración en primera persona, terror analógico/liminal con entidades que se mueven cuando no las miras y un susto directo, con estética de juego de PC de ~2005: render 4:3 a 480×360 escalado sin suavizado, color de 16 bits con tramado, niebla densa, luz plana sin sombras.
 
 - **Stack:** Vite + JavaScript (módulos ES) + Three.js. Sin TypeScript, sin frameworks.
 - **Idioma:** textos del juego y documentación en **español**; identificadores de código en inglés.
@@ -29,12 +29,12 @@ Galería de texturas: `http://localhost:5173/tools/texturas.html`.
 | `src/config.js` | Todos los valores de ajuste | no |
 | `src/content/texts.js` | Todos los textos | no |
 | `src/core/math.js`, `rng.js`, `noise.js` | Utilidades puras | no |
-| `src/world/*` | Disposición, terreno, colocación, física, zonas | **no (puro, probado)** |
+| `src/world/*` | Disposición, terreno, colocación, física, zonas, entidades | **no (puro, probado)** |
 | `src/player/headbob.js` | Balanceo de cámara | no |
 | `src/scene/bake.js` | Luz horneada por vértice | no |
 | `src/player/controller.js` | Jugador en primera persona | Three (cámara) |
 | `src/core/renderer.js`, `src/shaders/*` | Render retro y GLSL | sí |
-| `src/textures/*` | Texturas procedurales | sí (canvas) |
+| `src/textures/*` | Texturas procedurales (y los recortes de las entidades en `entities.js`) | sí (canvas) |
 | `src/scene/**` | Mallas de cada escena; `registry.js` | sí |
 | `src/audio/*` | Web Audio | sí |
 | `src/ui/*`, `src/game/game.js`, `src/main.js` | Interfaz, controles táctiles, bucle, estados | sí |
@@ -52,6 +52,7 @@ Galería de texturas: `http://localhost:5173/tools/texturas.html`.
 - **Determinismo:** todo lo procedural usa semillas fijas (`createRng`, `fbm2D`).
 - **Escenas nuevas:** `src/scene/<zona>/index.js` + entrada en `src/scene/registry.js`. La puerta metálica busca el id `subterraneo-2`.
 - **Controles:** toda la entrada pasa por `src/core/input.js` (teclado, ratón y táctil). Cada texto que menciona controles tiene variante táctil en `content/texts.js`.
+- **Entidades:** el comportamiento (cuándo aparecen, adónde van, apagones) es una máquina de estados pura en `src/world/entities.js` con pruebas en `tests/entities.test.js`; `src/scene/swamp/entities.js` solo las dibuja como recortes que giran hacia la cámara. Sus valores de ajuste están en `ENTITIES` (`config.js`) y sus sonidos en `src/audio/scares.js`. Los diseños son propios (inspirados en referencias); no metas imágenes de otros autores sin permiso.
 - **Android:** el juego no sabe que está en Android; `android/` solo empaqueta `dist/`. No añadas AndroidX, Capacitor ni permisos sin preguntar.
 
 ## Flujo de trabajo
@@ -65,7 +66,7 @@ Galería de texturas: `http://localhost:5173/tools/texturas.html`.
 
 - No conviertas a TypeScript, React ni otro motor sin que el usuario lo pida.
 - No añadas sombras dinámicas, posprocesado moderno (bloom, SSAO) ni texturas de alta resolución: rompen la estética.
-- No añadas sustos repentinos: el terror aquí es atmosférico.
+- Sustos sí, pero medidos: la mayor parte del tiempo es atmósfera; el susto fuerte es uno (el pasillo). Si añades otro, que tenga aviso previo (estática, apagón).
 - No dejes `console.log` de depuración en `src/`.
 - No escribas textos del juego en inglés.
 - No toques `legacy/` salvo que se pida: es el prototipo anterior (2D), con sus propias pruebas (`npm run test:legacy`).

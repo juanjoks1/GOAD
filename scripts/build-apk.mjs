@@ -21,7 +21,8 @@ if (!sdk && !existsSync(join(androidDir, 'local.properties'))) {
 await build({ logLevel: 'warn' });
 
 const win = process.platform === 'win32';
-execFileSync(win ? 'gradlew.bat' : './gradlew', ['assembleDebug', '--console=plain'], {
+// clean: el empaquetado incremental deja huecos en el zip y el APK crece sin motivo.
+execFileSync(win ? 'gradlew.bat' : './gradlew', ['clean', 'assembleDebug', '--console=plain'], {
   cwd: androidDir,
   stdio: 'inherit',
   shell: win,

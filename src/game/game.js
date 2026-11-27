@@ -3,7 +3,7 @@
 //   → saliendo (puerta metálica, fundido a negro) → siguiente escena o pantalla final.
 import * as THREE from 'three';
 import { RENDER, INTRO, INTERACT, TRANSITION } from '../config.js';
-import { lerp, smoothstep } from '../core/math.js';
+import { lerp, smoothstep, damp } from '../core/math.js';
 import { createRetroRenderer, fitViewport } from '../core/renderer.js';
 import { createInput } from '../core/input.js';
 import { createOverlay, totalChars } from '../ui/overlay.js';
@@ -48,7 +48,7 @@ export async function startGame({ viewport, glCanvas, uiCanvas, scanlines, optio
   player.place(spawn, level.physics);
   retro.warmUp(level.scene, camera);
 
-  const game = { mode: 'intro', modeTime: 0, clock: 0, typed: 0, wakeTime: 0, resumeMode: 'playing', exitTo: null };
+  const game = { mode: 'intro', modeTime: 0, clock: 0, typed: 0, wakeTime: 0, resumeMode: 'playing', exitTo: null, interference: 0 };
   const setMode = (mode) => {
     game.mode = mode;
     game.modeTime = 0;
@@ -122,6 +122,7 @@ export async function startGame({ viewport, glCanvas, uiCanvas, scanlines, optio
   });
 
   const forward = new THREE.Vector3();
+  const viewDir = new THREE.Vector3();
   function lookTarget() {
     const eye = player.eye();
     camera.getWorldDirection(forward);
@@ -227,7 +228,14 @@ export async function startGame({ viewport, glCanvas, uiCanvas, scanlines, optio
 
     touchControls.update(game.mode === 'playing');
     const feet = player.state;
-    level.update(dt, game.clock, feet);
+    camera.getWorldDirection(viewDir);
+    const fx = level.update(dt, game.clock, { feet, eye: camera.position, forward: viewDir, active: game.mode === 'playing' }) ?? {};
+    // Interferencia: sube de golpe, baja despacio. Se ve (post) y se oye (estática).
+    const targetInterference = game.mode === 'playing' ? (fx.interference ?? 0) : 0;
+    game.interference += (targetInterference - game.interference) * damp(targetInterference > game.interference ? 20 : 3, dt);
+    retro.interference = game.interference;
+    audio.setInterference(game.interference);
+    for (const name of fx.sounds ?? []) audio.playScare(name);
     const sample = level.sample(feet);
     audio.update(game.clock, sample.zone, sample.door);
     retro.render(level.scene, camera, game.clock);

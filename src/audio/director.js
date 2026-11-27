@@ -10,6 +10,7 @@ import { createSwampAmbience } from './ambience.js';
 import { createDrone } from './drone.js';
 import { createFootsteps } from './footsteps.js';
 import { playMetalDoor } from './sfx.js';
+import { createScareSounds } from './scares.js';
 
 /** Mezcla por zona (0 exterior, 0.3 choza, 1 subterráneo). Pura: también la usan las pruebas. */
 export function zoneMix(zone) {
@@ -74,6 +75,7 @@ export function createAudioDirector() {
       ambience: createSwampAmbience(ctx, exteriorBus, noise),
       drone: createDrone(ctx, interiorBus, reverbSend),
       footsteps: createFootsteps(ctx, sfxBus, reverbSend, noise),
+      scares: createScareSounds(ctx, sfxBus, reverbSend, noise),
     };
     master.gain.setValueAtTime(0, ctx.currentTime);
     master.gain.linearRampToValueAtTime(AUDIO.masterVolume, ctx.currentTime + 4);
@@ -112,6 +114,16 @@ export function createAudioDirector() {
     footstep(surface, side, intensity = 1) {
       if (!ctx) return;
       n.footsteps.play(surface, side, intensity, zoneMix(zone).footstepWet);
+    },
+
+    /** Sonido de una entidad: 'vanish', 'skitter', 'lights-off', 'lights-on', 'sting'. */
+    playScare(name) {
+      if (ctx) n.scares.play(name);
+    },
+
+    /** Estática y retumbo que acompañan a la interferencia visual (0..1). */
+    setInterference(v) {
+      if (ctx) n.scares.setInterference(v);
     },
 
     playMetalDoor() {

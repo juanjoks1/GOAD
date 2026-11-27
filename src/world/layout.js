@@ -60,6 +60,16 @@ export const DOOR_GAP_ANGLE = 2 * Math.asin(HUT.doorWidth / 2 / HUT.outerRadius)
 
 export const FLOOR_Y = HUT.groundHeight + HUT.floorLift;
 
+/** Altura del borde superior del muro y del cono del techo (la paja apoya sobre el muro). */
+export const HUT_WALL_TOP = HUT.groundHeight + HUT.wallHeight;
+export const HUT_ROOF_BASE = HUT_WALL_TOP - HUT.roofHeight * (1 - HUT.outerRadius / HUT.roofRadius);
+export const HUT_APEX = HUT_ROOF_BASE + HUT.roofHeight;
+
+/** Altura de la superficie del techo a distancia `r` del centro de la choza. */
+export function roofHeightAt(r) {
+  return HUT_ROOF_BASE + HUT.roofHeight * (1 - r / HUT.roofRadius);
+}
+
 /**
  * Escalera que desciende hacia el norte desde el interior de la choza.
  * Coordenadas z relativas al centro de la choza.

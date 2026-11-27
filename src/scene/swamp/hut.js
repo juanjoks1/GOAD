@@ -1,7 +1,7 @@
 // La choza circular: troncos y paja por fuera; por dentro, concreto gastado con arcada ciega,
 // piso de hexágonos y una espiral pintada frente a la escalera que baja.
 import * as THREE from 'three';
-import { HUT, FLOOR_Y, STAIRS, DOOR_GAP_ANGLE, inStairOpening } from '../../world/layout.js';
+import { HUT, FLOOR_Y, STAIRS, DOOR_GAP_ANGLE, HUT_WALL_TOP, HUT_ROOF_BASE, HUT_APEX, inStairOpening } from '../../world/layout.js';
 import { withRepeat } from '../../textures/library.js';
 import { bake, merge, transform } from '../builders.js';
 import { HUT_LIGHTS } from './lighting.js';
@@ -9,10 +9,10 @@ import { HUT_LIGHTS } from './lighting.js';
 const X = HUT.x;
 const Z = HUT.z;
 const GROUND = HUT.groundHeight;
-const WALL_TOP = GROUND + HUT.wallHeight;
+const WALL_TOP = HUT_WALL_TOP;
 const DOOR_TOP = FLOOR_Y + HUT.doorHeight;
-const ROOF_BASE = WALL_TOP - HUT.roofHeight * (1 - HUT.outerRadius / HUT.roofRadius);
-const APEX = ROOF_BASE + HUT.roofHeight;
+const ROOF_BASE = HUT_ROOF_BASE;
+const APEX = HUT_APEX;
 
 function flipNormals(geo) {
   const n = geo.attributes.normal;

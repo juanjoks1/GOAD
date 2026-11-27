@@ -271,8 +271,25 @@ export function createUnderground(textures) {
   const door = metalDoor(textures);
   group.add(door.group);
 
+  // Todo lo iluminado del subterráneo, para poder apagar la luz (el LED tiene batería propia).
+  const lit = [];
+  group.traverse((o) => {
+    if (!o.material || o.material === door.ledMat) return;
+    lit.push({ material: o.material, color: o.material.color.clone(), opacity: o.material.opacity });
+  });
+  let lightLevel = 1;
+
   return {
     group,
+    /** 1 = bombillas encendidas, ~0 = apagón. */
+    setLightLevel(k) {
+      if (k === lightLevel) return;
+      lightLevel = k;
+      for (const l of lit) {
+        l.material.color.copy(l.color).multiplyScalar(k);
+        if (l.material.isSpriteMaterial) l.material.opacity = l.opacity * k;
+      }
+    },
     update(time) {
       // El LED parpadea despacio, como si esperara una tarjeta.
       const on = Math.floor(time * 0.7) % 3 !== 2;

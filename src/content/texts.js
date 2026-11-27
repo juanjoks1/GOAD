@@ -16,7 +16,7 @@ export const INTRO_STORY = [
   'Volvió tres veces a medir el terreno.',
   'En sus notas, el pasillo era más largo cada vez.',
   '',
-  'Aquí no hay nada que encontrar. Solo camina.',
+  'No hay nada que encontrar. Camina, y no mires demasiado.',
   '',
 ];
 

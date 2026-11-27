@@ -91,6 +91,52 @@ export const TOUCH = {
   tapMaxTime: 0.4, // s
 };
 
+/**
+ * Entidades (src/world/entities.js). Distancias en metros, tiempos en segundos.
+ * Se mueven cuando no las miras; si las miras demasiado, desaparecen con interferencia.
+ */
+export const ENTITIES = {
+  viewCos: 0.8, // dentro del cono de visión (≈ ±37°)
+  stalker: {
+    // El Alto: te sigue por el pantano entre la niebla.
+    startZ: 26, // se activa al alejarte del inicio
+    stopHutDistance: 15, // deja de aparecer al llegar al claro
+    startDistance: 26,
+    minDistance: 10,
+    approach: 3, // cuánto se acerca cada vez que reaparece
+    moveEvery: [6, 11],
+    cooldown: [5, 9],
+    stareLimit: 2.5,
+    vanishDistance: 6,
+    maxSeenDistance: 40,
+    fogScale: 0.5, // atraviesa la niebla más que el resto del mundo
+  },
+  percher: {
+    // La Aguja: agazapada sobre el techo de la choza.
+    triggerDistance: 22,
+    fleeDistance: 9,
+    stareLimit: 1.3,
+    fleeDuration: 1.1,
+  },
+  watcher: {
+    // El del Sombrero: de pie en un rincón de la choza; luego al pie de la escalera.
+    appearDistance: 7,
+    stareLimit: 1.1,
+    vanishDistance: 2.2,
+    belowStareLimit: 3,
+    belowVanishDepth: 1.4, // se va cuando bajas esta altura
+  },
+  grinner: {
+    // El Sonriente: el susto del pasillo.
+    peekZ: -18.2, // z local donde asoma al fondo, bajo la bombilla encendida
+    triggerZ: -10.8, // al pasar por aquí se apagan las luces
+    blackout: 1.4,
+    scare: 0.85,
+    aftermath: 0.4,
+    scareDistance: 1.0,
+  },
+};
+
 export const INTERACT = {
   distance: 1.9,
   facing: 0.55, // producto punto mínimo entre la mirada y la dirección al objeto
@@ -104,6 +150,7 @@ export const AUDIO = {
   droneVolume: 0.24,
   humVolume: 0.06,
   footstepVolume: 0.5,
+  scareVolume: 0.9,
   reverbSeconds: 3.2,
 };
 

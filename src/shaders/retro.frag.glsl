@@ -11,6 +11,7 @@ uniform float uGrain;       // amplitud del grano
 uniform float uVignette;
 uniform float uSaturation;
 uniform vec3 uTint;
+uniform float uInterference; // 0..1: falla de cinta cuando hay una entidad cerca
 
 varying vec2 vUv;
 
@@ -30,7 +31,22 @@ float hash12(vec2 p) {
 }
 
 void main() {
-  vec3 c = texture2D(tDiffuse, vUv).rgb;
+  float frame = floor(uTime * 24.0);
+
+  // Interferencia: filas rasgadas, ondulación, colores separados, barra que rueda y destellos.
+  vec2 uv = vUv;
+  float band = floor(gl_FragCoord.y / 2.0);
+  float tear = step(1.0 - uInterference * 0.35, hash12(vec2(band, frame)));
+  uv.x += (hash12(vec2(band, frame + 7.0)) - 0.5) * 0.07 * uInterference * tear;
+  uv.x += sin(vUv.y * 38.0 + uTime * 9.0) * 0.0025 * uInterference;
+  float split = 0.005 * uInterference;
+  vec3 c = vec3(
+    texture2D(tDiffuse, uv + vec2(split, 0.0)).r,
+    texture2D(tDiffuse, uv).g,
+    texture2D(tDiffuse, uv - vec2(split, 0.0)).b
+  );
+  float bar = smoothstep(0.07, 0.0, abs(fract(vUv.y * 0.8 - uTime * 0.37) - 0.5));
+  c = mix(c, c * 0.45 + 0.06, bar * uInterference * 0.7);
 
   float luma = dot(c, vec3(0.299, 0.587, 0.114));
   c = mix(vec3(luma), c, uSaturation) * uTint;
@@ -38,10 +54,10 @@ void main() {
   vec2 d = vUv - 0.5;
   c *= 1.0 - uVignette * dot(d, d) * 2.2;
 
-  // Grano a 24 fps, algo más fuerte en las sombras.
-  float frame = floor(uTime * 24.0);
+  // Grano a 24 fps, algo más fuerte en las sombras (y mucho más con interferencia).
   float g = hash12(gl_FragCoord.xy + frame * vec2(37.0, 17.0)) - 0.5;
-  c += g * uGrain * (0.6 + 0.4 * (1.0 - luma));
+  c += g * uGrain * (0.6 + 0.4 * (1.0 - luma)) * (1.0 + uInterference * 5.0);
+  if (hash12(gl_FragCoord.xy * 0.5 + frame) > 1.0 - 0.0015 * uInterference * uInterference) c = vec3(0.85);
 
   c *= uFade;
 
