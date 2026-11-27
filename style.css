@@ -1,0 +1,174 @@
+/* Estilos de la interfaz. Colores y tipografía en un solo lugar. */
+:root {
+  --ink: #e9e1c7;
+  --ink-dim: rgba(233, 225, 199, 0.7);
+  --red: #c23b2b;
+  --cyan: rgba(0, 255, 255, 0.45);
+  --bg: #000;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  height: 100%;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Courier New", Courier, monospace;
+  overflow: hidden;
+}
+
+#game {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.hidden { display: none !important; }
+
+/* Líneas de barrido y viñeta del tubo */
+.crt {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 5;
+  background: repeating-linear-gradient(to bottom, rgba(0, 0, 0, 0.28) 0 1px, transparent 1px 3px);
+  box-shadow: inset 0 0 140px rgba(0, 0, 0, 0.85);
+}
+
+/* HUD: REC, cintas, barra de señal, subtítulos */
+.hud {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 4;
+  padding: 16px;
+}
+
+#rec, #tapes {
+  position: absolute;
+  top: 16px;
+  font-size: 18px;
+  text-shadow: 2px 0 rgba(255, 0, 0, 0.6), -2px 0 var(--cyan);
+}
+#rec { left: 16px; }
+#tapes { right: 16px; }
+
+#signal {
+  position: absolute;
+  left: 16px;
+  bottom: 52px;
+  width: min(180px, 40vw);
+  height: 10px;
+  border: 1px solid var(--ink);
+}
+#signal-bar {
+  display: block;
+  height: 100%;
+  width: 100%;
+  background: var(--ink);
+  transition: width 0.2s linear;
+}
+
+#subtitle {
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  min-height: 1.4em;
+  text-align: center;
+  font-size: 18px;
+  text-shadow: 1px 1px 0 #000;
+}
+
+/* Panel del VCR mientras se reproduce una cinta */
+.vhs {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: min(640px, calc(100vw - 32px));
+  z-index: 7;
+  padding: 20px 24px;
+  background: rgba(0, 0, 0, 0.82);
+  border: 1px solid var(--ink-dim);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.9);
+}
+.vhs-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 14px;
+  color: var(--ink-dim);
+  margin-bottom: 12px;
+}
+.vhs p {
+  margin: 0;
+  min-height: 6em;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/* Pantallas de inicio y fin */
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.82);
+}
+
+h1 {
+  margin: 0 0 16px;
+  font-size: clamp(36px, 9vw, 84px);
+  letter-spacing: 0.08em;
+  line-height: 1.05;
+  animation: glitch 2.4s infinite steps(1);
+}
+
+@keyframes glitch {
+  0%, 90%, 100% { transform: none; text-shadow: 3px 0 rgba(255, 0, 0, 0.6), -3px 0 var(--cyan); }
+  92% { transform: translateX(-4px); }
+  96% { transform: translateX(5px) skewX(-4deg); text-shadow: -4px 0 rgba(255, 0, 0, 0.7), 4px 0 var(--cyan); }
+}
+
+.lead {
+  max-width: 620px;
+  font-size: clamp(16px, 2.6vw, 20px);
+  line-height: 1.5;
+}
+
+.controls {
+  max-width: 620px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--ink-dim);
+}
+
+kbd {
+  border: 1px solid var(--ink);
+  padding: 0 4px;
+}
+
+.prompt {
+  margin-top: 24px;
+  font-size: 20px;
+  animation: blink 1s steps(2) infinite;
+}
+
+@keyframes blink {
+  to { visibility: hidden; }
+}
+
+/* Sin scroll horizontal en teléfonos */
+@media (max-width: 600px) {
+  .hud { padding: 12px; }
+  #rec, #tapes { font-size: 15px; }
+}
