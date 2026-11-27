@@ -43,6 +43,7 @@ En 2004 un topógrafo registró una construcción circular en una ciénaga que n
 - [ ] El pasillo "más largo cada vez": variar su longitud entre visitas.
 - [ ] Menú de opciones (sensibilidad, volumen, resolución interna 480×360 / 640×480).
 - [ ] Guardado de progreso.
-- [ ] Controles táctiles / mando.
+- [x] Controles táctiles y APK de Android (`npm run apk`).
+- [ ] Mando (gamepad).
 - [ ] Más detalle ambiental: niebla baja en capas, luciérnagas, troncos caídos.
 - [ ] Notas del topógrafo como objetos legibles.

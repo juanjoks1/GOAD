@@ -17,6 +17,14 @@ npm run build    # versión estática en dist/
 
 Necesita Node 20.19+ y un navegador con WebGL 2. No hay archivos de imagen ni de audio: todas las texturas se pintan en `<canvas>` y todo el sonido se sintetiza con Web Audio.
 
+### Android (APK)
+
+```bash
+npm run apk      # build de Vite + Gradle → dist-android/cienaga-debug.apk
+```
+
+Requiere JDK 17+ y el SDK de Android (`ANDROID_HOME`, o `android/local.properties` con `sdk.dir=...`). El APK sale firmado con la clave de depuración: se instala a mano activando "Instalar apps desconocidas". `android/` es un proyecto Gradle mínimo (una `Activity` con WebView a pantalla completa en horizontal, sin AndroidX ni permisos) que sirve `dist/` desde `assets/`; ábrelo con Android Studio si necesitas una versión release firmada.
+
 ## Controles
 
 | Tecla | Acción |
@@ -26,6 +34,8 @@ Necesita Node 20.19+ y un navegador con WebGL 2. No hay archivos de imagen ni de
 | `E` | Usar (la puerta metálica) |
 | `Esc` | Pausa |
 | `R` | Volver a empezar (en la pantalla final) |
+
+En pantallas táctiles: un dedo en la **mitad izquierda** es una palanca para caminar, un dedo en la **mitad derecha** mira, y un **toque corto** empieza, usa la puerta, continúa tras la pausa o reinicia.
 
 ## Atajos para iterar
 
@@ -52,11 +62,13 @@ src/
     swamp/              Escena 1: terreno, cielo, agua, vegetación, postes/puente, choza, subterráneo, luces horneadas
   player/               Controlador en primera persona y balanceo de cámara
   audio/                Director (buses y crossfade), ambiente del pantano, drone, pasos, efectos
-  ui/                   Texto pixelado y pantallas (intro, pausa, aviso, final)
+  ui/                   Texto pixelado, pantallas (intro, pausa, aviso, final) y palanca táctil
   game/game.js          Bucle y estados: intro → despertar → jugar ⇄ pausa → salir → siguiente escena
   content/texts.js      Todos los textos del juego
 tests/                  Pruebas con node:test
 tools/texturas.html     Galería de texturas
+android/                Envoltorio Android (WebView) para generar el APK
+scripts/build-apk.mjs   npm run apk
 docs/DISENO.md          Diseño, atmósfera y pendientes
 legacy/                 El prototipo anterior (Terror Analógico, 2D en canvas), intacto
 ```

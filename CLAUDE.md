@@ -17,6 +17,7 @@ Prototipo de exploración en primera persona, terror analógico/liminal tranquil
 npm run dev    # http://localhost:5173  (?skip-intro&spawn=choza para saltar directo a una zona)
 npm test       # pruebas de lógica pura; deben pasar siempre
 npm run build  # comprueba que el build de producción compila
+npm run apk    # APK de Android (dist-android/cienaga-debug.apk); requiere JDK 17+ y ANDROID_HOME
 ```
 
 Galería de texturas: `http://localhost:5173/tools/texturas.html`.
@@ -36,7 +37,8 @@ Galería de texturas: `http://localhost:5173/tools/texturas.html`.
 | `src/textures/*` | Texturas procedurales | sí (canvas) |
 | `src/scene/**` | Mallas de cada escena; `registry.js` | sí |
 | `src/audio/*` | Web Audio | sí |
-| `src/ui/*`, `src/game/game.js`, `src/main.js` | Interfaz, bucle, estados | sí |
+| `src/ui/*`, `src/game/game.js`, `src/main.js` | Interfaz, controles táctiles, bucle, estados | sí |
+| `android/` | Envoltorio Android: una `Activity` con WebView que sirve `dist/` | Java |
 
 **Regla de oro:** todo lo que decide *dónde* está algo, *si se puede pisar* o *qué tan adentro estás* va en `src/world/` sin importar Three.js ni el DOM, y tiene prueba en `tests/`. Las escenas solo dibujan lo que `world/` describe.
 
@@ -49,6 +51,8 @@ Galería de texturas: `http://localhost:5173/tools/texturas.html`.
 - **Geometría fusionada:** la vegetación y los postes se fusionan por material; todas las piezas de un grupo deben tener los mismos atributos (`position`, `normal`, `uv`, `color`, y `sway` en el follaje).
 - **Determinismo:** todo lo procedural usa semillas fijas (`createRng`, `fbm2D`).
 - **Escenas nuevas:** `src/scene/<zona>/index.js` + entrada en `src/scene/registry.js`. La puerta metálica busca el id `subterraneo-2`.
+- **Controles:** toda la entrada pasa por `src/core/input.js` (teclado, ratón y táctil). Cada texto que menciona controles tiene variante táctil en `content/texts.js`.
+- **Android:** el juego no sabe que está en Android; `android/` solo empaqueta `dist/`. No añadas AndroidX, Capacitor ni permisos sin preguntar.
 
 ## Flujo de trabajo
 
