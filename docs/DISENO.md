@@ -1,95 +1,73 @@
-# Terror Analógico — Documento de diseño
+# CIÉNAGA — Documento de diseño
 
-## Idea
+## Premisa
 
-Una estación de televisión rural de 1994 transmite una señal que no debería existir. Un técnico (o tú, sin saber bien por qué estás ahí) recupera tres cintas de VHS del archivo y las reproduce en el VCR de la sala de control para entender qué está pasando. Cuando termines, la puerta del transmisor se abre y tienes que decidir si subir.
-
-**Género:** terror analógico (*analog horror*), found footage, supervivencia ligera.
-**Plataforma:** navegador (escritorio), teclado y ratón.
-**Vista:** cenital con linterna. La oscuridad hace el trabajo.
+En 2004 un topógrafo registró una construcción circular en una ciénaga que no aparecía en ningún catastro. Volvió tres veces; según sus notas, el pasillo era más largo cada vez. El jugador despierta en ese pantano, mirando el cielo nublado, sin objetivo explícito: *"Aquí no hay nada que encontrar. Solo camina."*
 
 ## Pilares
 
-1. **Lo que no ves da más miedo.** Todo está en penumbra; la linterna es tu única herramienta.
-2. **Mirar es arriesgado.** Iluminar a la Señal la congela, pero la estática crece.
-3. **La estética es parte del juego.** Timestamp REC, barra de señal, estática, tracking y textos de cinta.
+1. **Te cazan.** Aislamiento, silencio y arquitectura que no encaja… hasta que algo te ve. Las entidades gritan y te persiguen; si te alcanzan, pantalla azul de VCR y vuelves al último punto de control.
+2. **Un juego perdido de 2005.** 4:3, baja resolución, texturas sucias de 128 px, luz plana, niebla espesa, color de 16 bits, pantalla shareware.
+3. **Lo natural cede a lo construido.** Barro y paja → concreto con patrones geométricos → una puerta metálica moderna. Cada paso hacia adentro es más artificial y más silencioso.
 
-## Historia (fragmentos de las cintas)
+## Recorrido (fase 1)
 
-Las cintas están en `src/content.js`. Resumen de lo que revelan:
-
-- **Cinta 01 (Día 1):** un técnico llega sin que nadie lo llame; dice que la señal está ensayando.
-- **Cinta 02 (Día 4):** la estática sigue un segundo después de apagar el televisor; alguien respira del otro lado.
-- **Cinta 03 (Día 9):** la cinta que tienes no es la original; el transmisor ya salió al aire y busca tu cara.
-
-El final actual es breve: llegar a la salida abierta gana la partida con el texto "Subiste al transmisor". Se puede ampliar.
-
-## Mecánicas
-
-### Linterna
-- Apuntas con el ratón. El cono tiene alcance `FLASHLIGHT_RANGE` y ancho `FLASHLIGHT_FOV`.
-- Alrededor del jugador hay una luz tenue (`AMBIENT_RADIUS`) para no estar completamente a ciegas.
-
-### La Señal (entidad)
-- Empieza en la sala del sótano (`E` en el mapa).
-- **Se mueve solo cuando no está en el cono de la linterna.** Si la iluminas, se congela.
-- Se mueve por el camino más corto hacia ti (BFS en `src/pathfind.js`), recalculado cada `REPATH_INTERVAL` segundos.
-- Si te toca (`ENTITY_TOUCH_DIST`), pierdes.
-
-### Señal (barra)
-- Va de 1 (clara) a 0 (perdida, pierdes).
-- Cae cuando estás a menos de `SENSE_RANGE` de la Señal, y cae un poco más mientras la miras.
-- Se recupera lentamente cuando estás lejos y no la miras.
-- La estática visual y el volumen del siseo siguen a `1 − señal`.
-
-### Cintas y VCR
-- Pasar sobre una cinta la recoge automáticamente.
-- Con `E` cerca del VCR reproduces la primera cinta que lleves. Dura `TAPE_PLAY_TIME` segundos.
-- **Durante la reproducción no puedes moverte, pero la Señal sigue avanzando.** No se puede empezar a reproducir si está a menos de `SENSE_RANGE`.
-- Al reproducir las tres, se abre la salida (`X`).
-
-### Salida
-- Sólida hasta que se abren las tres cintas. Entrar en ella gana la partida.
-
-## Valores de ajuste
-
-Todos en `src/config.js`. Puntos de partida:
-
-| Constante | Valor | Qué controla |
+| Zona | Qué hay | Sensación |
 | --- | --- | --- |
-| `PLAYER_SPEED` | 96 px/s | Velocidad del jugador |
-| `ENTITY_SPEED` | 62 px/s | Velocidad de la Señal (más lenta que el jugador) |
-| `FLASHLIGHT_RANGE` | 220 px | Alcance de la linterna |
-| `SENSE_RANGE` | 5 casillas | Distancia a la que la señal empieza a caer |
-| `SIGNAL_DRAIN` | 0.10/s | Caída de señal cerca de la Señal |
-| `SIGNAL_LOOK_DRAIN` | 0.04/s | Caída extra por mirarla |
-| `SIGNAL_RECOVER` | 0.05/s | Recuperación lejos de ella |
-| `TAPE_PLAY_TIME` | 4 s | Duración de cada cinta |
+| Inicio | Despiertas mirando al cielo; troncos altos de abedul; una cerca vieja con alambre guía hacia el norte | Desorientación |
+| Pantano | Barro, charcos que reflejan el cielo, sauces, juncos, postes inclinados | Aislamiento |
+| Zanja y puente | Agua turbia que corta el mapa; un puente de tablones con uno faltante y el pasamanos roto | Única salida |
+| Claro | Choza circular de troncos y paja, rodeada por un anillo de postes verticales | Algo deliberado |
+| Interior | Concreto gastado con arcada ciega, piso de hexágonos, espiral pintada frente a una escalera que baja | Contraste |
+| Subterráneo | Pasillo estrecho y húmedo, bombillas cálidas (una fundida), tubería, gotas | Descenso |
+| Puerta | Puerta cortafuegos moderna, luz de emergencia fría, LED verde, luz bajo la puerta, zumbido eléctrico | Fuera de lugar |
 
-Si el juego resulta demasiado fácil o difícil, lo primero que ajustaría es la relación entre `ENTITY_SPEED` y `PLAYER_SPEED`, y `SIGNAL_DRAIN`.
+## Entidades
 
-## Mapa
+Recortes pintados con grano de foto, como si alguien los hubiera pegado en el mundo. Diseños propios inspirados en referencias de terror analógico. Al mirarlas, la imagen sufre fallas de cinta (filas rasgadas, colores separados, estática). Cuando persiguen avanzan a saltos, como animación cuadro a cuadro.
 
-El mapa está en `MAP_ROWS` (`src/world.js`), 30×18 casillas:
+**Ciclo:** quieta → **te ve** (grita) → te persigue → si te pierde, te busca → vuelve a su sitio. Si te alcanza: su cara a un metro de la tuya, pantalla azul "SEÑAL PERDIDA" y vuelves al último punto de control (inicio, puente, claro, choza, pasillo).
 
-- **Arriba:** recepción (inicio, VCR), archivo (cinta), control (cinta). Tres puertas hacia el sótano.
-- **Medio:** sótano con tres habitaciones y pasillo abierto. Una cinta.
-- **Abajo:** sala larga donde aparece la Señal; la salida está en el borde derecho.
+**Cómo sobrevivir:**
+- **No mirarlas:** si las miras corren más (×1.35) y te ven desde más lejos; si no, van lentas (×0.7).
+- **Esconderte:** agachado entre arbustos o juncos solo te ven a 2.5 m; los árboles, la choza y las paredes tapan su vista.
+- **Salir de su territorio:** cada una tiene el suyo y no lo abandona.
+- **La cruz:** mantenla levantada apuntándoles y huyen chillando; luego se calman un rato. Se gasta en ~3.5 s y se recarga sola (si se agota, se raja y tarda en volver).
+- **Correr:** 5 s de aguante; hace ruido y te delata a 9 m.
 
-## Pendientes
+| Entidad | Territorio | Cómo es | Al verte |
+| --- | --- | --- | --- |
+| **El Alto** | El pantano (no entra al claro) | Columna negra de 8 m erizada de espinas, cabeza roja. Merodea entre la niebla y reaparece cada vez más cerca. | Sirena gruñida; pisadas enormes y un gruñido grave al perseguirte. Lento pero incansable. |
+| **La Aguja** | El claro (no entra en la choza) | Capucha cónica, cara pálida diminuta, patas de araña. Agazapada en el techo. | Chillido agudo; salta del techo y corre con un tableteo de patas. La más rápida. |
+| **El del Sombrero** | Dentro de la choza (no baja la escalera) | Silueta con un ala plana anchísima y ojos que brillan. | Susurro al revés que se corta en seco; respira húmedo y murmura sílabas al perseguirte. |
+| **El Sonriente** | El pasillo | Flaco, brazos hasta el suelo, ojos de anillo y una sonrisa que no le cabe. | Primero el apagón y su cara frente a la tuya; después espera junto a la puerta y te caza riéndose. Repelido, reaparece detrás de ti. |
 
-Ordenados por valor aproximado:
+Además: latidos que se aceleran cuando algo te persigue y jadeo cuando te quedas sin aire. Todo sintetizado.
 
-1. **Sustos y audio:** sonido de stinger cuando la Señal se acerca; latido de la estática; un susurro al reproducir cintas.
-2. **Menú de pausa** con `ESC` y opciones de volumen.
-3. **Más contenido:** un segundo piso con otro VCR y más cintas, o un segundo mapa.
-4. **Efectos visuales:** aberración cromática al perder señal; parpadeo de la linterna.
-5. **Progreso:** guardar cintas reproducidas en `localStorage` entre sesiones.
-6. **Controles táctiles** para móvil (hoy el juego requiere teclado).
-7. **Final alternativo:** si reproduces las cintas en un orden concreto, o si no subes al transmisor.
+Lógica en `src/world/entities.js`, ajustes en `ENTITIES` y `CROSS` (`src/config.js`).
 
-## Fuera de alcance (por ahora)
+## Estética visual
 
-- Multijugador.
-- Gráficos en 3D.
-- Motor de juego externo (Unity, Godot, etc.); se mantiene todo en JS puro para que sea fácil de leer y modificar.
+- **Render:** 480×360 → pantalla completa 4:3 sin suavizado, con bandas negras.
+- **Post (`retro.frag.glsl`):** desaturación con tinte verde, viñeta, grano a 24 fps, cuantización RGB565 con tramado Bayer 4×4, fundidos a negro.
+- **CRT:** líneas horizontales al 7 % de opacidad, una por fila de la resolución interna.
+- **Luz:** exterior con hemisférica + direccional, sin sombras. Interiores con luz horneada por vértice (como un *lightmap* de la época).
+- **Niebla:** `FogExp2` gris pantano; se oscurece en la choza y casi a negro bajo tierra.
+
+## Diseño sonoro (todo sintetizado)
+
+- **Exterior:** viento (ruido marrón filtrado con ráfagas), siseo de juncos, cigarras (banda estrecha con trémolo), grillos (chirridos programados) y ranas lejanas ocasionales.
+- **Pasos:** barro (ruido grave + chapoteo al despegar), agua, madera hueca del puente (con crujidos), concreto (seco, con eco bajo tierra).
+- **Transición:** una única variable de zona (0 exterior, 0.3 choza, 1 subterráneo) controla el crossfade: el exterior se filtra y se apaga mientras sube un drone grave de osciladores levemente desafinados que respira lentamente. La reverb (con eco aleteante de pasillo estrecho) crece al bajar.
+- **Puerta:** zumbido de red eléctrica de 60 Hz al acercarse; al abrir, pestillo, chirrido de bisagra y golpe pesado.
+
+## Pendientes / siguientes fases
+
+- [ ] Escena 2 (`subterraneo-2`) detrás de la puerta metálica: otra zona liminal.
+- [ ] El pasillo "más largo cada vez": variar su longitud entre visitas.
+- [ ] Menú de opciones (sensibilidad, volumen, resolución interna 480×360 / 640×480).
+- [ ] Guardado de progreso.
+- [x] Controles táctiles y APK de Android (`npm run apk`).
+- [ ] Mando (gamepad).
+- [ ] Más detalle ambiental: niebla baja en capas, luciérnagas, troncos caídos.
+- [ ] Notas del topógrafo como objetos legibles.

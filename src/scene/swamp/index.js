@@ -1,0 +1,160 @@
+// Escena 1: el pantano, la choza y el pasillo subterráneo.
+// Una escena es un objeto con: scene (THREE.Scene), physics, spawn, interactables, update() y dispose().
+import * as THREE from 'three';
+import { ATMOSPHERE } from '../../config.js';
+import { clamp } from '../../core/math.js';
+import { SPAWN, HUT, FLOOR_Y, CORRIDOR, CORRIDOR_Y, METAL_DOOR_WORLD, BRIDGE, STAIRS, stairHeightAt } from '../../world/layout.js';
+import { heightAt } from '../../world/terrain.js';
+import { createSwampPhysics } from '../../world/swampPhysics.js';
+import { interiorFactor, doorProximity, HUT_ZONE_LEVEL } from '../../world/zones.js';
+import { PROMPT_DOOR, PROMPT_DOOR_TOUCH } from '../../content/texts.js';
+import { createSky } from './sky.js';
+import { createTerrain } from './terrain.js';
+import { createWater } from './water.js';
+import { createVegetation } from './vegetation.js';
+import { createProps } from './props.js';
+import { createHut } from './hut.js';
+import { createUnderground } from './underground.js';
+import { createEntities } from './entities.js';
+import { CHECKPOINTS, reachCheckpoint } from '../../world/checkpoints.js';
+
+/** Identificador de la escena que se cargará al cruzar la puerta metálica (todavía no existe). */
+export const NEXT_LEVEL_ID = 'subterraneo-2';
+
+const fogExterior = new THREE.Color(ATMOSPHERE.exterior.fogColor);
+const fogHut = new THREE.Color(ATMOSPHERE.hut.fogColor);
+const fogUnder = new THREE.Color(ATMOSPHERE.underground.fogColor);
+
+/** Puntos de inicio para depurar (?spawn=...). */
+export const DEBUG_SPAWNS = {
+  inicio: { x: SPAWN.x, y: heightAt(SPAWN.x, SPAWN.z), z: SPAWN.z, yaw: SPAWN.yaw, pitch: 0 },
+  puente: { x: BRIDGE.x + 0.2, y: heightAt(0.2, BRIDGE.z + 6), z: BRIDGE.z + 6, yaw: 0, pitch: -0.05 },
+  claro: { x: HUT.x + 1.5, y: heightAt(1.5, HUT.z + 11), z: HUT.z + 11, yaw: 0.1, pitch: 0.05 },
+  choza: { x: HUT.x + 0.4, y: FLOOR_Y, z: HUT.z + 3.2, yaw: 0.05, pitch: -0.32 },
+  escalera: { x: HUT.x, y: stairHeightAt(-1.5), z: HUT.z - 1.5, yaw: 0, pitch: -0.25 },
+  pasillo: { x: HUT.x, y: CORRIDOR_Y, z: HUT.z + STAIRS.zBottom - 1, yaw: 0, pitch: 0 },
+  puerta: { x: HUT.x + 0.1, y: CORRIDOR_Y, z: HUT.z + CORRIDOR.zEnd + 1.6, yaw: 0, pitch: -0.05 },
+};
+
+export function createSwampLevel({ textures, timeUniform }) {
+  const scene = new THREE.Scene();
+  scene.background = fogExterior.clone();
+  scene.fog = new THREE.FogExp2(fogExterior.clone(), ATMOSPHERE.exterior.fogDensity);
+
+  const hemi = new THREE.HemisphereLight(ATMOSPHERE.hemiSky, ATMOSPHERE.hemiGround, ATMOSPHERE.hemiIntensity);
+  const sun = new THREE.DirectionalLight(ATMOSPHERE.sunColor, ATMOSPHERE.sunIntensity);
+  sun.position.set(...ATMOSPHERE.sunDirection);
+  scene.add(hemi, sun);
+
+  const underground = createUnderground(textures);
+  const entities = createEntities(textures, timeUniform);
+  scene.add(
+    createSky(textures, timeUniform),
+    createTerrain(textures),
+    createWater(textures, timeUniform),
+    createVegetation(textures, timeUniform),
+    createProps(textures),
+    createHut(textures),
+    underground.group,
+    entities.group,
+  );
+
+  const physics = createSwampPhysics();
+  let zone = 0;
+  let checkpoint = 0;
+
+  return {
+    id: 'pantano',
+    scene,
+    physics,
+    spawn: { x: SPAWN.x, y: heightAt(SPAWN.x, SPAWN.z), z: SPAWN.z, yaw: SPAWN.yaw, pitch: 0 },
+    debugSpawns: DEBUG_SPAWNS,
+    entities: entities.state,
+    interactables: [
+      {
+        id: 'puerta-metalica',
+        position: METAL_DOOR_WORLD,
+        prompt: PROMPT_DOOR,
+        promptTouch: PROMPT_DOOR_TOUCH,
+        action: { type: 'exit', to: NEXT_LEVEL_ID, sound: 'metal-door' },
+      },
+    ],
+    get zone() {
+      return zone;
+    },
+
+    /** Zona actual y proximidad a la puerta para el audio. */
+    sample(position) {
+      return {
+        zone: interiorFactor(position.x, position.y, position.z),
+        door: doorProximity(position.x, position.y, position.z),
+      };
+    },
+
+    /** Punto donde reapareces si te atrapan (el último punto de control alcanzado). */
+    respawnPoint() {
+      const c = CHECKPOINTS[checkpoint];
+      return { x: c.x, y: c.y, z: c.z, yaw: c.yaw, pitch: 0 };
+    },
+
+    /** La entidad que te atrapó llena la pantalla. */
+    showCaught(kind) {
+      entities.showCaught(kind);
+    },
+
+    /** Tras reaparecer: las entidades vuelven a su sitio y se calman un poco. */
+    resetEntities(time) {
+      entities.reset(time);
+    },
+
+    /**
+     * @param {{ feet, eye, forward, active: boolean, crouched?: boolean, sprinting?: boolean, crossHeld?: boolean, frozen?: boolean }} view
+     * @returns {object} efectos de las entidades para el render, el audio y el juego
+     */
+    update(dt, time, view) {
+      const position = view.feet;
+      underground.update(time);
+      // La niebla cambia con la zona: gris verdosa afuera, casi negra bajo tierra.
+      const target = interiorFactor(position.x, position.y, position.z);
+      zone += (target - zone) * clamp(dt * 3, 0, 1);
+      const fog = scene.fog;
+      if (zone <= HUT_ZONE_LEVEL) {
+        const t = zone / HUT_ZONE_LEVEL;
+        fog.color.copy(fogExterior).lerp(fogHut, t * 0.6);
+        fog.density = ATMOSPHERE.exterior.fogDensity + (ATMOSPHERE.hut.fogDensity - ATMOSPHERE.exterior.fogDensity) * t;
+      } else {
+        const t = (zone - HUT_ZONE_LEVEL) / (1 - HUT_ZONE_LEVEL);
+        fog.color.copy(fogExterior).lerp(fogHut, 0.6).lerp(fogUnder, t);
+        fog.density = ATMOSPHERE.hut.fogDensity + (ATMOSPHERE.underground.fogDensity - ATMOSPHERE.hut.fogDensity) * t;
+      }
+      scene.background.copy(fog.color);
+
+      // Entidades: solo avanzan mientras se juega (no en la intro ni en pausa).
+      if (!view.active && !view.frozen) return { interference: 0, sounds: [], voices: {}, threat: 0, caught: null, cross: null };
+      checkpoint = reachCheckpoint(checkpoint, position);
+      const fx = entities.update({
+        time,
+        dt,
+        zone: target,
+        feet: position,
+        eye: view.eye,
+        forward: view.forward,
+        crouched: view.crouched,
+        sprinting: view.sprinting,
+        crossHeld: view.crossHeld,
+        world: physics,
+        frozen: view.frozen,
+      });
+      underground.setLightLevel(fx.lightLevel);
+      return fx;
+    },
+
+    dispose() {
+      scene.traverse((o) => {
+        if (o.geometry) o.geometry.dispose();
+        if (o.material) (Array.isArray(o.material) ? o.material : [o.material]).forEach((m) => m.dispose());
+      });
+    },
+  };
+}
+
