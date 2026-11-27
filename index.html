@@ -1,48 +1,19 @@
 <!doctype html>
 <html lang="es">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Terror Analógico</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <canvas id="game"></canvas>
-  <div class="crt"></div>
-
-  <div id="hud" class="hud hidden">
-    <div id="rec">● REC  00:00:00</div>
-    <div id="tapes">CINTAS 0/3</div>
-    <div id="signal"><span id="signal-bar"></span></div>
-    <div id="subtitle"></div>
-  </div>
-
-  <div id="tape" class="vhs hidden">
-    <div class="vhs-head">
-      <span>▶ PLAY</span>
-      <span id="tape-title"></span>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark" />
+    <title>CIÉNAGA</title>
+  </head>
+  <body>
+    <div id="viewport">
+      <canvas id="gl" width="480" height="360"></canvas>
+      <canvas id="ui" width="640" height="480"></canvas>
+      <div id="crt"></div>
     </div>
-    <p id="tape-text"></p>
-  </div>
-
-  <section id="screen-start" class="overlay">
-    <h1>TERROR<br>ANALÓGICO</h1>
-    <p class="lead">Una emisión de 1994 que no debió sobrevivir. Recupera tres cintas y sube al transmisor.</p>
-    <p class="controls">
-      <kbd>W A S D</kbd> / flechas: moverte<br>
-      Ratón: apuntar la linterna<br>
-      <kbd>E</kbd>: reproducir cinta en el VCR<br>
-      Mirar a la Señal la <em>congela</em>, pero la estática crece.
-    </p>
-    <p class="prompt">Presiona ENTER para empezar</p>
-  </section>
-
-  <section id="screen-end" class="overlay hidden">
-    <h1 id="end-title"></h1>
-    <p id="end-msg" class="lead"></p>
-    <p class="prompt">Presiona R para reintentar</p>
-  </section>
-
-  <script type="module" src="src/main.js"></script>
-</body>
+    <p id="error" hidden></p>
+    <noscript>Este juego necesita JavaScript.</noscript>
+    <script type="module" src="/src/main.js"></script>
+  </body>
 </html>

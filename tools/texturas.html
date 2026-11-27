@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Texturas procedurales</title>
+    <style>
+      body { margin: 0; padding: 16px; background: #111; color: #b9bdb2; font: 13px monospace; }
+      h1 { font-size: 15px; font-weight: normal; }
+      #grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
+      figure { margin: 0; }
+      figcaption { margin-top: 4px; color: #8a8f84; }
+      canvas { height: 256px; width: auto; max-width: 100%; image-rendering: pixelated; background: repeating-conic-gradient(#222 0 25%, #1a1a1a 0 50%) 0 0 / 16px 16px; }
+    </style>
+  </head>
+  <body>
+    <h1>Texturas procedurales (src/textures/). Guarda un generador y esta página se recarga sola.</h1>
+    <div id="grid"></div>
+    <script type="module" src="./texturas.js"></script>
+  </body>
+</html>

@@ -1,70 +1,67 @@
-# CLAUDE.md — Guía del proyecto Terror Analógico
+# CLAUDE.md — Guía del proyecto CIÉNAGA
 
-Lee esto primero. Te ahorra explorar el repo a ciegas.
+Lee esto primero. (Gemini y otros asistentes: esta es también vuestra guía; ver `GEMINI.md`).
 
 ## Qué es
 
-Juego de terror analógico (VHS, estática, found footage) en **HTML5 Canvas + JavaScript puro**.
-Vista cenital con linterna. Un jugador, un mapa, tres cintas que reproducir en un VCR y una entidad (*la Señal*) que se mueve solo cuando no la miras.
+Prototipo de exploración en primera persona, terror analógico/liminal tranquilo (sin jumpscares), con estética de juego de PC de ~2005: render 4:3 a 480×360 escalado sin suavizado, color de 16 bits con tramado, niebla densa, luz plana sin sombras.
 
-- Idioma: **textos del juego y documentación en español**. Identificadores de código en inglés.
-- Sin frameworks, sin bundler, sin dependencias de runtime. Módulos ES nativos.
-- Dependencias de desarrollo: ninguna. Las pruebas usan `node:test` (incluido en Node 18+).
+- **Stack:** Vite + JavaScript (módulos ES) + Three.js. Sin TypeScript, sin frameworks.
+- **Idioma:** textos del juego y documentación en **español**; identificadores de código en inglés.
+- **Sin assets externos:** texturas pintadas en canvas y audio sintetizado con Web Audio. No añadas archivos de imagen/audio sin preguntar.
+- **Dependencias:** runtime solo `three`; desarrollo solo `vite`. No agregues paquetes sin preguntar.
 
 ## Comandos
 
 ```bash
-npm test     # 34 pruebas unitarias; deben pasar siempre
-npm start    # servidor estático en http://localhost:8000
+npm run dev    # http://localhost:5173  (?skip-intro&spawn=choza para saltar directo a una zona)
+npm test       # pruebas de lógica pura; deben pasar siempre
+npm run build  # comprueba que el build de producción compila
 ```
 
-Para ver el juego en el navegador, sirve la carpeta con `npm start`. No abras `index.html` con `file://`: los módulos ES no cargan así.
+Galería de texturas: `http://localhost:5173/tools/texturas.html`.
 
 ## Mapa del código
 
-| Archivo | Responsabilidad | ¿Tiene DOM? |
+| Ruta | Responsabilidad | ¿DOM / Three? |
 | --- | --- | --- |
-| `src/config.js` | Constantes de ajuste | no |
-| `src/content.js` | Textos de las cintas (`TAPES`) | no |
-| `src/world.js` | `MAP_ROWS` (mapa ASCII), `parseWorld`, `isSolid` | no |
-| `src/logic.js` | Colisiones, cono de linterna, señal, `formatTimestamp` | no |
-| `src/pathfind.js` | `findPath` (BFS) | no |
-| `src/game.js` | `createGame`, `update`: todas las reglas | no |
-| `src/render.js` | Dibujo en canvas (`render`, `drawStatic`) | sí (canvas) |
-| `src/audio.js` | Siseo de estática con WebAudio | sí (WebAudio) |
-| `src/main.js` | Bucle, teclado, ratón, HUD y pantallas | sí |
-| `index.html` | HUD y overlays; IDs usados por `main.js` | — |
-| `style.css` | Estilos y efectos CRT | — |
-| `tests/*.test.js` | Pruebas de lógica pura | — |
+| `src/config.js` | Todos los valores de ajuste | no |
+| `src/content/texts.js` | Todos los textos | no |
+| `src/core/math.js`, `rng.js`, `noise.js` | Utilidades puras | no |
+| `src/world/*` | Disposición, terreno, colocación, física, zonas | **no (puro, probado)** |
+| `src/player/headbob.js` | Balanceo de cámara | no |
+| `src/scene/bake.js` | Luz horneada por vértice | no |
+| `src/player/controller.js` | Jugador en primera persona | Three (cámara) |
+| `src/core/renderer.js`, `src/shaders/*` | Render retro y GLSL | sí |
+| `src/textures/*` | Texturas procedurales | sí (canvas) |
+| `src/scene/**` | Mallas de cada escena; `registry.js` | sí |
+| `src/audio/*` | Web Audio | sí |
+| `src/ui/*`, `src/game/game.js`, `src/main.js` | Interfaz, bucle, estados | sí |
 
-**Regla de oro:** la lógica (todo lo que no es `render.js`, `audio.js` o `main.js`) no toca el DOM. Así se prueba con `npm test`. Si necesitas lógica nueva, ponla en `logic.js`, `game.js` o `pathfind.js` y escribe su prueba.
+**Regla de oro:** todo lo que decide *dónde* está algo, *si se puede pisar* o *qué tan adentro estás* va en `src/world/` sin importar Three.js ni el DOM, y tiene prueba en `tests/`. Las escenas solo dibujan lo que `world/` describe.
 
 ## Convenciones
 
-- **Mapa:** `MAP_ROWS` en `src/world.js`. Todas las filas deben medir lo mismo. Hay exactamente una `S`, una `E`, una `V`, una `X`, y tantas `T` como cintas en `TAPES`. `npm test` lo verifica; si cambias el mapa, corre las pruebas.
-- **Cintas:** el orden de `TAPES` en `content.js` corresponde al orden de lectura de las `T` del mapa (arriba→abajo, izquierda→derecha). Si agregas una cinta, agrega también su `T` y actualiza el número esperado en `world.test.js` si cambia.
-- **Valores de ajuste:** van en `src/config.js`, no escritos a mano dentro de la lógica.
-- **Estado del juego:** `game.js` es la única fuente de verdad. `render.js` solo lee; `main.js` solo transmite la entrada.
-- **IDs del HTML:** si cambias un `id` en `index.html`, cámbialo también en `main.js` (objeto `ui`).
-- **Dependencias:** no agregues paquetes de runtime sin preguntar. Si hace falta una herramienta de desarrollo, avisa primero.
+- **Coordenadas:** metros; x = este, z = sur; el jugador empieza mirando a −z. La choza está en `HUT` (`src/world/layout.js`); escalera y pasillo usan z relativo a la choza.
+- **Valores de ajuste** en `src/config.js`, nunca escritos a mano en la lógica.
+- **Color:** `ColorManagement` está desactivado a propósito (flujo "gamma" como en 2005). Las texturas usan `NoColorSpace`.
+- **Interiores:** usan `MeshBasicMaterial` con luz horneada por vértice (`bake()` + `src/scene/swamp/lighting.js`). El exterior usa `MeshLambertMaterial` con luz hemisférica + direccional, sin sombras.
+- **Geometría fusionada:** la vegetación y los postes se fusionan por material; todas las piezas de un grupo deben tener los mismos atributos (`position`, `normal`, `uv`, `color`, y `sway` en el follaje).
+- **Determinismo:** todo lo procedural usa semillas fijas (`createRng`, `fbm2D`).
+- **Escenas nuevas:** `src/scene/<zona>/index.js` + entrada en `src/scene/registry.js`. La puerta metálica busca el id `subterraneo-2`.
 
-## Flujo de trabajo recomendado
+## Flujo de trabajo
 
-1. Lee el archivo relevante antes de editarlo. El proyecto es pequeño; `src/game.js` y `src/config.js` cubren casi todo el comportamiento.
+1. Lee el archivo antes de editarlo; `config.js` y `world/layout.js` explican casi todo.
 2. Haz el cambio más pequeño que resuelva lo pedido.
-3. Corre `npm test`. Si falla, corrige antes de dar por terminado.
-4. Si el cambio es visual (render, CSS, HUD), comprueba en el navegador con `npm start`. Las pruebas no cubren el dibujo.
+3. `npm test`. Si tocas el mapa, la física o la colocación, la prueba de recorrido (`tests/physics.test.js`, inicio → puerta metálica) debe seguir pasando.
+4. Si el cambio es visual o de audio, compruébalo en el navegador con `npm run dev` (las pruebas no cubren el dibujo).
 
 ## Qué no hacer
 
-- No conviertas el proyecto a TypeScript, React ni a un bundler sin que el usuario lo pida.
-- No cambies las reglas de colisión (`moveWithCollision`, `isSolid`) sin probar que el mapa sigue siendo recorrible (`findPath` de `tests/pathfind.test.js`).
-- No dejes un `console.log` de depuración en `src/` al terminar.
-- No escribas la narrativa en inglés: el tono y el idioma del juego son en español.
-
-## Estado actual y pendientes
-
-Ver `docs/DISENO.md` para el diseño completo, la historia y la lista de pendientes. Resumen corto:
-
-- Hecho: mapa de un piso, 3 cintas, VCR, Señal con IA de ruta (BFS), linterna con cono, estática y audio básico.
-- Pendiente: menú de pausa, más mapas, sustos con audio, guardado de progreso, controles táctiles.
+- No conviertas a TypeScript, React ni otro motor sin que el usuario lo pida.
+- No añadas sombras dinámicas, posprocesado moderno (bloom, SSAO) ni texturas de alta resolución: rompen la estética.
+- No añadas sustos repentinos: el terror aquí es atmosférico.
+- No dejes `console.log` de depuración en `src/`.
+- No escribas textos del juego en inglés.
+- No toques `legacy/` salvo que se pida: es el prototipo anterior (2D), con sus propias pruebas (`npm run test:legacy`).

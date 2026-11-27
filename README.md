@@ -1,67 +1,72 @@
-# Terror Analógico
+# CIÉNAGA
 
-Un juego de terror en vista cenital con linterna. Estás en una estación de televisión rural en 1994, con un VCR, tres cintas y una señal que no debería seguir al aire.
+Prototipo de exploración en primera persona con estética de **juego de PC perdido de ~2005** y terror analógico/liminal tranquilo: sin sustos, solo atmósfera, aislamiento y arquitectura que no debería estar ahí.
 
-Estética: VHS, estática, líneas de tracking, timestamp de grabación y ruido de cinta. Terror analógico (*analog horror*) en su forma más pura.
+Un pantano bajo niebla, una choza circular de troncos y paja, y debajo, una escalera de concreto que baja a un pasillo húmedo que termina en una puerta metálica moderna.
 
-> Estado: prototipo jugable. Un mapa, tres cintas, una entidad, sin menús de pausa ni sonidos de susto todavía.
-
-## Cómo jugar
-
-| Control | Acción |
-| --- | --- |
-| `W A S D` / flechas | Moverte |
-| Ratón | Apuntar la linterna |
-| `E` | Reproducir cinta en el VCR (cerca del VCR) |
-| `R` / `ENTER` | Reiniciar / empezar |
-
-Recoge las tres cintas, reprodúcelas en el VCR y sube al transmisor.
-
-- La **Señal** se mueve solo cuando **no** la miras con la linterna. Si la iluminas, se congela, pero la estática crece.
-- Si te alcanza, pierdes. Si la señal se pierde por completo, también.
-- No puedes reproducir una cinta si la Señal está cerca.
+> Estado: **Fase 1** jugable. Pantalla inicial shareware, pantano explorable, choza con descenso subterráneo, render 4:3 a baja resolución y audio 100 % procedural. La puerta del fondo lleva a una pantalla final (gancho para la escena 2).
 
 ## Ejecutar
 
-No hay dependencias ni paso de compilación. Es JavaScript de módulos ES que corre en el navegador.
-
 ```bash
-# Opción 1: servidor local (recomendado, los módulos ES no cargan desde file://)
-npm start            # o: python3 -m http.server 8000
-# abre http://localhost:8000
-
-# Pruebas unitarias (Node 18+)
-npm test
+npm install
+npm run dev      # http://localhost:5173
+npm test         # pruebas de lógica pura (node:test)
+npm run build    # versión estática en dist/
 ```
+
+Necesita Node 20.19+ y un navegador con WebGL 2. No hay archivos de imagen ni de audio: todas las texturas se pintan en `<canvas>` y todo el sonido se sintetiza con Web Audio.
+
+## Controles
+
+| Tecla | Acción |
+| --- | --- |
+| `W A S D` / flechas | Caminar |
+| Ratón | Mirar (Pointer Lock; si no está disponible, arrastra con el botón) |
+| `E` | Usar (la puerta metálica) |
+| `Esc` | Pausa |
+| `R` | Volver a empezar (en la pantalla final) |
+
+## Atajos para iterar
+
+| URL | Qué hace |
+| --- | --- |
+| `/?skip-intro` | Empieza jugando, sin pantalla inicial |
+| `/?skip-intro&spawn=choza` | Aparece en un punto: `inicio`, `puente`, `claro`, `choza`, `escalera`, `pasillo`, `puerta` |
+| `/tools/texturas.html` | Galería de todas las texturas procedurales, repetidas 2×2 para ver costuras |
+
+En desarrollo, `window.__cienaga` expone el jugador, la cámara, el audio y `teleport('pasillo')`.
 
 ## Estructura
 
 ```
-index.html        Página, HUD y pantallas de inicio/fin
-style.css         Estilos y efectos CRT
+index.html              Canvas 3D, capa de texto y líneas CRT
 src/
-  config.js       Valores de ajuste (velocidades, rangos, tiempos)
-  content.js      Textos de las cintas
-  world.js        Mapa (texto ASCII) y lectura de su leyenda
-  logic.js        Funciones puras: colisiones, vista, señal, tiempo
-  pathfind.js     BFS para la ruta de la Señal
-  game.js         Estado y reglas del juego (update)
-  render.js       Dibujo en canvas: mundo, linterna, estática
-  audio.js        Siseo de estática con WebAudio
-  main.js         Bucle, teclado/ratón y HUD
-tests/            Pruebas con node:test
-docs/DISENO.md    Documento de diseño: historia, mecánicas, pendientes
-CLAUDE.md         Guía para Claude Code (y para cualquiera que contribuya con IA)
+  main.js               Arranque y parámetros de URL
+  config.js             TODOS los valores de ajuste (resolución, post, niebla, velocidades, audio)
+  core/                 Renderer retro (render target + post), entrada, RNG, ruido, matemáticas
+  shaders/              GLSL: retro (post), cielo, agua; inyecciones para viento y terreno
+  textures/             Generadores procedurales en canvas (barro, cortezas, follaje, paja, concreto, puerta…)
+  world/                Lógica pura y probada: disposición, altura del terreno, colocación, física, zonas
+  scene/                Construcción de mallas. registry.js registra las escenas
+    swamp/              Escena 1: terreno, cielo, agua, vegetación, postes/puente, choza, subterráneo, luces horneadas
+  player/               Controlador en primera persona y balanceo de cámara
+  audio/                Director (buses y crossfade), ambiente del pantano, drone, pasos, efectos
+  ui/                   Texto pixelado y pantallas (intro, pausa, aviso, final)
+  game/game.js          Bucle y estados: intro → despertar → jugar ⇄ pausa → salir → siguiente escena
+  content/texts.js      Todos los textos del juego
+tests/                  Pruebas con node:test
+tools/texturas.html     Galería de texturas
+docs/DISENO.md          Diseño, atmósfera y pendientes
+legacy/                 El prototipo anterior (Terror Analógico, 2D en canvas), intacto
 ```
 
-## Editar el juego
+## Cómo extender
 
-- **Mapa:** edita `MAP_ROWS` en `src/world.js`. La leyenda está arriba del archivo.
-- **Historia:** edita `TAPES` en `src/content.js`.
-- **Dificultad y sensación:** cambia los números de `src/config.js`.
-
-Después de cualquier cambio, corre `npm test`.
+- **Shaders:** los `.glsl` de `src/shaders/` se importan con `?raw`; Vite recarga al guardar. El post-procesado está en `retro.frag.glsl` y sus parámetros en `POST` (`src/config.js`).
+- **Texturas:** cada generador devuelve un canvas. Edita el archivo en `src/textures/` y revisa el resultado en `/tools/texturas.html`.
+- **Nueva zona liminal:** crea `src/scene/<zona>/index.js` con la misma forma que `createSwampLevel` (escena, física, `spawn`, `interactables`, `update`, `dispose`) y regístrala en `src/scene/registry.js` con el id `subterraneo-2`: la puerta metálica la cargará automáticamente.
 
 ## Licencia
 
-Sin licencia por ahora (`UNLICENSED`). Pide permiso antes de reutilizar el código o los textos.
+Sin licencia por ahora (`UNLICENSED`).

@@ -1,0 +1,50 @@
+/* Ventana 4:3 centrada con bandas negras, escalado sin suavizado y líneas CRT muy discretas. */
+html,
+body {
+  margin: 0;
+  height: 100%;
+  background: #000;
+  overflow: hidden;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#viewport {
+  position: relative;
+  background: #000;
+}
+
+#viewport canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+#ui {
+  pointer-events: none;
+}
+
+/* Una línea oscura por cada fila de la resolución interna (ver fitViewport). */
+#crt {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: linear-gradient(to bottom, transparent 0 62%, #000 62% 100%);
+  background-repeat: repeat;
+  opacity: 0.07;
+}
+
+#error {
+  position: absolute;
+  color: #b9bdb2;
+  font: 14px monospace;
+  padding: 16px;
+  max-width: 40em;
+}
