@@ -119,6 +119,15 @@ export function createAudioDirector() {
       return playMetalDoor(ctx, n.sfxBus, n.reverbSend, n.noise);
     },
 
+    /** Detiene todo el audio (app en segundo plano). */
+    suspend() {
+      if (ctx && ctx.state === 'running') ctx.suspend();
+    },
+
+    resume() {
+      if (ctx && ctx.state === 'suspended') ctx.resume();
+    },
+
     /** Baja el volumen en pausa (el pantano sigue sonando, más lejos). */
     duck(on) {
       if (!ctx || on === ducked) return;

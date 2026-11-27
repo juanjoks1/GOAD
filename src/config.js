@@ -82,6 +82,15 @@ export const INTRO = {
   startPitch: 1.12,
 };
 
+/** Controles táctiles (Android): mitad izquierda de la pantalla camina, mitad derecha mira, tocar usa. */
+export const TOUCH = {
+  stickRadius: 60, // px de pantalla
+  deadZone: 0.15,
+  lookScale: 2.6, // multiplicador sobre la sensibilidad del ratón
+  tapMaxMove: 14, // px: más que esto ya es arrastrar
+  tapMaxTime: 0.4, // s
+};
+
 export const INTERACT = {
   distance: 1.9,
   facing: 0.55, // producto punto mínimo entre la mirada y la dirección al objeto

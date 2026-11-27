@@ -1,0 +1,17 @@
+// Envoltorio Android de CIÉNAGA: una sola Activity con WebView que carga el build de Vite (../dist).
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+rootProject.name = 'cienaga'
+include ':app'

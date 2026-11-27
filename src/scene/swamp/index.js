@@ -7,7 +7,7 @@ import { SPAWN, HUT, FLOOR_Y, CORRIDOR, CORRIDOR_Y, METAL_DOOR_WORLD, BRIDGE, ST
 import { heightAt } from '../../world/terrain.js';
 import { createSwampPhysics } from '../../world/swampPhysics.js';
 import { interiorFactor, doorProximity, HUT_ZONE_LEVEL } from '../../world/zones.js';
-import { PROMPT_DOOR } from '../../content/texts.js';
+import { PROMPT_DOOR, PROMPT_DOOR_TOUCH } from '../../content/texts.js';
 import { createSky } from './sky.js';
 import { createTerrain } from './terrain.js';
 import { createWater } from './water.js';
@@ -69,6 +69,7 @@ export function createSwampLevel({ textures, timeUniform }) {
         id: 'puerta-metalica',
         position: METAL_DOOR_WORLD,
         prompt: PROMPT_DOOR,
+        promptTouch: PROMPT_DOOR_TOUCH,
         action: { type: 'exit', to: NEXT_LEVEL_ID, sound: 'metal-door' },
       },
     ],

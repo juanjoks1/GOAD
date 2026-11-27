@@ -7,11 +7,12 @@ import { lerp, smoothstep } from '../core/math.js';
 import { createRetroRenderer, fitViewport } from '../core/renderer.js';
 import { createInput } from '../core/input.js';
 import { createOverlay, totalChars } from '../ui/overlay.js';
+import { createTouchControls } from '../ui/touchControls.js';
 import { createAudioDirector } from '../audio/director.js';
 import { createPlayer } from '../player/controller.js';
 import { createTextureLibrary } from '../textures/library.js';
 import { LEVELS, FIRST_LEVEL } from '../scene/registry.js';
-import { INTRO_LINES } from '../content/texts.js';
+import { introLines } from '../content/texts.js';
 
 const nextFrame = () => new Promise((resolve) => requestAnimationFrame(() => setTimeout(resolve, 0)));
 
@@ -23,9 +24,12 @@ export async function startGame({ viewport, glCanvas, uiCanvas, scanlines, optio
   fitViewport(viewport, scanlines);
   window.addEventListener('resize', () => fitViewport(viewport, scanlines));
 
+  // En teléfonos y tabletas los textos hablan de tocar en lugar de teclado y ratón.
+  const touchUI = window.matchMedia('(pointer: coarse)').matches;
   const retro = createRetroRenderer(glCanvas);
-  const overlay = createOverlay(uiCanvas);
+  const overlay = createOverlay(uiCanvas, { touch: touchUI });
   const input = createInput(glCanvas);
+  const touchControls = createTouchControls(input);
   const audio = createAudioDirector();
   const camera = new THREE.PerspectiveCamera(RENDER.fov, 4 / 3, RENDER.near, RENDER.far);
   const timeUniform = { value: 0 };
@@ -59,7 +63,7 @@ export async function startGame({ viewport, glCanvas, uiCanvas, scanlines, optio
   }
 
   function advanceIntro() {
-    if (game.typed < totalChars(INTRO_LINES)) game.typed = Infinity;
+    if (game.typed < totalChars(introLines(touchUI))) game.typed = Infinity;
     else beginWaking();
   }
 
@@ -68,22 +72,52 @@ export async function startGame({ viewport, glCanvas, uiCanvas, scanlines, optio
     setMode('playing');
   }
 
+  function pause() {
+    if (game.mode !== 'playing' && game.mode !== 'waking') return;
+    game.resumeMode = game.mode;
+    setMode('paused');
+    audio.duck(true);
+  }
+
+  function resume() {
+    if (game.mode !== 'paused') return;
+    audio.resume();
+    setMode(game.resumeMode);
+    audio.duck(false);
+  }
+
   input.onClick(() => {
     if (game.mode === 'intro') advanceIntro();
-    else if (game.mode === 'paused') input.requestLock();
-    else if (game.mode === 'playing' && !input.locked) {
+    else if (game.mode === 'paused') {
+      input.requestLock();
+      if (!input.lockSupported) resume();
+    } else if (game.mode === 'playing' && !input.locked) {
       audio.start();
       input.requestLock();
-    }
+    } else if (game.mode === 'ended') window.location.reload();
   });
   input.onLockChange((locked) => {
-    if (!locked && (game.mode === 'playing' || game.mode === 'waking')) {
-      game.resumeMode = game.mode;
-      setMode('paused');
-      audio.duck(true);
-    } else if (locked && game.mode === 'paused') {
-      setMode(game.resumeMode);
-      audio.duck(false);
+    if (!locked) pause();
+    else resume();
+  });
+  // Pantalla táctil: no hay Pointer Lock; un toque corto empieza, continúa, usa o reinicia.
+  input.onTap(() => {
+    if (game.mode === 'intro') advanceIntro();
+    else if (game.mode === 'paused') resume();
+    else if (game.mode === 'ended') window.location.reload();
+    else if (game.mode === 'playing') {
+      audio.start();
+      const target = lookTarget();
+      if (target) use(target);
+    }
+  });
+  // Al minimizar la app o cambiar de pestaña: pausa y silencio.
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+      pause();
+      audio.suspend();
+    } else {
+      audio.resume();
     }
   });
 
@@ -165,7 +199,7 @@ export async function startGame({ viewport, glCanvas, uiCanvas, scanlines, optio
         player.look(mouse.x, mouse.y);
         player.update(dt, input.axes(), (step) => audio.footstep(step.surface, step.side));
         const target = lookTarget();
-        if (target) overlay.prompt(target.prompt);
+        if (target) overlay.prompt(touchUI ? (target.promptTouch ?? target.prompt) : target.prompt);
         else overlay.clear();
         if (target && input.consume('KeyE')) use(target);
         break;
@@ -191,6 +225,7 @@ export async function startGame({ viewport, glCanvas, uiCanvas, scanlines, optio
         break;
     }
 
+    touchControls.update(game.mode === 'playing');
     const feet = player.state;
     level.update(dt, game.clock, feet);
     const sample = level.sample(feet);
