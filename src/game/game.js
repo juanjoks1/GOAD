@@ -29,7 +29,7 @@ export async function startGame({ viewport, glCanvas, uiCanvas, scanlines, optio
   const retro = createRetroRenderer(glCanvas);
   const overlay = createOverlay(uiCanvas, { touch: touchUI });
   const input = createInput(glCanvas);
-  const touchControls = createTouchControls(input);
+  const touchControls = createTouchControls(input, { enabled: touchUI });
   const audio = createAudioDirector();
   const camera = new THREE.PerspectiveCamera(RENDER.fov, 4 / 3, RENDER.near, RENDER.far);
   const timeUniform = { value: 0 };
@@ -48,7 +48,10 @@ export async function startGame({ viewport, glCanvas, uiCanvas, scanlines, optio
   player.place(spawn, level.physics);
   retro.warmUp(level.scene, camera);
 
-  const game = { mode: 'intro', modeTime: 0, clock: 0, typed: 0, wakeTime: 0, resumeMode: 'playing', exitTo: null, interference: 0 };
+  const game = {
+    mode: 'intro', modeTime: 0, clock: 0, typed: 0, wakeTime: 0, resumeMode: 'playing', exitTo: null,
+    interference: 0, crouched: false, cross: null, caughtBy: null,
+  };
   const setMode = (mode) => {
     game.mode = mode;
     game.modeTime = 0;
@@ -86,7 +89,31 @@ export async function startGame({ viewport, glCanvas, uiCanvas, scanlines, optio
     audio.duck(false);
   }
 
+  /** Una entidad te atrapó: su cara llena la pantalla y luego la pantalla azul. */
+  function caught(kind) {
+    game.caughtBy = kind;
+    level.showCaught(kind);
+    audio.playScare('sting');
+    audio.playScare(`alert:${kind}`);
+    setMode('caught');
+  }
+
+  /** Volver al último punto de control. */
+  function respawn() {
+    player.place(level.respawnPoint(), level.physics);
+    level.resetEntities(game.clock);
+    game.crouched = false;
+    game.caughtBy = null;
+    audio.duck(false);
+    setMode('arriving');
+  }
+
   input.onClick(() => {
+    if (game.mode === 'dead') {
+      input.requestLock();
+      respawn();
+      return;
+    }
     if (game.mode === 'intro') advanceIntro();
     else if (game.mode === 'paused') {
       input.requestLock();
@@ -105,6 +132,7 @@ export async function startGame({ viewport, glCanvas, uiCanvas, scanlines, optio
     if (game.mode === 'intro') advanceIntro();
     else if (game.mode === 'paused') resume();
     else if (game.mode === 'ended') window.location.reload();
+    else if (game.mode === 'dead') respawn();
     else if (game.mode === 'playing') {
       audio.start();
       const target = lookTarget();
@@ -197,14 +225,31 @@ export async function startGame({ viewport, glCanvas, uiCanvas, scanlines, optio
       }
       case 'playing': {
         retro.fade = 1;
+        if (input.consumeCrouch()) game.crouched = !game.crouched;
         player.look(mouse.x, mouse.y);
-        player.update(dt, input.axes(), (step) => audio.footstep(step.surface, step.side));
+        player.update(dt, input.axes(), (step) => audio.footstep(step.surface, step.side, step.intensity), {
+          sprint: input.sprint(),
+          crouch: game.crouched,
+        });
         const target = lookTarget();
-        if (target) overlay.prompt(touchUI ? (target.promptTouch ?? target.prompt) : target.prompt);
-        else overlay.clear();
+        const prompt = target ? (touchUI ? (target.promptTouch ?? target.prompt) : target.prompt) : null;
+        overlay.hud({ prompt, cross: game.cross, time: game.clock });
         if (target && input.consume('KeyE')) use(target);
         break;
       }
+      case 'caught':
+        overlay.clear();
+        retro.fade = 1 - smoothstep(1.0, 1.4, game.modeTime);
+        if (game.modeTime > 1.4) {
+          audio.duck(true);
+          setMode('dead');
+        }
+        break;
+      case 'dead':
+        retro.fade = 0;
+        overlay.dead(game.caughtBy, game.clock);
+        if (input.consume('Enter') || input.consume('Space')) respawn();
+        break;
       case 'paused':
         overlay.pause(game.clock);
         break;
@@ -226,12 +271,26 @@ export async function startGame({ viewport, glCanvas, uiCanvas, scanlines, optio
         break;
     }
 
-    touchControls.update(game.mode === 'playing');
     const feet = player.state;
     camera.getWorldDirection(viewDir);
-    const fx = level.update(dt, game.clock, { feet, eye: camera.position, forward: viewDir, active: game.mode === 'playing' }) ?? {};
+    const playing = game.mode === 'playing';
+    const fx =
+      level.update(dt, game.clock, {
+        feet,
+        eye: camera.position,
+        forward: viewDir,
+        active: playing,
+        frozen: game.mode === 'caught',
+        crouched: feet.crouched,
+        sprinting: feet.sprinting,
+        crossHeld: playing && input.cross(),
+      }) ?? {};
+    if (fx.cross) game.cross = fx.cross;
+    if (playing && fx.caught) caught(fx.caught);
+    touchControls.update(playing, { crossActive: game.cross?.active, crossBroken: game.cross?.broken, crouched: game.crouched });
+    audio.updateEntities(game.clock, playing ? fx : { voices: fx.voices, threat: 0 }, { eye: camera.position, forward: viewDir }, playing ? player.exhaustion : 0);
     // Interferencia: sube de golpe, baja despacio. Se ve (post) y se oye (estática).
-    const targetInterference = game.mode === 'playing' ? (fx.interference ?? 0) : 0;
+    const targetInterference = playing || game.mode === 'caught' ? (fx.interference ?? 0) : 0;
     game.interference += (targetInterference - game.interference) * damp(targetInterference > game.interference ? 20 : 3, dt);
     retro.interference = game.interference;
     audio.setInterference(game.interference);

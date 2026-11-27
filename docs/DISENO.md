@@ -6,7 +6,7 @@ En 2004 un topógrafo registró una construcción circular en una ciénaga que n
 
 ## Pilares
 
-1. **Atmósfera, y luego algo que te mira.** La mayor parte del tiempo es aislamiento, silencio y arquitectura que no encaja. Las entidades aparecen poco, solo se mueven cuando no las miras, y hay un único susto directo.
+1. **Te cazan.** Aislamiento, silencio y arquitectura que no encaja… hasta que algo te ve. Las entidades gritan y te persiguen; si te alcanzan, pantalla azul de VCR y vuelves al último punto de control.
 2. **Un juego perdido de 2005.** 4:3, baja resolución, texturas sucias de 128 px, luz plana, niebla espesa, color de 16 bits, pantalla shareware.
 3. **Lo natural cede a lo construido.** Barro y paja → concreto con patrones geométricos → una puerta metálica moderna. Cada paso hacia adentro es más artificial y más silencioso.
 
@@ -24,16 +24,27 @@ En 2004 un topógrafo registró una construcción circular en una ciénaga que n
 
 ## Entidades
 
-Recortes pintados con grano de foto, como si alguien los hubiera pegado en el mundo. Diseños propios inspirados en referencias de terror analógico. Al mirarlas, la imagen sufre fallas de cinta (filas rasgadas, colores separados, estática) y suena un siseo con retumbo grave.
+Recortes pintados con grano de foto, como si alguien los hubiera pegado en el mundo. Diseños propios inspirados en referencias de terror analógico. Al mirarlas, la imagen sufre fallas de cinta (filas rasgadas, colores separados, estática). Cuando persiguen avanzan a saltos, como animación cuadro a cuadro.
 
-| Entidad | Dónde | Qué hace |
-| --- | --- | --- |
-| **El Alto** | Pantano | Columna negra de 8 m erizada de espinas, cabeza roja. Reaparece entre la niebla, cada vez más cerca, solo fuera de tu vista. Si lo miras demasiado o te acercas, se esfuma. |
-| **La Aguja** | Techo de la choza | Capucha cónica, cara pálida diminuta, patas de araña. Agazapada en el techo; si la miras o te acercas, huye trepando por detrás. |
-| **El del Sombrero** | Choza → escalera | Silueta con un ala plana anchísima y ojos que brillan. De pie en un rincón; si lo miras se esfuma y te espera al pie de la escalera. |
-| **El Sonriente** | Pasillo | Flaco, brazos hasta el suelo, ojos de anillo y una sonrisa que no le cabe. Asoma al fondo; al acercarte se apagan las luces y aparece frente a tu cara (el susto). |
+**Ciclo:** quieta → **te ve** (grita) → te persigue → si te pierde, te busca → vuelve a su sitio. Si te alcanza: su cara a un metro de la tuya, pantalla azul "SEÑAL PERDIDA" y vuelves al último punto de control (inicio, puente, claro, choza, pasillo).
 
-Lógica en `src/world/entities.js`, ajustes en `ENTITIES` (`src/config.js`).
+**Cómo sobrevivir:**
+- **No mirarlas:** si las miras corren más (×1.35) y te ven desde más lejos; si no, van lentas (×0.7).
+- **Esconderte:** agachado entre arbustos o juncos solo te ven a 2.5 m; los árboles, la choza y las paredes tapan su vista.
+- **Salir de su territorio:** cada una tiene el suyo y no lo abandona.
+- **La cruz:** mantenla levantada apuntándoles y huyen chillando; luego se calman un rato. Se gasta en ~3.5 s y se recarga sola (si se agota, se raja y tarda en volver).
+- **Correr:** 5 s de aguante; hace ruido y te delata a 9 m.
+
+| Entidad | Territorio | Cómo es | Al verte |
+| --- | --- | --- | --- |
+| **El Alto** | El pantano (no entra al claro) | Columna negra de 8 m erizada de espinas, cabeza roja. Merodea entre la niebla y reaparece cada vez más cerca. | Sirena gruñida; pisadas enormes y un gruñido grave al perseguirte. Lento pero incansable. |
+| **La Aguja** | El claro (no entra en la choza) | Capucha cónica, cara pálida diminuta, patas de araña. Agazapada en el techo. | Chillido agudo; salta del techo y corre con un tableteo de patas. La más rápida. |
+| **El del Sombrero** | Dentro de la choza (no baja la escalera) | Silueta con un ala plana anchísima y ojos que brillan. | Susurro al revés que se corta en seco; respira húmedo y murmura sílabas al perseguirte. |
+| **El Sonriente** | El pasillo | Flaco, brazos hasta el suelo, ojos de anillo y una sonrisa que no le cabe. | Primero el apagón y su cara frente a la tuya; después espera junto a la puerta y te caza riéndose. Repelido, reaparece detrás de ti. |
+
+Además: latidos que se aceleran cuando algo te persigue y jadeo cuando te quedas sin aire. Todo sintetizado.
+
+Lógica en `src/world/entities.js`, ajustes en `ENTITIES` y `CROSS` (`src/config.js`).
 
 ## Estética visual
 

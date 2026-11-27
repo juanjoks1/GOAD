@@ -11,6 +11,7 @@ import { createDrone } from './drone.js';
 import { createFootsteps } from './footsteps.js';
 import { playMetalDoor } from './sfx.js';
 import { createScareSounds } from './scares.js';
+import { createEntityVoices } from './voices.js';
 
 /** Mezcla por zona (0 exterior, 0.3 choza, 1 subterráneo). Pura: también la usan las pruebas. */
 export function zoneMix(zone) {
@@ -26,6 +27,7 @@ export function createAudioDirector() {
   let ctx = null;
   let n = null;
   let lastUpdate = 0;
+  let lastVoices = 0;
   let zone = 0;
   let ducked = false;
 
@@ -76,6 +78,7 @@ export function createAudioDirector() {
       drone: createDrone(ctx, interiorBus, reverbSend),
       footsteps: createFootsteps(ctx, sfxBus, reverbSend, noise),
       scares: createScareSounds(ctx, sfxBus, reverbSend, noise),
+      voices: createEntityVoices(ctx, sfxBus, reverbSend, noise),
     };
     master.gain.setValueAtTime(0, ctx.currentTime);
     master.gain.linearRampToValueAtTime(AUDIO.masterVolume, ctx.currentTime + 4);
@@ -116,9 +119,24 @@ export function createAudioDirector() {
       n.footsteps.play(surface, side, intensity, zoneMix(zone).footstepWet);
     },
 
-    /** Sonido de una entidad: 'vanish', 'skitter', 'lights-off', 'lights-on', 'sting'. */
+    /** Sonido de una entidad: 'alert:<tipo>', 'repel:<tipo>', 'cross-up', 'vanish', 'lights-off', 'sting'… */
     playScare(name) {
-      if (ctx) n.scares.play(name);
+      if (!ctx) return;
+      if (!n.voices.play(name)) n.scares.play(name);
+    },
+
+    /**
+     * Voces posicionales de las entidades, latidos y jadeo.
+     * @param {{ voices: object, threat: number }} fx  salida de las entidades
+     * @param {{ eye, forward }} listener
+     * @param {number} exhaustion  0..1
+     */
+    updateEntities(time, fx, listener, exhaustion) {
+      if (!ctx || time - lastVoices < 0.05) return;
+      lastVoices = time;
+      n.voices.setThreat(fx.threat ?? 0);
+      n.voices.setExhaustion(exhaustion);
+      n.voices.update(fx.voices, listener);
     },
 
     /** Estática y retumbo que acompañan a la interferencia visual (0..1). */

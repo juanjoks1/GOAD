@@ -2,7 +2,7 @@
 
 Prototipo de exploración en primera persona con estética de **juego de PC perdido de ~2005** y terror analógico/liminal tranquilo: sin sustos, solo atmósfera, aislamiento y arquitectura que no debería estar ahí.
 
-Un pantano bajo niebla, una choza circular de troncos y paja, y debajo, una escalera de concreto que baja a un pasillo húmedo que termina en una puerta metálica moderna. Hay cosas que solo se mueven cuando no las miras.
+Un pantano bajo niebla, una choza circular de troncos y paja, y debajo, una escalera de concreto que baja a un pasillo húmedo que termina en una puerta metálica moderna. Cuatro entidades te cazan: si te ven, gritan y te persiguen. Para sobrevivir: no las mires, escóndete, sal de su territorio o levanta la cruz.
 
 > Estado: **Fase 1** jugable. Pantalla inicial shareware, pantano explorable, choza con descenso subterráneo, render 4:3 a baja resolución y audio 100 % procedural. La puerta del fondo lleva a una pantalla final (gancho para la escena 2).
 
@@ -30,12 +30,15 @@ Requiere JDK 17+ y el SDK de Android (`ANDROID_HOME`, o `android/local.propertie
 | Tecla | Acción |
 | --- | --- |
 | `W A S D` / flechas | Caminar |
+| `Shift` | Correr (aguante limitado; hace ruido) |
+| `C` / `Ctrl` | Agacharse (entre arbustos o juncos casi no te ven) |
 | Ratón | Mirar (Pointer Lock; si no está disponible, arrastra con el botón) |
+| `Q` / clic derecho | Levantar la cruz (mantener; repele a lo que apuntas, se gasta) |
 | `E` | Usar (la puerta metálica) |
 | `Esc` | Pausa |
 | `R` | Volver a empezar (en la pantalla final) |
 
-En pantallas táctiles: un dedo en la **mitad izquierda** es una palanca para caminar, un dedo en la **mitad derecha** mira, y un **toque corto** empieza, usa la puerta, continúa tras la pausa o reinicia.
+En pantallas táctiles: un dedo en la **mitad izquierda** es una palanca para caminar (al tope: correr), un dedo en la **mitad derecha** mira, los botones **CRUZ** (mantener) y **AGACHAR** están abajo a la derecha, y un **toque corto** empieza, usa la puerta, continúa tras la pausa o reintenta.
 
 ## Atajos para iterar
 

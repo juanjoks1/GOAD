@@ -16,6 +16,7 @@ import { createProps } from './props.js';
 import { createHut } from './hut.js';
 import { createUnderground } from './underground.js';
 import { createEntities } from './entities.js';
+import { CHECKPOINTS, reachCheckpoint } from '../../world/checkpoints.js';
 
 /** Identificador de la escena que se cargará al cruzar la puerta metálica (todavía no existe). */
 export const NEXT_LEVEL_ID = 'subterraneo-2';
@@ -60,6 +61,7 @@ export function createSwampLevel({ textures, timeUniform }) {
 
   const physics = createSwampPhysics();
   let zone = 0;
+  let checkpoint = 0;
 
   return {
     id: 'pantano',
@@ -89,9 +91,25 @@ export function createSwampLevel({ textures, timeUniform }) {
       };
     },
 
+    /** Punto donde reapareces si te atrapan (el último punto de control alcanzado). */
+    respawnPoint() {
+      const c = CHECKPOINTS[checkpoint];
+      return { x: c.x, y: c.y, z: c.z, yaw: c.yaw, pitch: 0 };
+    },
+
+    /** La entidad que te atrapó llena la pantalla. */
+    showCaught(kind) {
+      entities.showCaught(kind);
+    },
+
+    /** Tras reaparecer: las entidades vuelven a su sitio y se calman un poco. */
+    resetEntities(time) {
+      entities.reset(time);
+    },
+
     /**
-     * @param {{ feet, eye, forward, active: boolean }} view  posición de los pies, ojos y mirada
-     * @returns {{ interference: number, sounds: string[] }} efectos para el render y el audio
+     * @param {{ feet, eye, forward, active: boolean, crouched?: boolean, sprinting?: boolean, crossHeld?: boolean, frozen?: boolean }} view
+     * @returns {object} efectos de las entidades para el render, el audio y el juego
      */
     update(dt, time, view) {
       const position = view.feet;
@@ -112,8 +130,21 @@ export function createSwampLevel({ textures, timeUniform }) {
       scene.background.copy(fog.color);
 
       // Entidades: solo avanzan mientras se juega (no en la intro ni en pausa).
-      if (!view.active) return { interference: 0, sounds: [] };
-      const fx = entities.update({ time, dt, zone: target, feet: position, eye: view.eye, forward: view.forward });
+      if (!view.active && !view.frozen) return { interference: 0, sounds: [], voices: {}, threat: 0, caught: null, cross: null };
+      checkpoint = reachCheckpoint(checkpoint, position);
+      const fx = entities.update({
+        time,
+        dt,
+        zone: target,
+        feet: position,
+        eye: view.eye,
+        forward: view.forward,
+        crouched: view.crouched,
+        sprinting: view.sprinting,
+        crossHeld: view.crossHeld,
+        world: physics,
+        frozen: view.frozen,
+      });
       underground.setLightLevel(fx.lightLevel);
       return fx;
     },

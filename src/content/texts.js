@@ -20,8 +20,16 @@ export const INTRO_STORY = [
   '',
 ];
 
-export const CONTROLS_KEYBOARD = ['   [W A S D] caminar    [RATÓN] mirar    [E] usar', '   [ESC] pausa'];
-export const CONTROLS_TOUCH = ['   [IZQUIERDA] caminar    [DERECHA] mirar', '   [TOCAR] usar'];
+export const CONTROLS_KEYBOARD = [
+  '   [WASD] caminar   [SHIFT] correr   [C] agacharse',
+  '   [RATÓN] mirar    [Q / CLIC DER.] levantar la cruz',
+  '   [E] usar         [ESC] pausa',
+];
+export const CONTROLS_TOUCH = [
+  '   [IZQUIERDA] caminar (al tope: correr)',
+  '   [DERECHA] mirar    [CRUZ] mantener para repeler',
+  '   [AGACHAR] esconderse    [TOCAR] usar',
+];
 
 /** Texto completo de la pantalla inicial según el tipo de control. */
 export const introLines = (touch) => [...INTRO_STORY, ...(touch ? CONTROLS_TOUCH : CONTROLS_KEYBOARD)];
@@ -35,8 +43,11 @@ export const LOADING = 'CARGANDO';
 export const PAUSE_TITLE = 'PAUSA';
 export const PAUSE_PROMPT = 'Haz clic para continuar';
 export const PAUSE_PROMPT_TOUCH = 'Toca para continuar';
-export const PAUSE_HELP = ['[W A S D] caminar', '[RATÓN] mirar', '[E] usar'];
-export const PAUSE_HELP_TOUCH = ['[IZQUIERDA] caminar', '[DERECHA] mirar', '[TOCAR] usar'];
+export const PAUSE_HELP = ['[WASD] caminar  [SHIFT] correr  [C] agacharse', '[RATÓN] mirar  [Q / CLIC DER.] cruz  [E] usar'];
+export const PAUSE_HELP_TOUCH = ['[IZQUIERDA] caminar (al tope: correr)', '[DERECHA] mirar  [CRUZ] repeler  [AGACHAR]'];
+
+/** Consejos que aparecen en la pausa: cómo sobrevivir. */
+export const PAUSE_TIPS = ['Si no las miras, son más lentas.', 'Agachado entre arbustos no te ven.'];
 
 export const PROMPT_DOOR = '[E] Abrir';
 export const PROMPT_DOOR_TOUCH = 'Toca para abrir';
@@ -54,3 +65,18 @@ export const END_LINES = [
 ];
 export const END_PROMPT = '[R] volver al pantano';
 export const END_PROMPT_TOUCH = 'Toca para volver al pantano';
+
+/** Nombres de las entidades (para la pantalla de "te atrapó"). */
+export const ENTITY_NAMES = {
+  stalker: 'El Alto',
+  percher: 'La Aguja',
+  watcher: 'El del Sombrero',
+  grinner: 'El Sonriente',
+};
+
+/** Pantalla azul de VCR cuando una entidad te atrapa. */
+export const DEAD_CHANNEL = 'AV-1';
+export const DEAD_TITLE = 'SEÑAL PERDIDA';
+export const deadLine = (kind) => `Te encontró ${ENTITY_NAMES[kind] ?? 'algo'}.`;
+export const DEAD_PROMPT = 'Haz clic para volver a intentarlo';
+export const DEAD_PROMPT_TOUCH = 'Toca para volver a intentarlo';

@@ -6,7 +6,10 @@ import { moveCharacter, footstepSurface } from '../world/physics.js';
 import { advanceStepPhase, stepsBetween, bobOffset } from './headbob.js';
 
 export function createPlayer(camera) {
-  const state = { x: 0, y: 0, z: 0, vy: 0, grounded: true, surface: 'mud', surfaceRef: null };
+  const state = { x: 0, y: 0, z: 0, vy: 0, grounded: true, surface: 'mud', surfaceRef: null, crouched: false, sprinting: false };
+  let stamina = PLAYER.stamina;
+  let exhausted = false;
+  let eyeOffset = PLAYER.eyeHeight;
   let world = null;
   let yaw = 0;
   let pitch = 0;
@@ -56,6 +59,11 @@ export function createPlayer(camera) {
       yaw = spawn.yaw ?? 0;
       pitch = spawn.pitch ?? 0;
       vx = vz = 0;
+      state.crouched = false;
+      state.sprinting = false;
+      stamina = PLAYER.stamina;
+      exhausted = false;
+      eyeOffset = PLAYER.eyeHeight;
       eyeY = state.y + PLAYER.eyeHeight;
       bobWeight = 0;
       moveCharacter(world, state, 0, 0, { ...moveOpts, dt: 1 / 60 });
@@ -77,8 +85,10 @@ export function createPlayer(camera) {
     /**
      * @param {{ forward: number, strafe: number }} axes  entrada de movimiento (-1..1)
      * @param {(step: { surface: string, side: number }) => void} onStep
+     * @param {{ sprint?: boolean, crouch?: boolean }} [mode]  correr / agachado
      */
-    update(dt, axes, onStep) {
+    update(dt, axes, onStep, mode = {}) {
+      state.crouched = Boolean(mode.crouch);
       const fwdX = -Math.sin(yaw);
       const fwdZ = -Math.cos(yaw);
       const rightX = Math.cos(yaw);
@@ -91,7 +101,22 @@ export function createPlayer(camera) {
         s /= len;
       }
       const surface = footstepSurface(state);
-      const speed = PLAYER.walkSpeed * (surface === 'water' ? PLAYER.waterSpeedFactor : 1);
+      // Correr: solo hacia adelante, de pie y con aguante. Si te agotas, no corres hasta recuperarte.
+      state.sprinting = Boolean(mode.sprint) && !state.crouched && !exhausted && axes.forward > 0.3;
+      if (state.sprinting) {
+        stamina -= dt;
+        if (stamina <= 0) {
+          stamina = 0;
+          exhausted = true;
+          state.sprinting = false;
+        }
+      } else {
+        stamina = Math.min(PLAYER.stamina, stamina + PLAYER.staminaRegen * dt);
+        if (exhausted && stamina >= PLAYER.stamina * PLAYER.staminaRearm) exhausted = false;
+      }
+      let speed = state.sprinting ? PLAYER.sprintSpeed : PLAYER.walkSpeed;
+      if (state.crouched) speed *= PLAYER.crouchSpeedFactor;
+      if (surface === 'water') speed *= PLAYER.waterSpeedFactor;
       const tvx = (fwdX * f + rightX * s) * speed;
       const tvz = (fwdZ * f + rightZ * s) * speed;
       const a = damp(PLAYER.acceleration, dt);
@@ -110,13 +135,20 @@ export function createPlayer(camera) {
         const steps = stepsBetween(prev, phase);
         for (let i = 0; i < steps; i++) {
           stepCount++;
-          onStep?.({ surface: footstepSurface(state), side: stepCount % 2 ? -1 : 1 });
+          const intensity = state.sprinting ? 1.45 : state.crouched ? 0.45 : 1;
+          onStep?.({ surface: footstepSurface(state), side: stepCount % 2 ? -1 : 1, intensity });
         }
       }
       const walking = clamp(moved / dt / PLAYER.walkSpeed, 0, 1);
       bobWeight += (walking - bobWeight) * damp(HEADBOB.fadeRate, dt);
-      eyeY += (state.y + PLAYER.eyeHeight - eyeY) * damp(PLAYER.eyeSmoothing, dt);
+      eyeOffset += ((state.crouched ? PLAYER.crouchEye : PLAYER.eyeHeight) - eyeOffset) * damp(8, dt);
+      eyeY += (state.y + eyeOffset - eyeY) * damp(PLAYER.eyeSmoothing, dt);
       applyCamera();
+    },
+
+    /** 0 = descansado, 1 = sin aliento (para el jadeo). */
+    get exhaustion() {
+      return exhausted ? 1 : 1 - stamina / PLAYER.stamina;
     },
 
     /** Coloca la cámara sin mover al jugador (secuencia inicial). */

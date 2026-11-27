@@ -1,10 +1,11 @@
 // Dibuja las entidades: recortes que giran hacia la cámara, con fallas de cinta.
-// Toda la lógica (cuándo aparecen, adónde van) está en src/world/entities.js.
+// Mientras persiguen avanzan a saltos (como animación cuadro a cuadro). Toda la lógica está en
+// src/world/entities.js.
 import * as THREE from 'three';
 import vertexShader from '../../shaders/entity.vert.glsl?raw';
 import fragmentShader from '../../shaders/entity.frag.glsl?raw';
 import { ENTITIES } from '../../config.js';
-import { createEntityState, stepEntities, ENTITY_SIZES } from '../../world/entities.js';
+import { createEntityState, stepEntities, resetAfterCatch, placeInFace, ENTITY_SIZES } from '../../world/entities.js';
 
 /** Brillo de cada entidad según dónde vive (las texturas ya son oscuras). */
 const BRIGHTNESS = { stalker: 0.9, percher: 0.95, watcher: 0.6, grinner: 1.0 };
@@ -46,36 +47,72 @@ export function createEntities(textures, timeUniform) {
     mesh.visible = false;
     mesh.frustumCulled = false;
     group.add(mesh);
-    meshes[kind] = { mesh, opacity: 0 };
+    meshes[kind] = { mesh, opacity: 0, shown: null, nextFrame: 0 };
   }
+  let caught = null; // { kind } mientras su cara llena la pantalla
 
   return {
     group,
     /** Estado de las entidades (para depurar desde window.__cienaga.level.entities). */
     state,
+
+    /** La entidad que te atrapó se planta frente a la cámara. */
+    showCaught(kind) {
+      caught = { kind };
+    },
+
+    /** Tras volver a un punto de control. */
+    reset(time) {
+      caught = null;
+      resetAfterCatch(state, time);
+    },
+
     /**
-     * @param {{ time, dt, zone, feet, eye, forward }} view
-     * @returns {{ interference: number, lightLevel: number, sounds: string[] }}
+     * @param {{ time, dt, zone, feet, eye, forward, crouched, sprinting, crossHeld, world, frozen }} view
      */
     update(view) {
-      const out = stepEntities(state, view);
-      for (const [kind, s] of Object.entries(out.sprites)) {
+      const out = view.frozen ? null : stepEntities(state, view);
+      const sprites = out ? out.sprites : {};
+      for (const kind of Object.keys(meshes)) {
         const m = meshes[kind];
-        // Aparecen y se van con un fundido de trama muy corto (salvo el susto, que es de golpe).
+        const u = m.mesh.material.uniforms;
+        if (caught) {
+          // Su cara, a un metro de la tuya, iluminada como por un flash.
+          m.mesh.visible = caught.kind === kind;
+          if (!m.mesh.visible) continue;
+          const p = { kind };
+          placeInFace(p, view.eye, view.forward, 0.9);
+          m.mesh.position.set(p.x, p.y, p.z);
+          m.mesh.rotation.y = Math.atan2(view.eye.x - p.x, view.eye.z - p.z);
+          u.uOpacity.value = 1;
+          u.uGlitch.value = 0.35 + Math.random() * 0.3;
+          u.uBrightness.value = 1.8;
+          continue;
+        }
+        const s = sprites[kind];
+        if (!s) continue;
         const target = s.visible ? 1 : 0;
         const rate = kind === 'grinner' ? 30 : 6;
         m.opacity += Math.sign(target - m.opacity) * Math.min(Math.abs(target - m.opacity), view.dt * rate);
         m.mesh.visible = m.opacity > 0.01;
-        if (!m.mesh.visible) continue;
-        m.mesh.position.set(s.x, s.y, s.z);
-        m.mesh.rotation.y = Math.atan2(view.eye.x - s.x, view.eye.z - s.z);
-        const u = m.mesh.material.uniforms;
+        if (!m.mesh.visible) {
+          m.shown = null;
+          continue;
+        }
+        // Cuadro a cuadro mientras se mueve: la posición dibujada salta cada `stutter` segundos.
+        if (!m.shown || !s.moving || view.time >= m.nextFrame) {
+          m.shown = { x: s.x, y: s.y, z: s.z };
+          m.nextFrame = view.time + ENTITIES.stutter * (0.7 + Math.random() * 0.6);
+        }
+        m.mesh.position.set(m.shown.x, m.shown.y, m.shown.z);
+        m.mesh.rotation.y = Math.atan2(view.eye.x - m.shown.x, view.eye.z - m.shown.z);
         u.uOpacity.value = m.opacity;
-        u.uGlitch.value = 0.06 + out.interference * 0.4;
+        u.uGlitch.value = 0.06 + out.interference * 0.4 + (s.moving ? 0.15 : 0);
         // En el susto la cara se ve como bajo un flash; si no, depende de la luz del pasillo.
         u.uBrightness.value = s.flash ? 1.7 : BRIGHTNESS[kind] * (kind === 'grinner' ? out.lightLevel : 1);
       }
-      return { interference: out.interference, lightLevel: out.lightLevel, sounds: out.sounds };
+      if (!out) return { interference: caught ? 1 : 0, lightLevel: 1, sounds: [], voices: {}, threat: 0, caught: null, cross: null };
+      return out;
     },
   };
 }
